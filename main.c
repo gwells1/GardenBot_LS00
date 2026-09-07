@@ -13,7 +13,7 @@ int main(){
 
     init_system();
     init_USART();
-    //init_SPI();
+    init_SPI();
 
      //send_string("SPI Weather Click Example\n");
      //send_string("Initializing Weather Click\n");

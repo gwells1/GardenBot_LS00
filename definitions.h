@@ -8,7 +8,7 @@
 #include "configuration.h"
 #include "usart.h"
 #include "utilities.h"
-//#include "weatherClick.h"
-//#include "SPI.h"
+#include "weatherClick.h"
+#include "SPI.h"
 
 #endif 
