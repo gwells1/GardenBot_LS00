@@ -6,6 +6,7 @@
             "id": "conf1",
             "device": "PIC32CM5164LS00048",
             "imagePath": "./out/GardenBot_LS00/default.elf",
+            "tool": "PKOB nano",
             "packs": [
                 {
                     "name": "PIC32CM-LS_DFP",

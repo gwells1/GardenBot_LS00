@@ -6,13 +6,13 @@
  */
 
 #include "definitions.h"
-#include <pic32cm5164LS00048h>
+#include <pic32cm5164LS00048.h>
 #include <stdint.h>
 
 int main(){
 
-    //init_system();
-    //init_USART();
+    init_system();
+    init_USART();
     //init_SPI();
 
      //send_string("SPI Weather Click Example\n");
@@ -25,8 +25,10 @@ int main(){
 
     while(1){
 
-        //toggle_LED();
-        //simple_delay(3600000);
+        toggle_LED();
+        USART_sendString("USART Message\n ");
+        //USART_sendChar('c');
+        simple_delay(1200000);
     }
 
     return 0;
