@@ -69,7 +69,7 @@ void init_USART(){
     SERCOM3_REGS -> USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
 
     //Enable NVIC interrupt for SERCOM3
-    NVIC_EnableIRQ(SERCOM3_0_IRQn);
+    NVIC_EnableIRQ(SERCOM3_2_IRQn);
 }
 
 void USART_sendChar(char charToSend){

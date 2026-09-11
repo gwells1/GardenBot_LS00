@@ -51,6 +51,14 @@ add_library(GardenBot_LS00_default_default_XC32_bin2hex OBJECT ${GardenBot_LS00_
 
 endif()
 
+# Handle files with suffix elf, for group default-XC32
+if(GardenBot_LS00_default_default_XC32_FILE_TYPE_objcopy_lss)
+add_library(GardenBot_LS00_default_default_XC32_objcopy_lss OBJECT ${GardenBot_LS00_default_default_XC32_FILE_TYPE_objcopy_lss})
+    GardenBot_LS00_default_default_XC32_objcopy_lss_rule(GardenBot_LS00_default_default_XC32_objcopy_lss)
+    list(APPEND GardenBot_LS00_default_library_list "$<TARGET_OBJECTS:GardenBot_LS00_default_default_XC32_objcopy_lss>")
+
+endif()
+
 
 # Main target for this project
 add_executable(GardenBot_LS00_default_image_fJSWT_np ${GardenBot_LS00_default_library_list})
@@ -60,10 +68,12 @@ set_target_properties(GardenBot_LS00_default_image_fJSWT_np PROPERTIES
     SUFFIX ".elf"
     RUNTIME_OUTPUT_DIRECTORY "${GardenBot_LS00_default_output_dir}")
 target_link_libraries(GardenBot_LS00_default_image_fJSWT_np PRIVATE ${GardenBot_LS00_default_default_XC32_FILE_TYPE_link})
-
 # Add the link options from the rule file.
 GardenBot_LS00_default_link_rule( GardenBot_LS00_default_image_fJSWT_np)
 
 # Call bin2hex function from the rule file
 GardenBot_LS00_default_bin2hex_rule(GardenBot_LS00_default_image_fJSWT_np)
+
+#Add objcopy steps
+GardenBot_LS00_default_objcopy_lss_rule(GardenBot_LS00_default_image_fJSWT_np)
 

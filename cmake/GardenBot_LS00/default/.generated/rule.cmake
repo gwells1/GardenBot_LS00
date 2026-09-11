@@ -82,3 +82,11 @@ function(GardenBot_LS00_default_bin2hex_rule target)
         COMMENT "Convert build file to .hex")
     add_dependencies(GardenBot_LS00_default_Bin2Hex ${target})
 endfunction()
+function(GardenBot_LS00_default_objcopy_lss_rule target)
+    add_custom_command(
+        TARGET ${target}
+        POST_BUILD
+        COMMAND ${OBJDUMP}
+        ARGS --disassemble --wide --demangle --line-numbers --section-headers --source ${GardenBot_LS00_default_image_name} > ${GardenBot_LS00_default_image_base_name}.lss
+        WORKING_DIRECTORY ${GardenBot_LS00_default_output_dir})
+endfunction()

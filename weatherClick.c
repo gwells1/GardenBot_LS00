@@ -54,7 +54,7 @@ void read_wClick_T_Params(void){
     for(i=0; i<3 ; i++){
         uDigT[i] = spi_data_exchange(cmd_uDigT[i]);
     }
-    for(j=0; j<3 ; j++){
+    for(j=0; j<5 ; j++){
         sDigT[j] = spi_data_exchange(cmd_uDigT[j]);
     }
 }

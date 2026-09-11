@@ -57,7 +57,7 @@
 // USER_WORD_6
 #pragma config NONSECC_EVSYS = CLEAR
 #pragma config NONSECC_SERCOM0 = CLEAR
-#pragma config NONSECC_SERCOM1 = CLEAR
+#pragma config NONSECC_SERCOM1 = SET
 #pragma config NONSECC_SERCOM2 = CLEAR
 #pragma config NONSECC_SERCOM3 = SET
 #pragma config NONSECC_SERCOM4 = CLEAR

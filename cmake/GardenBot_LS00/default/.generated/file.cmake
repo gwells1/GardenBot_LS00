@@ -27,6 +27,7 @@ set(GardenBot_LS00_default_default_XC32_FILE_TYPE_compile_cpp)
 set_source_files_properties(${GardenBot_LS00_default_default_XC32_FILE_TYPE_compile_cpp} PROPERTIES LANGUAGE CXX)
 set(GardenBot_LS00_default_default_XC32_FILE_TYPE_link)
 set(GardenBot_LS00_default_default_XC32_FILE_TYPE_bin2hex)
+set(GardenBot_LS00_default_default_XC32_FILE_TYPE_objcopy_lss)
 set(GardenBot_LS00_default_image_name "default.elf")
 set(GardenBot_LS00_default_image_base_name "default")
 

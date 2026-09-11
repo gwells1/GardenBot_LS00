@@ -15,13 +15,13 @@ int main(){
     init_USART();
     init_SPI();
 
-     //send_string("SPI Weather Click Example\n");
-     //send_string("Initializing Weather Click\n");
+     USART_sendString("SPI Weather Click Example\n");
+     USART_sendString("Initializing Weather Click\n");
      //Begin by reading the WeatherClick's Compensation Parameters
-     //read_wClick_T_Params();
-     //read_wClick_P_Params();
-     //read_wClick_H_Params();
-     //init_wClick();
+     read_wClick_T_Params();
+     read_wClick_P_Params();
+     read_wClick_H_Params();
+     init_wClick();
 
     while(1){
 

@@ -1,9 +1,9 @@
 Archive member included to satisfy reference by file (symbol)
 
 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
-                              C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o (__pic32c_data_initialization)
+                              C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o (__pic32c_data_initialization)
 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
-                              C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o (__libc_init_array)
+                              C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o (__libc_init_array)
 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
                               c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o) (__progname_full)
 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__environ.o)
@@ -28,24 +28,24 @@ section                    address  length [bytes]      (dec)  Description
 .dinit                       0x80c           0xc0         192   
 .text.Reset_Handler          0x8cc           0x7e         126   
 .text                        0x94a           0x68         104  App's exec code 
-.text.__dummy_init_tls       0x9b2            0x2           2   
-.text.__libc_start_init      0x9b4           0x5c          92   
-.text                        0xa10           0x40          64  App's exec code 
-.text.__pic32c_data_ini      0xa50           0x34          52   
-.text                        0xa84           0x32          50  App's exec code 
-.rodata                      0xab6           0x24          36  Read-only const 
-.rodata                      0xada           0x24          36  Read-only const 
-.text.__dinit_copy           0xafe           0x1e          30   
-.rodata                      0xb1c           0x14          20  Read-only const 
-.rodata                      0xb30           0x14          20  Read-only const 
-.text.__dinit_clear          0xb44           0x12          18   
-.text.__dummy                0xb56            0x2           2   
-.rodata                      0xb58           0x10          16  Read-only const 
-.text.__dummy_decompres      0xb68            0x4           4   
-.rodata                      0xb6c            0x1           1  Read-only const 
-      Total ROM used  :       0xb6d        2925  1.1% of 0x40000
+.text                        0x9b2           0x5e          94  App's exec code 
+.text.__libc_start_init      0xa10           0x5c          92   
+.rodata                      0xa6c           0x48          72  Read-only const 
+.text                        0xab4           0x40          64  App's exec code 
+.text.__pic32c_data_ini      0xaf4           0x34          52   
+.rodata                      0xb28           0x24          36  Read-only const 
+.rodata                      0xb4c           0x24          36  Read-only const 
+.text.__dinit_copy           0xb70           0x1e          30   
+.text.__dummy_init_tls       0xb8e            0x2           2   
+.rodata                      0xb90           0x14          20  Read-only const 
+.rodata                      0xba4           0x14          20  Read-only const 
+.text.__dinit_clear          0xbb8           0x12          18   
+.text.__dummy_decompres      0xbca            0x4           4   
+.text.__dummy                0xbce            0x2           2   
+.rodata                      0xbd0            0x1           1  Read-only const 
+      Total ROM used  :       0xbd1        3025  1.2% of 0x40000
         --------------------------------------------------------------------------
-         Total Program Memory used  :       0xb6d        2925  1.1% of 0x40000
+         Total Program Memory used  :       0xbd1        3025  1.2% of 0x40000
         --------------------------------------------------------------------------
 
 
@@ -80,16 +80,16 @@ Microchip PIC32 Memory-Usage Report By Module
 --------------------------------------------------------------------------------
          487          71         104         662         296    weatherClick.c.o       CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
          628           0           0         628         274    configuration.c.o      CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c.o
-         476           0           0         476         1dc    ccWOPe88.o             C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+         476           0           0         476         1dc    ccuDAfl1.o             C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
          416           0           0         416         1a0    usart.c.o              CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
          376           0           0         376         178    SPI.c.o                CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c.o
          192           0           0         192          c0    data_init              data_init
+         166           0           0         166          a6    main.c.o               CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
          100          12          28         140          8c    crtbegin.o             c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtbegin.o
          104           0           0         104          68    utilities.c.o          CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
           94           0           0          94          5e    __libc_start_main.o    libg-musl.a
           78           0           4          82          52    data_init.o            libpic32c.a
            0           0          80          80          50    libc.o                 libg-musl.a
-          66           0           0          66          42    main.c.o               CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
           36           4           0          40          28    crtend.o               c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtend.o
           30           0           0          30          1e    pic32_data_init_copy.o libpic32c.a
           18           0           0          18          12    pic32_data_init_clear.olibpic32c.a
@@ -97,7 +97,7 @@ Microchip PIC32 Memory-Usage Report By Module
            8           0           0           8           8    crti.o                 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crti.o
            0           0           4           4           4    __environ.o            libg-musl.a
 --------------------------------------------------------------------------------
-        3125          87         220        3432         d68    C:\Users\gregw\Documents\Projects\GardenBot_LS00\out\GardenBot_LS00\default.elf
+        3225          87         220        3532         dcc    C:\Users\gregw\Documents\Projects\GardenBot_LS00\out\GardenBot_LS00\default.elf
 
 
 Discarded input sections
@@ -163,7 +163,7 @@ LOAD CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/D
 LOAD CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
 LOAD CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
 LOAD CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
-LOAD C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+LOAD C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
 START GROUP
 LOAD c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a
 LOAD c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libc-size-musl.a
@@ -248,7 +248,7 @@ LOAD c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v
                 0x00000000                        _sfixed = .
  *(.vectors .vectors.* .vectors_default .vectors_default.*)
  .vectors.default
-                0x00000000      0x15c C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+                0x00000000      0x15c C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
                 0x00000000                exception_table
  *(.isr_vector)
  *(.reset*)
@@ -339,7 +339,7 @@ LOAD data_init
  .note          0x00000a38       0x18 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
  .note          0x00000a50       0x18 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
  .note          0x00000a68       0x18 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
- .note          0x00000a80       0x18 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .note          0x00000a80       0x18 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .note          0x00000a98       0x18 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .note          0x00000ab0       0x18 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
  .note          0x00000ac8       0x18 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
@@ -368,7 +368,7 @@ LOAD data_init
  .ARM.attributes
                 0x00000142       0x30 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
  .ARM.attributes
-                0x00000172       0x30 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+                0x00000172       0x30 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .ARM.attributes
                 0x000001a2       0x30 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .ARM.attributes
@@ -395,7 +395,7 @@ LOAD data_init
  .comment       0x00000035       0x36 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
  .comment       0x00000035       0x36 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
  .comment       0x00000035       0x36 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
- .comment       0x00000035       0x36 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .comment       0x00000035       0x36 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .comment       0x00000035       0x36 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .comment       0x00000035       0x36 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
  .comment       0x00000035       0x36 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
@@ -404,20 +404,20 @@ LOAD data_init
  .comment       0x00000035       0x36 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
  .comment       0x00000035       0x36 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_info     0x00000000     0x4087
+.debug_info     0x00000000     0x40b3
  .debug_info    0x00000000      0xcf1 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c.o
  .debug_info    0x00000cf1      0x872 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c.o
- .debug_info    0x00001563      0x109 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
- .debug_info    0x0000166c     0x104c CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
- .debug_info    0x000026b8      0x2e5 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
- .debug_info    0x0000299d      0x48f CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
- .debug_info    0x00002e2c      0x7fe C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
- .debug_info    0x0000362a      0x212 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
- .debug_info    0x0000383c      0x2fb c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
- .debug_info    0x00003b37      0x276 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
- .debug_info    0x00003dad       0x97 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__environ.o)
- .debug_info    0x00003e44      0x117 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
- .debug_info    0x00003f5b      0x12c c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
+ .debug_info    0x00001563      0x135 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
+ .debug_info    0x00001698     0x104c CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
+ .debug_info    0x000026e4      0x2e5 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
+ .debug_info    0x000029c9      0x48f CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
+ .debug_info    0x00002e58      0x7fe C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
+ .debug_info    0x00003656      0x212 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
+ .debug_info    0x00003868      0x2fb c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
+ .debug_info    0x00003b63      0x276 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
+ .debug_info    0x00003dd9       0x97 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__environ.o)
+ .debug_info    0x00003e70      0x117 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
+ .debug_info    0x00003f87      0x12c c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
 
 .debug_abbrev   0x00000000      0xd54
  .debug_abbrev  0x00000000      0x14a CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c.o
@@ -426,7 +426,7 @@ LOAD data_init
  .debug_abbrev  0x000002f2      0x19c CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
  .debug_abbrev  0x0000048e       0xda CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
  .debug_abbrev  0x00000568      0x140 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
- .debug_abbrev  0x000006a8      0x18f C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .debug_abbrev  0x000006a8      0x18f C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .debug_abbrev  0x00000837      0x156 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .debug_abbrev  0x0000098d      0x133 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
  .debug_abbrev  0x00000ac0       0xd4 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
@@ -460,7 +460,7 @@ LOAD data_init
  .debug_aranges
                 0x000000a0       0x20 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
  .debug_aranges
-                0x000000c0       0x28 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+                0x000000c0       0x28 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .debug_aranges
                 0x000000e8       0x30 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .debug_aranges
@@ -474,30 +474,30 @@ LOAD data_init
  .debug_aranges
                 0x00000190       0x20 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_line     0x00000000     0x14cb
+.debug_line     0x00000000     0x14e3
  .debug_line    0x00000000      0x20d CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c.o
  .debug_line    0x0000020d      0x243 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c.o
- .debug_line    0x00000450       0xf7 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
- .debug_line    0x00000547      0x2ef CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
- .debug_line    0x00000836      0x146 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
- .debug_line    0x0000097c      0x1c5 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
- .debug_line    0x00000b41      0x253 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
- .debug_line    0x00000d94      0x165 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
- .debug_line    0x00000ef9      0x1ce c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
- .debug_line    0x000010c7       0xb5 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
- .debug_line    0x0000117c       0xfb c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__environ.o)
- .debug_line    0x00001277      0x11e c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
- .debug_line    0x00001395      0x136 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
+ .debug_line    0x00000450      0x10f CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
+ .debug_line    0x0000055f      0x2ef CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
+ .debug_line    0x0000084e      0x146 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
+ .debug_line    0x00000994      0x1c5 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
+ .debug_line    0x00000b59      0x253 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
+ .debug_line    0x00000dac      0x165 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
+ .debug_line    0x00000f11      0x1ce c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
+ .debug_line    0x000010df       0xb5 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
+ .debug_line    0x00001194       0xfb c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__environ.o)
+ .debug_line    0x0000128f      0x11e c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
+ .debug_line    0x000013ad      0x136 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
 
 .debug_str      0x00000000     0x21d3
  .debug_str     0x00000000     0x21d3 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c.o
                                 0x5b3 (size before relaxing)
  .debug_str     0x000021d3      0x775 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c.o
- .debug_str     0x000021d3      0x2f2 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
+ .debug_str     0x000021d3      0x33d CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
  .debug_str     0x000021d3      0xaa3 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
  .debug_str     0x000021d3      0x3ed CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
  .debug_str     0x000021d3      0x414 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
- .debug_str     0x000021d3      0xa82 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .debug_str     0x000021d3      0xa82 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .debug_str     0x000021d3      0x2f8 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .debug_str     0x000021d3      0x3e6 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
  .debug_str     0x000021d3      0x351 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(libc.o)
@@ -512,14 +512,14 @@ LOAD data_init
  .debug_frame   0x00000118       0xac CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c.o
  .debug_frame   0x000001c4       0x84 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
  .debug_frame   0x00000248       0x90 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
- .debug_frame   0x000002d8       0x30 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .debug_frame   0x000002d8       0x30 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .debug_frame   0x00000308       0x48 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .debug_frame   0x00000350       0x38 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
  .debug_frame   0x00000388       0x20 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
  .debug_frame   0x000003a8       0x28 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
 
 .debug_ranges   0x00000000       0x90
- .debug_ranges  0x00000000       0x18 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .debug_ranges  0x00000000       0x18 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
  .debug_ranges  0x00000018       0x20 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
  .debug_ranges  0x00000038       0x38 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
  .debug_ranges  0x00000070       0x10 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
@@ -603,7 +603,7 @@ LOAD data_init
  .bss           0x00000000        0x0 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
 
 .bss%z11        0x00000000        0x0
- .bss           0x00000000        0x0 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .bss           0x00000000        0x0 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
 
 .bss%z12        0x00000000        0x0
  .bss           0x00000000        0x0 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
@@ -669,7 +669,7 @@ LOAD data_init
  .data          0x00000000        0x0 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
 
 .data%z26       0x00000000        0x0
- .data          0x00000000        0x0 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .data          0x00000000        0x0 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
 
 .data%z27       0x00000000        0x0
  .data          0x00000000        0x0 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c.o
@@ -983,7 +983,7 @@ LOAD data_init
 .text.Reset_Handler%57
                 0x000008cc       0x7e
  .text.Reset_Handler
-                0x000008cc       0x7e C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+                0x000008cc       0x7e C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
                 0x000008cc                Reset_Handler
 
 .text%58        0x0000094a       0x68
@@ -993,66 +993,66 @@ LOAD data_init
                 0x00000982                LED_off
                 0x0000099a                toggle_LED
 
-.text.__libc_start_init%59
-                0x000009b4       0x5c
+.text%59        0x000009b2       0x5e
+ .text          0x000009b2       0x5e CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
+                0x000009b2                main
+
+.text.__libc_start_init%60
+                0x00000a10       0x5c
  .text.__libc_start_init
-                0x000009b4       0x5c c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
-                0x000009b4                __libc_init_array
+                0x00000a10       0x5c c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
+                0x00000a10                __libc_init_array
 
-.text%60        0x00000a10       0x40
- .text          0x00000a10       0x40 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtbegin.o
+.rodata%61      0x00000a6c       0x48
+ .rodata        0x00000a6c       0x48 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
 
-.text.__pic32c_data_initialization%61
-                0x00000a50       0x34
+.text%62        0x00000ab4       0x40
+ .text          0x00000ab4       0x40 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtbegin.o
+
+.text.__pic32c_data_initialization%63
+                0x00000af4       0x34
  .text.__pic32c_data_initialization
-                0x00000a50       0x34 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
-                0x00000a50                __pic32c_data_initialization
+                0x00000af4       0x34 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
+                0x00000af4                __pic32c_data_initialization
 
-.text%62        0x00000a84       0x32
- .text          0x00000a84       0x32 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
-                0x00000a84                main
+.rodata%64      0x00000b28       0x24
+ .rodata        0x00000b28       0x24 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtbegin.o
 
-.rodata%63      0x00000ab6       0x24
- .rodata        0x00000ab6       0x24 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtbegin.o
+.rodata%65      0x00000b4c       0x24
+ .rodata        0x00000b4c       0x24 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtend.o
 
-.rodata%64      0x00000ada       0x24
- .rodata        0x00000ada       0x24 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crtend.o
-
-.text.__dinit_copy%65
-                0x00000afe       0x1e
+.text.__dinit_copy%66
+                0x00000b70       0x1e
  .text.__dinit_copy
-                0x00000afe       0x1e c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
-                0x00000afe                __dinit_copy_needed
-                0x00000afe                __dinit_copy
+                0x00000b70       0x1e c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
+                0x00000b70                __dinit_copy_needed
+                0x00000b70                __dinit_copy
 
-.rodata%66      0x00000b1c       0x14
- .rodata        0x00000b1c       0x14 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c.o
+.rodata%67      0x00000b90       0x14
+ .rodata        0x00000b90       0x14 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c.o
 
-.rodata%67      0x00000b30       0x14
- .rodata        0x00000b30       0x14 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
+.rodata%68      0x00000ba4       0x14
+ .rodata        0x00000ba4       0x14 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
 
-.text.__dinit_clear%68
-                0x00000b44       0x12
+.text.__dinit_clear%69
+                0x00000bb8       0x12
  .text.__dinit_clear
-                0x00000b44       0x12 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
-                0x00000b44                __dinit_clear
-                0x00000b44                __dinit_clear_needed
-
-.rodata%69      0x00000b58       0x10
- .rodata        0x00000b58       0x10 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/main.c.o
+                0x00000bb8       0x12 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_clear.o)
+                0x00000bb8                __dinit_clear
+                0x00000bb8                __dinit_clear_needed
 
 .text.__dummy_decompress%70
-                0x00000b68        0x4
+                0x00000bca        0x4
  .text.__dummy_decompress
-                0x00000b68        0x4 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
-                0x00000b68                __dinit_decompress
-                0x00000b68                __dinit_copy_val_data
-                0x00000b68                __dinit_copy_emb
+                0x00000bca        0x4 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
+                0x00000bca                __dinit_decompress
+                0x00000bca                __dinit_copy_val_data
+                0x00000bca                __dinit_copy_emb
 
 .text.Dummy_Handler%71
                 0x00000506        0x2
  .text.Dummy_Handler
-                0x00000506        0x2 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+                0x00000506        0x2 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
                 0x00000506                SVCall_Handler
                 0x00000506                SERCOM0_2_Handler
                 0x00000506                EVSYS_0_Handler
@@ -1132,16 +1132,16 @@ LOAD data_init
                 0x00000506                SERCOM2_0_Handler
 
 .text.__dummy_init_tls%72
-                0x000009b2        0x2
+                0x00000b8e        0x2
  .text.__dummy_init_tls
-                0x000009b2        0x2 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
-                0x000009b2                xc32_init_tls
+                0x00000b8e        0x2 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
+                0x00000b8e                xc32_init_tls
 
 .text.__dummy%73
-                0x00000b56        0x2
- .text.__dummy  0x00000b56        0x2 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
-                0x00000b56                __init_stdio
-                0x00000b56                __init_host
+                0x00000bce        0x2
+ .text.__dummy  0x00000bce        0x2 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libg-musl.a(__libc_start_main.o)
+                0x00000bce                __init_stdio
+                0x00000bce                __init_host
 
 .text%z34       0x00000000        0x0
  .text          0x00000000        0x0 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(pic32_data_init_copy.o)
@@ -1168,11 +1168,11 @@ LOAD data_init
  .text          0x00000000        0x0 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/../../../../pic32c/lib/thumb/v8-m.base/nofp\libpic32c.a(data_init.o)
 
 .text%z42       0x00000000        0x0
- .text          0x00000000        0x0 C:\Users\gregw\AppData\Local\Temp\ccWOPe88.o
+ .text          0x00000000        0x0 C:\Users\gregw\AppData\Local\Temp\ccuDAfl1.o
 
-.rodata%74      0x00000b6c        0x1
- .rodata        0x00000b6c        0x1 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
-                0x00000b6c                DUMMY_DATA
+.rodata%74      0x00000bd0        0x1
+ .rodata        0x00000bd0        0x1 CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c.o
+                0x00000bd0                DUMMY_DATA
 
 .text%z43       0x00000000        0x0
  .text          0x00000000        0x0 c:/PROGRA~1/MICROC~1/xc32/v5.00/bin/bin/../../lib/gcc/pic32c/13.2.1/thumb/v8-m.base/nofp/crti.o

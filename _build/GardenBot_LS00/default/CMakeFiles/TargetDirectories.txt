@@ -1,5 +1,0 @@
-C:/Users/gregw/Documents/Projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir
-C:/Users/gregw/Documents/Projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_image_fJSWT_np.dir
-C:/Users/gregw/Documents/Projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_Bin2Hex.dir
-C:/Users/gregw/Documents/Projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/edit_cache.dir
-C:/Users/gregw/Documents/Projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/rebuild_cache.dir
