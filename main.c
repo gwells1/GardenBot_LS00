@@ -15,7 +15,7 @@ int main(){
     init_USART();
     init_SPI();
 
-     USART_sendString("SPI Weather Click Example\n");
+     USART_sendString("SPI Weather Click Example\n");                       //Program appears to be tripping an interrupt at this point, from here it jumps to the dummy_handler function in the startup_pic32cm5164ls00048.c file
      USART_sendString("Initializing Weather Click\n");
      //Begin by reading the WeatherClick's Compensation Parameters
      read_wClick_T_Params();

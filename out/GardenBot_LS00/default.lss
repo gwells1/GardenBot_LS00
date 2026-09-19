@@ -1467,7 +1467,7 @@ C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:16
  9be:	f7ff fe73 	bl	6a8 <init_SPI>
 C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:18
 
-     USART_sendString("SPI Weather Click Example\n");
+     USART_sendString("SPI Weather Click Example\n");                       //Program appears to be tripping an interrupt at this point, from here it jumps to the dummy_handler function in the startup_pic32cm5164ls00048.c file
  9c2:	f640 236c 	movw	r3, #2668	@ 0xa6c
  9c6:	f2c0 0300 	movt	r3, #0
  9ca:	0018      	movs	r0, r3

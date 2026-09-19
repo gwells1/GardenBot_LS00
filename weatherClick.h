@@ -8,4 +8,12 @@ void read_wClick_T_Params(void);
 void read_wClick_P_Params(void);
 void read_wClick_H_Params(void);
 
+void read_wClick_ID(void);
+
+void read_wClick_temp(void);
+void read_wClick_press(void);
+void read_wClick_hum(void);
+
+void print_wClick_results(void);
+
 #endif

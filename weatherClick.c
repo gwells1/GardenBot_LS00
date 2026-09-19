@@ -47,6 +47,13 @@ void init_wClick(){
     }
 }
 
+void read_wClick_ID(void){
+    uint8_t i;
+    for(i=0 ; i<2 ; i++){
+        deviceID[i] = spi_data_exchange(cmd_deviceID[i]);
+    }
+}
+
 void read_wClick_T_Params(void){
     //Quiery the device for the first temperature compensation parameter
     uint8_t i;
@@ -81,4 +88,29 @@ void read_wClick_H_Params(void){
     for(j=0; j<7; j++){
         sDigH[j] = spi_data_exchange(cmd_sDigH[j]);
     }
+}
+
+void read_wClick_temp(void){
+    uint8_t i;
+    for(i=0 ; i<4 ; i++){
+        temp[i] = spi_data_exchange(cmd_temp[i]);
+    }
+}
+
+void read_wClick_press(void){
+    uint8_t i;
+    for(i=0 ; i<4 ; i++){
+        press[i] = spi_data_exchange(cmd_press[i]);
+    }
+}
+
+void read_wClick_hum(void){
+    uint8_t i;
+    for(i=0 ; i<3 ; i++){
+        hum[i] = spi_data_exchange(cmd_hum[i]);
+    }
+}
+
+void print_wClick_results(void){
+    //USART_sendString(char *)
 }
