@@ -112,5 +112,7 @@ void read_wClick_hum(void){
 }
 
 void print_wClick_results(void){
-    //USART_sendString(char *)
+    USART_sendString("\r\nBME280 Device ID: 0x");
+    USART_sendChar(deviceID[1]);
+    USART_sendString("\r\n");
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="C:\Users\gregw\Documents\Projects\GardenBot_LS00\out\GardenBot_LS00\default.elf">
+  <executable name="C:\Users\gregw\Documents\projects\GardenBot_LS00\out\GardenBot_LS00\default.elf">
     <memory name="program">
       <units>bytes</units>
       <length>262144</length>
-      <used>3025</used>
-      <free>259119</free>
+      <used>3411</used>
+      <free>258733</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
