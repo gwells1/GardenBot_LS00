@@ -112,7 +112,20 @@ void read_wClick_hum(void){
 }
 
 void print_wClick_results(void){
+    //Print the device ID to the terminal
     USART_sendString("\r\nBME280 Device ID: 0x");
     USART_sendChar(deviceID[1]);
     USART_sendString("\r\n");
+    //Print the Temperature to the terminal
+    USART_sendString("Temperature: ");
+    USART_sendString("25");            //Placeholder for calculated temperature
+    USART_sendString("degC\r\n");
+    //Print the Pressure to the terminal
+    USART_sendString("Pressure: ");
+    USART_sendString("100000");            //Placeholder for calculated pressure
+    USART_sendString("Pa\r\n");
+    //Print the Humidity to the terminal
+    USART_sendString("Humidity: ");
+    USART_sendString("25");            //Placeholder for calculated humidity
+    USART_sendString("%%\r\n");
 }

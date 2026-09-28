@@ -16,4 +16,7 @@ void read_wClick_hum(void);
 
 void print_wClick_results(void);
 
+void calc_wClick_temp(void);
+void calc_wClick_press(void);
+void calc_wClick_hum(void);
 #endif
