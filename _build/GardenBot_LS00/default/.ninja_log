@@ -1,16 +1,11 @@
 # ninja log v6
-64	1101	8121000249318225	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/main.c.o	7787f8c3c2bd65a
-85	1104	8121000249535833	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c.o	206eec59909d27a7
-94	1105	8121000249620459	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c.o	a48804f93c6ca69e
-76	1106	8121000249446504	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/usart.c.o	f5a1d8e44d1f8e2b
-51	1108	8121000249193433	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c.o	3a8d4dded8d377cb
-41	1109	8121000249085376	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c.o	91e96a39bc9b0785
-1109	4704	8121000259776245	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.elf	17d022b5d289f274
-4704	5293	8121000295729539	CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
-4704	5293	8121000295729539	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.hex	cf7760c4307faa67
-4704	5293	8121000295729539	C:/Users/gregw/Documents/projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
-37	1311	8121003856500345	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c.o	a48804f93c6ca69e
-1312	2140	8121003869247713	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.elf	17d022b5d289f274
-2141	2236	8121003877543148	CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
-2141	2236	8121003877543148	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.hex	cf7760c4307faa67
-2141	2236	8121003877543148	C:/Users/gregw/Documents/projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
+87	3325	8123584808355915	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/main.c.o	7787f8c3c2bd65a
+528	4118	8123502995421306	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c.o	206eec59909d27a7
+475	4128	8123502994888548	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c.o	3a8d4dded8d377cb
+549	4130	8123502995619715	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c.o	a48804f93c6ca69e
+101	4134	8123502991147819	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c.o	91e96a39bc9b0785
+5247	5599	8123584859952342	CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
+510	4123	8123502995236377	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/usart.c.o	f5a1d8e44d1f8e2b
+3327	5247	8123584840749147	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.elf	17d022b5d289f274
+5247	5599	8123584859952342	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.hex	cf7760c4307faa67
+5247	5599	8123584859952342	C:/Users/gregw/Documents/projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67

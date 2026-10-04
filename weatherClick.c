@@ -129,3 +129,78 @@ void print_wClick_results(void){
     USART_sendString("25");            //Placeholder for calculated humidity
     USART_sendString("%%\r\n");
 }
+
+void calc_wClick_temp(void){
+    double var1, var2;
+    temp_raw.byte2 = temp[1];
+    temp_raw.byte1 = temp[2];
+    temp_raw.byte0 = temp[3];
+    temp_raw.raw = temp_raw.raw >> 4;
+    uint16_t digT1 = (uDigT[2] << 8) + (uDigT[1]);
+    int16_t digT2 = (sDigT[2] << 8) + (sDigT[1]);
+    int16_t digT3 = (sDigT[4] << 8) + (sDigT[3]);
+    var1 = (((double)temp_raw.raw) / 16384.0 - ((double)digT1) / 1024.0) *
+        ((double)digT2);
+    var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
+        (((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0)) *
+        ((double)digT3);
+    t_fine = (int32_t)(var1 + var2);
+    T = (var1 + var2) / 5120.0;
+}
+
+void calc_wClick_press(void){
+    double var1, var2;
+    press_raw.byte2 = press[1];
+    press_raw.byte1 = press[2];
+    press_raw.byte0 = press[3];
+    press_raw.raw = press_raw.raw >> 4;
+    uint16_t digP1 = (uDigP[2] << 8) + (uDigP[1]);
+    int16_t digP2 = (sDigP[2] << 8) + (sDigP[1]);
+    int16_t digP3 = (sDigP[4] << 8) + (sDigP[3]);
+    int16_t digP4 = (sDigP[6] << 8) + (sDigP[5]);
+    int16_t digP5 = (sDigP[8] << 8) + (sDigP[7]);
+    int16_t digP6 = (sDigP[10] << 8) + (sDigP[9]);
+    int16_t digP7 = (sDigP[12] << 8) + (sDigP[11]);
+    int16_t digP8 = (sDigP[14] << 8) + (sDigP[13]);
+    int16_t digP9 = (sDigP[16] << 8) + (sDigP[15]);
+    var1 = ((double)t_fine / 2.0) -64000.0;
+    var2 = var1 * var1 * ((double)digP6) /32768.0;
+    var2 = var2 + var1 * ((double)digP5) *2.0;
+    var2 = (var2 / 4.0) + (((double)digP4) *65536.0);
+    var1 = (((double)digP3) * var1 * var1 / 524288.0 + ((double)digP2) *
+    var1) / 524288.0;
+    var1 = (1.0 + var1 / 32768.0) * ((double)digP1);
+    if (var1 == 0.0)
+    {
+    P = 0;
+    }
+    P = 1048576.0 - (double)press_raw.raw;
+    P = (P - (var2 / 4096.0)) * 6250.0 / var1;
+    var1 = ((double)digP9) * P * P/ 2147483648.0;
+    var2 = P * ((double)digP8) /32768.0;
+    P = P + (var1 + var2 +((double)digP7)) / 16.0;
+}
+
+void calc_wClick_hum(void){
+    int32_t var1;
+    hum_raw.byte1 = hum[1];
+    hum_raw.byte0 = hum[2];
+    uint8_t digH1 = uDigH[1];
+    int16_t digH2 = (sDigH[2] << 8) + (sDigH[1]);
+    uint8_t digH3 = uDigH[2];
+    int16_t digH4 = (sDigH[3] << 4) + (sDigH[4] & 0x0F);
+    int16_t digH5 = (sDigH[5] << 4) + ((sDigH[4] >> 4) & 0x0F);
+    int8_t digH6 = sDigH[6];
+    var1 = (t_fine - ((int32_t) 76000));
+    var1 = (((((temp_raw.raw << 14) - (((int32_t) digH4) << 20) -
+    (((int32_t) digH5) * var1)) + ((int32_t) 16384)) >> 15) *
+    (((((((var1 * ((int32_t) digH6)) >> 10) *
+    (((var1 * ((int32_t) digH3)) >> 11) + ((int32_t)32768))) >> 10) +
+    ((int32_t) 2097152)) * ((int32_t)digH2) + 8192) >> 14));
+    var1 = (var1 - (((((var1 >> 15) * (var1 >> 15)) >> 7) *
+    ((int32_t) digH1))>> 4));
+    var1 = (var1 < 0 ? 0 :var1);
+    var1 = (var1 > 419430400 ? 419430400 : var1);
+    H = (uint32_t) (var1 >> 12);
+    H = H / 1024.0;
+}

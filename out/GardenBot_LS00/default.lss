@@ -3,104 +3,113 @@ default.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name                                  Size      VMA       LMA       File off  Algn  Flags
-  0 .config_00804000                      00000004  00804000  00804000  00002000  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  1 .config_00804004                      00000004  00804004  00804004  00002004  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  2 .config_00804008                      00000004  00804008  00804008  00002008  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  3 .config_0080400C                      00000004  0080400c  0080400c  0000200c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  4 .config_00804010                      00000004  00804010  00804010  00002010  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  5 .config_00804014                      00000004  00804014  00804014  00002014  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  6 .config_00804018                      00000004  00804018  00804018  00002018  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  7 .config_0080401C                      00000004  0080401c  0080401c  0000201c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
-  8 .config_00804020                      00000004  00804020  00804020  00002020  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  0 .config_00804000                      00000004  00804000  00804000  00003000  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  1 .config_00804004                      00000004  00804004  00804004  00003004  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  2 .config_00804008                      00000004  00804008  00804008  00003008  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  3 .config_0080400C                      00000004  0080400c  0080400c  0000300c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  4 .config_00804010                      00000004  00804010  00804010  00003010  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  5 .config_00804014                      00000004  00804014  00804014  00003014  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  6 .config_00804018                      00000004  00804018  00804018  00003018  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  7 .config_0080401C                      00000004  0080401c  0080401c  0000301c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
+  8 .config_00804020                      00000004  00804020  00804020  00003020  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA, ABSOLUTE
   9 .vectors                              0000015c  00000000  00000000  00001000  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
  10 .text                                 00000020  0000015c  0000015c  0000115c  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 11 .gnu.sgstubs                          00000000  00040000  00040000  0000412c  2**0  CONTENTS
+ 11 .gnu.sgstubs                          00000000  00040000  00040000  0000512c  2**0  CONTENTS
  12 .bss                                  00000000  20000000  20000000  00000000  2**0  ALLOC
- 13 .note                                 00000b58  00000000  00000000  0000412c  2**2  CONTENTS, READONLY
- 14 .ARM.attributes                       00000030  00000000  00000000  00004c84  2**0  CONTENTS, READONLY
- 15 .comment                              00000035  00000000  00000000  00004cb4  2**0  CONTENTS, READONLY
- 16 .debug_info                           00004189  00000000  00000000  00004ce9  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_abbrev                         00000d8c  00000000  00000000  00008e72  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_loc                            0000092b  00000000  00000000  00009bfe  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_aranges                        000001b0  00000000  00000000  0000a529  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_line                           000015a5  00000000  00000000  0000a6d9  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_str                            0000222a  00000000  00000000  0000bc7e  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_frame                          0000046c  00000000  00000000  0000dea8  2**2  CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_ranges                         00000090  00000000  00000000  0000e314  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .bss%1                                00000068  20000000  20000000  00004000  2**3  ALLOC
- 25 .bss%2                                00000050  20000068  20000068  00004000  2**2  ALLOC
- 26 .bss%3                                0000001c  200000b8  200000b8  00004000  2**2  ALLOC
- 27 .bss%4                                00000004  200000d4  200000d4  00004000  2**2  ALLOC
- 28 .bss%5                                00000004  200000d8  200000d8  00004000  2**2  ALLOC
- 29 .data%6                               00000047  200000dc  200000dc  000040dc  2**2  CONTENTS, ALLOC, LOAD, DATA, MCHP_NOLOAD
- 30 .data%7                               00000004  20000124  20000124  00004124  2**2  CONTENTS, ALLOC, LOAD, DATA, MCHP_NOLOAD
- 31 .eh_frame%8                           00000004  20000128  20000128  00004128  2**2  CONTENTS, ALLOC, LOAD, DATA, MCHP_NOLOAD
- 32 .config_0080C0FC%9                    00000004  0080c0fc  0080c0fc  000030fc  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 33 .config_0080C0F8%10                   00000004  0080c0f8  0080c0f8  000030f8  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 34 .config_0080C0F4%11                   00000004  0080c0f4  0080c0f4  000030f4  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 35 .config_0080C0F0%12                   00000004  0080c0f0  0080c0f0  000030f0  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 36 .config_0080C0EC%13                   00000004  0080c0ec  0080c0ec  000030ec  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 37 .config_0080C0E8%14                   00000004  0080c0e8  0080c0e8  000030e8  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 38 .config_0080C0E4%15                   00000004  0080c0e4  0080c0e4  000030e4  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 39 .config_0080C0E0%16                   00000004  0080c0e0  0080c0e0  000030e0  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 40 .config_0080C08C%17                   00000004  0080c08c  0080c08c  0000308c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 41 .config_0080C088%18                   00000004  0080c088  0080c088  00003088  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 42 .config_0080C084%19                   00000004  0080c084  0080c084  00003084  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 43 .config_0080C080%20                   00000004  0080c080  0080c080  00003080  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 44 .config_0080C07C%21                   00000004  0080c07c  0080c07c  0000307c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 45 .config_0080C078%22                   00000004  0080c078  0080c078  00003078  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 46 .config_0080C074%23                   00000004  0080c074  0080c074  00003074  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 47 .config_0080C070%24                   00000004  0080c070  0080c070  00003070  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 48 .config_0080C06C%25                   00000004  0080c06c  0080c06c  0000306c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 49 .config_0080C068%26                   00000004  0080c068  0080c068  00003068  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 50 .config_0080C064%27                   00000004  0080c064  0080c064  00003064  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 51 .config_0080C060%28                   00000004  0080c060  0080c060  00003060  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 52 .config_0080C05C%29                   00000004  0080c05c  0080c05c  0000305c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 53 .config_0080C058%30                   00000004  0080c058  0080c058  00003058  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 54 .config_0080C054%31                   00000004  0080c054  0080c054  00003054  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 55 .config_0080C050%32                   00000004  0080c050  0080c050  00003050  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 56 .config_0080C04C%33                   00000004  0080c04c  0080c04c  0000304c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 57 .config_0080C048%34                   00000004  0080c048  0080c048  00003048  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 58 .config_0080C044%35                   00000004  0080c044  0080c044  00003044  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 59 .config_0080C040%36                   00000004  0080c040  0080c040  00003040  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 60 .config_0080C03C%37                   00000004  0080c03c  0080c03c  0000303c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 61 .config_0080C038%38                   00000004  0080c038  0080c038  00003038  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 62 .config_0080C034%39                   00000004  0080c034  0080c034  00003034  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 63 .config_0080C030%40                   00000004  0080c030  0080c030  00003030  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 64 .config_0080C02C%41                   00000004  0080c02c  0080c02c  0000302c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 65 .config_0080C028%42                   00000004  0080c028  0080c028  00003028  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 66 .config_0080C024%43                   00000004  0080c024  0080c024  00003024  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 67 .config_0080C020%44                   00000004  0080c020  0080c020  00003020  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 68 .config_0080C01C%45                   00000004  0080c01c  0080c01c  0000301c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 69 .config_0080C018%46                   00000004  0080c018  0080c018  00003018  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 70 .config_0080C014%47                   00000004  0080c014  0080c014  00003014  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 71 .config_0080C010%48                   00000004  0080c010  0080c010  00003010  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 72 .config_0080C008%49                   00000004  0080c008  0080c008  00003008  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 73 .config_0080C004%50                   00000004  0080c004  0080c004  00003004  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 74 .config_0080C000%51                   00000004  0080c000  0080c000  00003000  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 75 .text%52                              0000034e  0000017c  0000017c  0000117c  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 76 .text%53                              000001a4  000004ca  000004ca  000014ca  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 77 .text%54                              000001a0  00000670  00000670  00001670  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 78 .text%55                              00000164  00000810  00000810  00001810  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 79 .dinit%56                             000000c0  00000974  00000974  00001974  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 80 .text.Reset_Handler%57                0000007e  00000a34  00000a34  00001a34  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 81 .text%58                              00000068  00000ab2  00000ab2  00001ab2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 82 .text%59                              0000005e  00000b1a  00000b1a  00001b1a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 83 .text.__libc_start_init%60            0000005c  00000b78  00000b78  00001b78  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 84 .rodata%61                            00000048  00000bd4  00000bd4  00001bd4  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 85 .text%62                              00000040  00000c1c  00000c1c  00001c1c  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 86 .text.__pic32c_data_initialization%63 00000034  00000c5c  00000c5c  00001c5c  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 87 .rodata%64                            00000024  00000c90  00000c90  00001c90  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 88 .rodata%65                            00000024  00000cb4  00000cb4  00001cb4  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 89 .text.__dinit_copy%66                 0000001e  00000cd8  00000cd8  00001cd8  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 90 .rodata%67                            0000001b  00000cf8  00000cf8  00001cf8  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 91 .rodata%68                            00000014  00000d14  00000d14  00001d14  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 92 .rodata%69                            00000014  00000d28  00000d28  00001d28  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
- 93 .text.__dinit_clear%70                00000012  00000d3c  00000d3c  00001d3c  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 94 .text.__dummy_decompress%71           00000004  00000d4e  00000d4e  00001d4e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 95 .text.Dummy_Handler%72                00000002  0000066e  0000066e  0000166e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 96 .text.__dummy_init_tls%73             00000002  00000cf6  00000cf6  00001cf6  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
- 97 .text.__dummy%74                      00000002  00000d52  00000d52  00001d52  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note                                 00000b58  00000000  00000000  0000512c  2**2  CONTENTS, READONLY
+ 14 .ARM.attributes                       0000002e  00000000  00000000  00005c84  2**0  CONTENTS, READONLY
+ 15 .comment                              00000035  00000000  00000000  00005cb2  2**0  CONTENTS, READONLY
+ 16 .debug_info                           000043c8  00000000  00000000  00005ce7  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 17 .debug_abbrev                         00000d9d  00000000  00000000  0000a0af  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 18 .debug_loc                            000009d5  00000000  00000000  0000ae4c  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 19 .debug_aranges                        000001b0  00000000  00000000  0000b821  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 20 .debug_line                           00001860  00000000  00000000  0000b9d1  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 21 .debug_str                            000022d3  00000000  00000000  0000d231  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 22 .debug_frame                          000004d8  00000000  00000000  0000f504  2**2  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 23 .debug_ranges                         00000090  00000000  00000000  0000f9dc  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 24 .bss%1                                00000068  20000000  20000000  00005000  2**3  ALLOC
+ 25 .bss%2                                00000050  20000068  20000068  00005000  2**2  ALLOC
+ 26 .bss%3                                0000001c  200000b8  200000b8  00005000  2**2  ALLOC
+ 27 .bss%4                                00000004  200000d4  200000d4  00005000  2**2  ALLOC
+ 28 .bss%5                                00000004  200000d8  200000d8  00005000  2**2  ALLOC
+ 29 .data%6                               00000047  200000dc  200000dc  000050dc  2**2  CONTENTS, ALLOC, LOAD, DATA, MCHP_NOLOAD
+ 30 .data%7                               00000004  20000124  20000124  00005124  2**2  CONTENTS, ALLOC, LOAD, DATA, MCHP_NOLOAD
+ 31 .eh_frame%8                           00000004  20000128  20000128  00005128  2**2  CONTENTS, ALLOC, LOAD, DATA, MCHP_NOLOAD
+ 32 .config_0080C0FC%9                    00000004  0080c0fc  0080c0fc  000040fc  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 33 .config_0080C0F8%10                   00000004  0080c0f8  0080c0f8  000040f8  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 34 .config_0080C0F4%11                   00000004  0080c0f4  0080c0f4  000040f4  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 35 .config_0080C0F0%12                   00000004  0080c0f0  0080c0f0  000040f0  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 36 .config_0080C0EC%13                   00000004  0080c0ec  0080c0ec  000040ec  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 37 .config_0080C0E8%14                   00000004  0080c0e8  0080c0e8  000040e8  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 38 .config_0080C0E4%15                   00000004  0080c0e4  0080c0e4  000040e4  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 39 .config_0080C0E0%16                   00000004  0080c0e0  0080c0e0  000040e0  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 40 .config_0080C08C%17                   00000004  0080c08c  0080c08c  0000408c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 41 .config_0080C088%18                   00000004  0080c088  0080c088  00004088  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 42 .config_0080C084%19                   00000004  0080c084  0080c084  00004084  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 43 .config_0080C080%20                   00000004  0080c080  0080c080  00004080  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 44 .config_0080C07C%21                   00000004  0080c07c  0080c07c  0000407c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 45 .config_0080C078%22                   00000004  0080c078  0080c078  00004078  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 46 .config_0080C074%23                   00000004  0080c074  0080c074  00004074  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 47 .config_0080C070%24                   00000004  0080c070  0080c070  00004070  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 48 .config_0080C06C%25                   00000004  0080c06c  0080c06c  0000406c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 49 .config_0080C068%26                   00000004  0080c068  0080c068  00004068  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 50 .config_0080C064%27                   00000004  0080c064  0080c064  00004064  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 51 .config_0080C060%28                   00000004  0080c060  0080c060  00004060  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 52 .config_0080C05C%29                   00000004  0080c05c  0080c05c  0000405c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 53 .config_0080C058%30                   00000004  0080c058  0080c058  00004058  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 54 .config_0080C054%31                   00000004  0080c054  0080c054  00004054  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 55 .config_0080C050%32                   00000004  0080c050  0080c050  00004050  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 56 .config_0080C04C%33                   00000004  0080c04c  0080c04c  0000404c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 57 .config_0080C048%34                   00000004  0080c048  0080c048  00004048  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 58 .config_0080C044%35                   00000004  0080c044  0080c044  00004044  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 59 .config_0080C040%36                   00000004  0080c040  0080c040  00004040  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 60 .config_0080C03C%37                   00000004  0080c03c  0080c03c  0000403c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 61 .config_0080C038%38                   00000004  0080c038  0080c038  00004038  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 62 .config_0080C034%39                   00000004  0080c034  0080c034  00004034  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 63 .config_0080C030%40                   00000004  0080c030  0080c030  00004030  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 64 .config_0080C02C%41                   00000004  0080c02c  0080c02c  0000402c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 65 .config_0080C028%42                   00000004  0080c028  0080c028  00004028  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 66 .config_0080C024%43                   00000004  0080c024  0080c024  00004024  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 67 .config_0080C020%44                   00000004  0080c020  0080c020  00004020  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 68 .config_0080C01C%45                   00000004  0080c01c  0080c01c  0000401c  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 69 .config_0080C018%46                   00000004  0080c018  0080c018  00004018  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 70 .config_0080C014%47                   00000004  0080c014  0080c014  00004014  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 71 .config_0080C010%48                   00000004  0080c010  0080c010  00004010  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 72 .config_0080C008%49                   00000004  0080c008  0080c008  00004008  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 73 .config_0080C004%50                   00000004  0080c004  0080c004  00004004  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 74 .config_0080C000%51                   00000004  0080c000  0080c000  00004000  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 75 .text%52                              00000d3a  0000017c  0000017c  0000117c  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 76 .text.__aeabi_dadd%53                 000001c8  00000eb6  00000eb6  00001eb6  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 77 .text%54                              000001a4  0000107e  0000107e  0000207e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 78 .text%55                              000001a0  00001224  00001224  00002224  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 79 .text.__aeabi_dmul_aux%56             00000186  000013c4  000013c4  000023c4  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 80 .text%57                              00000164  0000154a  0000154a  0000254a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 81 .text.__aeabi_ddiv%58                 000000c0  000016ae  000016ae  000026ae  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 82 .dinit%59                             000000c0  00001770  00001770  00002770  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 83 .text%60                              0000008c  00001830  00001830  00002830  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 84 .text.Reset_Handler%61                0000007e  000018bc  000018bc  000028bc  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 85 .rodata%62                            0000007d  0000193c  0000193c  0000293c  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 86 .rodata%63                            00000069  000019bc  000019bc  000029bc  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 87 .text%64                              00000068  00001a26  00001a26  00002a26  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 88 .text.__libc_start_init%65            0000005c  00001a90  00001a90  00002a90  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 89 .text%66                              00000040  00001aec  00001aec  00002aec  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 90 .text.__pic32c_data_initialization%67 00000034  00001b2c  00001b2c  00002b2c  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 91 .text.__aeabi_d2iz%68                 00000034  00001b60  00001b60  00002b60  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 92 .text.__aeabi_dcmpeq%69               0000002e  00001b94  00001b94  00002b94  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 93 .text.__aeabi_d2uiz%70                0000002e  00001bc2  00001bc2  00002bc2  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 94 .rodata%71                            00000024  00001bf0  00001bf0  00002bf0  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 95 .rodata%72                            00000024  00001c14  00001c14  00002c14  2**0  CONTENTS, ALLOC, LOAD, READONLY, DATA
+ 96 .text.__dinit_copy%73                 0000001e  00001c38  00001c38  00002c38  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 97 .text.__aeabi_i2d%74                  0000001c  00001c56  00001c56  00002c56  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 98 .text.__aeabi_ui2d%75                 0000001a  00001c72  00001c72  00002c72  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 99 .rodata%76                            00000014  00001c8c  00001c8c  00002c8c  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+100 .rodata%77                            00000014  00001ca0  00001ca0  00002ca0  2**2  CONTENTS, ALLOC, LOAD, READONLY, DATA
+101 .text.__aeabi_dsub%78                 00000012  00001cb4  00001cb4  00002cb4  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+102 .text.__dinit_clear%79                00000012  00001cc6  00001cc6  00002cc6  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+103 .text.__dummy_decompress%80           00000004  00001cd8  00001cd8  00002cd8  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+104 .text.Dummy_Handler%81                00000002  00001222  00001222  00002222  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+105 .text.__dummy_init_tls%82             00000002  0000176e  0000176e  0000276e  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+106 .text.__dummy%83                      00000002  0000193a  0000193a  0000293a  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
@@ -115,7 +124,7 @@ _init():
 
 00000168 <__frame_dummy_init_array_entry>:
 __preinit_array_end():
- 168:	0c41 0000                                   A...
+ 168:	1b11 0000                                   ....
 
 0000016c <_fini>:
 _fini():
@@ -129,7 +138,7 @@ __init_array_end():
 
 00000178 <__do_global_dtors_aux_fini_array_entry>:
 __fini_array_start():
- 178:	0c1d 0000                                   ....
+ 178:	1aed 0000                                   ....
 
 Disassembly of section .text%52:
 
@@ -158,7 +167,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:46
  192:	189b      	adds	r3, r3, r2
  194:	781b      	ldrb	r3, [r3, #0]
  196:	0018      	movs	r0, r3
- 198:	f000 fb83 	bl	8a2 <spi_data_exchange>
+ 198:	f001 fa20 	bl	15dc <spi_data_exchange>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:45 (discriminator 3)
     for(int i=0; i<7; i++){
  19c:	687b      	ldr	r3, [r7, #4]
@@ -202,7 +211,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:53
  1ce:	1dfb      	adds	r3, r7, #7
  1d0:	781c      	ldrb	r4, [r3, #0]
  1d2:	0010      	movs	r0, r2
- 1d4:	f000 fb65 	bl	8a2 <spi_data_exchange>
+ 1d4:	f001 fa02 	bl	15dc <spi_data_exchange>
  1d8:	0003      	movs	r3, r0
  1da:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:53 (discriminator 1)
@@ -257,7 +266,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:62
  21e:	1dfb      	adds	r3, r7, #7
  220:	781c      	ldrb	r4, [r3, #0]
  222:	0010      	movs	r0, r2
- 224:	f000 fb3d 	bl	8a2 <spi_data_exchange>
+ 224:	f001 f9da 	bl	15dc <spi_data_exchange>
  228:	0003      	movs	r3, r0
  22a:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:62 (discriminator 1)
@@ -293,7 +302,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:65
  25e:	1dbb      	adds	r3, r7, #6
  260:	781c      	ldrb	r4, [r3, #0]
  262:	0010      	movs	r0, r2
- 264:	f000 fb1d 	bl	8a2 <spi_data_exchange>
+ 264:	f001 f9ba 	bl	15dc <spi_data_exchange>
  268:	0003      	movs	r3, r0
  26a:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:65 (discriminator 1)
@@ -348,7 +357,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:74
  2ae:	1dfb      	adds	r3, r7, #7
  2b0:	781c      	ldrb	r4, [r3, #0]
  2b2:	0010      	movs	r0, r2
- 2b4:	f000 faf5 	bl	8a2 <spi_data_exchange>
+ 2b4:	f001 f992 	bl	15dc <spi_data_exchange>
  2b8:	0003      	movs	r3, r0
  2ba:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:74 (discriminator 1)
@@ -384,7 +393,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:77
  2ee:	1dbb      	adds	r3, r7, #6
  2f0:	781c      	ldrb	r4, [r3, #0]
  2f2:	0010      	movs	r0, r2
- 2f4:	f000 fad5 	bl	8a2 <spi_data_exchange>
+ 2f4:	f001 f972 	bl	15dc <spi_data_exchange>
  2f8:	0003      	movs	r3, r0
  2fa:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:77 (discriminator 1)
@@ -439,7 +448,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:86
  33e:	1dfb      	adds	r3, r7, #7
  340:	781c      	ldrb	r4, [r3, #0]
  342:	0010      	movs	r0, r2
- 344:	f000 faad 	bl	8a2 <spi_data_exchange>
+ 344:	f001 f94a 	bl	15dc <spi_data_exchange>
  348:	0003      	movs	r3, r0
  34a:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:86 (discriminator 1)
@@ -475,7 +484,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:89
  37e:	1dbb      	adds	r3, r7, #6
  380:	781c      	ldrb	r4, [r3, #0]
  382:	0010      	movs	r0, r2
- 384:	f000 fa8d 	bl	8a2 <spi_data_exchange>
+ 384:	f001 f92a 	bl	15dc <spi_data_exchange>
  388:	0003      	movs	r3, r0
  38a:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:89 (discriminator 1)
@@ -528,7 +537,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:96
  3ce:	1dfb      	adds	r3, r7, #7
  3d0:	781c      	ldrb	r4, [r3, #0]
  3d2:	0010      	movs	r0, r2
- 3d4:	f000 fa65 	bl	8a2 <spi_data_exchange>
+ 3d4:	f001 f902 	bl	15dc <spi_data_exchange>
  3d8:	0003      	movs	r3, r0
  3da:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:96 (discriminator 1)
@@ -581,7 +590,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:103
  41e:	1dfb      	adds	r3, r7, #7
  420:	781c      	ldrb	r4, [r3, #0]
  422:	0010      	movs	r0, r2
- 424:	f000 fa3d 	bl	8a2 <spi_data_exchange>
+ 424:	f001 f8da 	bl	15dc <spi_data_exchange>
  428:	0003      	movs	r3, r0
  42a:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:103 (discriminator 1)
@@ -634,7 +643,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:110
  46e:	1dfb      	adds	r3, r7, #7
  470:	781c      	ldrb	r4, [r3, #0]
  472:	0010      	movs	r0, r2
- 474:	f000 fa15 	bl	8a2 <spi_data_exchange>
+ 474:	f001 f8b2 	bl	15dc <spi_data_exchange>
  478:	0003      	movs	r3, r0
  47a:	001a      	movs	r2, r3
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:110 (discriminator 1)
@@ -669,27 +678,1449 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:114
 void print_wClick_results(void){
  4a2:	b580      	push	{r7, lr}
  4a4:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:115
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:116
+    //Print the device ID to the terminal
     USART_sendString("\r\nBME280 Device ID: 0x");
- 4a6:	f640 43fc 	movw	r3, #3324	@ 0xcfc
+ 4a6:	f641 13c0 	movw	r3, #6592	@ 0x19c0
  4aa:	f2c0 0300 	movt	r3, #0
  4ae:	0018      	movs	r0, r3
- 4b0:	f000 f96d 	bl	78e <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:116
-    USART_sendString(deviceID[1]);
+ 4b0:	f000 ff47 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:117
+    USART_sendChar(deviceID[1]);
  4b4:	f240 0300 	movw	r3, #0
  4b8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  4bc:	785b      	ldrb	r3, [r3, #1]
  4be:	0018      	movs	r0, r3
- 4c0:	f000 f965 	bl	78e <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:117
- 4c4:	46c0      	nop			@ (mov r8, r8)
- 4c6:	46bd      	mov	sp, r7
- 4c8:	bd80      	pop	{r7, pc}
+ 4c0:	f000 ff22 	bl	1308 <USART_sendChar>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:118
+    USART_sendString("\r\n");
+ 4c4:	f641 13d8 	movw	r3, #6616	@ 0x19d8
+ 4c8:	f2c0 0300 	movt	r3, #0
+ 4cc:	0018      	movs	r0, r3
+ 4ce:	f000 ff38 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:120
+    //Print the Temperature to the terminal
+    USART_sendString("Temperature: ");
+ 4d2:	f641 13dc 	movw	r3, #6620	@ 0x19dc
+ 4d6:	f2c0 0300 	movt	r3, #0
+ 4da:	0018      	movs	r0, r3
+ 4dc:	f000 ff31 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:121
+    USART_sendString("25");            //Placeholder for calculated temperature
+ 4e0:	f641 13ec 	movw	r3, #6636	@ 0x19ec
+ 4e4:	f2c0 0300 	movt	r3, #0
+ 4e8:	0018      	movs	r0, r3
+ 4ea:	f000 ff2a 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:122
+    USART_sendString("degC\r\n");
+ 4ee:	f641 13f0 	movw	r3, #6640	@ 0x19f0
+ 4f2:	f2c0 0300 	movt	r3, #0
+ 4f6:	0018      	movs	r0, r3
+ 4f8:	f000 ff23 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:124
+    //Print the Pressure to the terminal
+    USART_sendString("Pressure: ");
+ 4fc:	f641 13f8 	movw	r3, #6648	@ 0x19f8
+ 500:	f2c0 0300 	movt	r3, #0
+ 504:	0018      	movs	r0, r3
+ 506:	f000 ff1c 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:125
+    USART_sendString("100000");            //Placeholder for calculated pressure
+ 50a:	f641 2304 	movw	r3, #6660	@ 0x1a04
+ 50e:	f2c0 0300 	movt	r3, #0
+ 512:	0018      	movs	r0, r3
+ 514:	f000 ff15 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:126
+    USART_sendString("Pa\r\n");
+ 518:	f641 230c 	movw	r3, #6668	@ 0x1a0c
+ 51c:	f2c0 0300 	movt	r3, #0
+ 520:	0018      	movs	r0, r3
+ 522:	f000 ff0e 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:128
+    //Print the Humidity to the terminal
+    USART_sendString("Humidity: ");
+ 526:	f641 2314 	movw	r3, #6676	@ 0x1a14
+ 52a:	f2c0 0300 	movt	r3, #0
+ 52e:	0018      	movs	r0, r3
+ 530:	f000 ff07 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:129
+    USART_sendString("25");            //Placeholder for calculated humidity
+ 534:	f641 13ec 	movw	r3, #6636	@ 0x19ec
+ 538:	f2c0 0300 	movt	r3, #0
+ 53c:	0018      	movs	r0, r3
+ 53e:	f000 ff00 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:130
+    USART_sendString("%%\r\n");
+ 542:	f641 2320 	movw	r3, #6688	@ 0x1a20
+ 546:	f2c0 0300 	movt	r3, #0
+ 54a:	0018      	movs	r0, r3
+ 54c:	f000 fef9 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:131
+}
+ 550:	46c0      	nop			@ (mov r8, r8)
+ 552:	46bd      	mov	sp, r7
+ 554:	bd80      	pop	{r7, pc}
 
-Disassembly of section .text%53:
+00000556 <calc_wClick_temp>:
+calc_wClick_temp():
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:133
 
-000004ca <init_system>:
+void calc_wClick_temp(void){
+ 556:	b5f0      	push	{r4, r5, r6, r7, lr}
+ 558:	b089      	sub	sp, #36	@ 0x24
+ 55a:	af00      	add	r7, sp, #0
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:135
+    double var1, var2;
+    temp_raw.byte2 = temp[1];
+ 55c:	f240 0304 	movw	r3, #4
+ 560:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 564:	785b      	ldrb	r3, [r3, #1]
+ 566:	b25a      	sxtb	r2, r3
+ 568:	f240 035c 	movw	r3, #92	@ 0x5c
+ 56c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 570:	709a      	strb	r2, [r3, #2]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:136
+    temp_raw.byte1 = temp[2];
+ 572:	f240 0304 	movw	r3, #4
+ 576:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 57a:	789b      	ldrb	r3, [r3, #2]
+ 57c:	b25a      	sxtb	r2, r3
+ 57e:	f240 035c 	movw	r3, #92	@ 0x5c
+ 582:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 586:	705a      	strb	r2, [r3, #1]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:137
+    temp_raw.byte0 = temp[3];
+ 588:	f240 0304 	movw	r3, #4
+ 58c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 590:	78db      	ldrb	r3, [r3, #3]
+ 592:	b25a      	sxtb	r2, r3
+ 594:	f240 035c 	movw	r3, #92	@ 0x5c
+ 598:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 59c:	701a      	strb	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:138
+    temp_raw.raw = temp_raw.raw >> 4;
+ 59e:	f240 035c 	movw	r3, #92	@ 0x5c
+ 5a2:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 5a6:	681b      	ldr	r3, [r3, #0]
+ 5a8:	111a      	asrs	r2, r3, #4
+ 5aa:	f240 035c 	movw	r3, #92	@ 0x5c
+ 5ae:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 5b2:	601a      	str	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:139
+    uint16_t digT1 = (uDigT[2] << 8) + (uDigT[1]);
+ 5b4:	f240 0310 	movw	r3, #16
+ 5b8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 5bc:	789b      	ldrb	r3, [r3, #2]
+ 5be:	021b      	lsls	r3, r3, #8
+ 5c0:	b29a      	uxth	r2, r3
+ 5c2:	f240 0310 	movw	r3, #16
+ 5c6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 5ca:	785b      	ldrb	r3, [r3, #1]
+ 5cc:	0019      	movs	r1, r3
+ 5ce:	2616      	movs	r6, #22
+ 5d0:	2008      	movs	r0, #8
+ 5d2:	1833      	adds	r3, r6, r0
+ 5d4:	19db      	adds	r3, r3, r7
+ 5d6:	1852      	adds	r2, r2, r1
+ 5d8:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:140
+    int16_t digT2 = (sDigT[2] << 8) + (sDigT[1]);
+ 5da:	f240 0314 	movw	r3, #20
+ 5de:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 5e2:	789b      	ldrb	r3, [r3, #2]
+ 5e4:	021b      	lsls	r3, r3, #8
+ 5e6:	b29a      	uxth	r2, r3
+ 5e8:	f240 0314 	movw	r3, #20
+ 5ec:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 5f0:	785b      	ldrb	r3, [r3, #1]
+ 5f2:	18d3      	adds	r3, r2, r3
+ 5f4:	b29a      	uxth	r2, r3
+ 5f6:	2314      	movs	r3, #20
+ 5f8:	181b      	adds	r3, r3, r0
+ 5fa:	19db      	adds	r3, r3, r7
+ 5fc:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:141
+    int16_t digT3 = (sDigT[4] << 8) + (sDigT[3]);
+ 5fe:	f240 0314 	movw	r3, #20
+ 602:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 606:	791b      	ldrb	r3, [r3, #4]
+ 608:	021b      	lsls	r3, r3, #8
+ 60a:	b29a      	uxth	r2, r3
+ 60c:	f240 0314 	movw	r3, #20
+ 610:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 614:	78db      	ldrb	r3, [r3, #3]
+ 616:	18d3      	adds	r3, r2, r3
+ 618:	b29a      	uxth	r2, r3
+ 61a:	2112      	movs	r1, #18
+ 61c:	1809      	adds	r1, r1, r0
+ 61e:	19cb      	adds	r3, r1, r7
+ 620:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:142
+    var1 = (((double)temp_raw.raw) / 16384.0 - ((double)digT1) / 1024.0) *
+ 622:	f240 035c 	movw	r3, #92	@ 0x5c
+ 626:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 62a:	681b      	ldr	r3, [r3, #0]
+ 62c:	0018      	movs	r0, r3
+ 62e:	f001 fb12 	bl	1c56 <__aeabi_i2d>
+ 632:	2200      	movs	r2, #0
+ 634:	2300      	movs	r3, #0
+ 636:	f2c4 03d0 	movt	r3, #16592	@ 0x40d0
+ 63a:	f001 f838 	bl	16ae <__aeabi_ddiv>
+ 63e:	0002      	movs	r2, r0
+ 640:	000b      	movs	r3, r1
+ 642:	0014      	movs	r4, r2
+ 644:	001d      	movs	r5, r3
+ 646:	2008      	movs	r0, #8
+ 648:	1832      	adds	r2, r6, r0
+ 64a:	19d3      	adds	r3, r2, r7
+ 64c:	881b      	ldrh	r3, [r3, #0]
+ 64e:	0018      	movs	r0, r3
+ 650:	f001 fb0f 	bl	1c72 <__aeabi_ui2d>
+ 654:	2200      	movs	r2, #0
+ 656:	2300      	movs	r3, #0
+ 658:	f2c4 0390 	movt	r3, #16528	@ 0x4090
+ 65c:	f001 f827 	bl	16ae <__aeabi_ddiv>
+ 660:	0002      	movs	r2, r0
+ 662:	000b      	movs	r3, r1
+ 664:	0020      	movs	r0, r4
+ 666:	0029      	movs	r1, r5
+ 668:	f001 fb24 	bl	1cb4 <__aeabi_dsub>
+ 66c:	0002      	movs	r2, r0
+ 66e:	000b      	movs	r3, r1
+ 670:	0014      	movs	r4, r2
+ 672:	001d      	movs	r5, r3
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:143
+        ((double)digT2);
+ 674:	2314      	movs	r3, #20
+ 676:	2008      	movs	r0, #8
+ 678:	181a      	adds	r2, r3, r0
+ 67a:	19d3      	adds	r3, r2, r7
+ 67c:	2200      	movs	r2, #0
+ 67e:	5e9b      	ldrsh	r3, [r3, r2]
+ 680:	0018      	movs	r0, r3
+ 682:	f001 fae8 	bl	1c56 <__aeabi_i2d>
+ 686:	0002      	movs	r2, r0
+ 688:	000b      	movs	r3, r1
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:142
+    var1 = (((double)temp_raw.raw) / 16384.0 - ((double)digT1) / 1024.0) *
+ 68a:	0020      	movs	r0, r4
+ 68c:	0029      	movs	r1, r5
+ 68e:	f000 feb3 	bl	13f8 <__aeabi_dmul>
+ 692:	0002      	movs	r2, r0
+ 694:	000b      	movs	r3, r1
+ 696:	613a      	str	r2, [r7, #16]
+ 698:	617b      	str	r3, [r7, #20]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
+    var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
+ 69a:	f240 035c 	movw	r3, #92	@ 0x5c
+ 69e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 6a2:	681b      	ldr	r3, [r3, #0]
+ 6a4:	0018      	movs	r0, r3
+ 6a6:	f001 fad6 	bl	1c56 <__aeabi_i2d>
+ 6aa:	2200      	movs	r2, #0
+ 6ac:	2382      	movs	r3, #130	@ 0x82
+ 6ae:	05db      	lsls	r3, r3, #23
+ 6b0:	f000 fffd 	bl	16ae <__aeabi_ddiv>
+ 6b4:	0002      	movs	r2, r0
+ 6b6:	000b      	movs	r3, r1
+ 6b8:	0014      	movs	r4, r2
+ 6ba:	001d      	movs	r5, r3
+ 6bc:	2308      	movs	r3, #8
+ 6be:	18f2      	adds	r2, r6, r3
+ 6c0:	19d3      	adds	r3, r2, r7
+ 6c2:	881b      	ldrh	r3, [r3, #0]
+ 6c4:	0018      	movs	r0, r3
+ 6c6:	f001 fad4 	bl	1c72 <__aeabi_ui2d>
+ 6ca:	2200      	movs	r2, #0
+ 6cc:	2300      	movs	r3, #0
+ 6ce:	f2c4 03c0 	movt	r3, #16576	@ 0x40c0
+ 6d2:	f000 ffec 	bl	16ae <__aeabi_ddiv>
+ 6d6:	0002      	movs	r2, r0
+ 6d8:	000b      	movs	r3, r1
+ 6da:	0020      	movs	r0, r4
+ 6dc:	0029      	movs	r1, r5
+ 6de:	f001 fae9 	bl	1cb4 <__aeabi_dsub>
+ 6e2:	0002      	movs	r2, r0
+ 6e4:	000b      	movs	r3, r1
+ 6e6:	0014      	movs	r4, r2
+ 6e8:	001d      	movs	r5, r3
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:145
+        (((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0)) *
+ 6ea:	f240 035c 	movw	r3, #92	@ 0x5c
+ 6ee:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 6f2:	681b      	ldr	r3, [r3, #0]
+ 6f4:	0018      	movs	r0, r3
+ 6f6:	f001 faae 	bl	1c56 <__aeabi_i2d>
+ 6fa:	2200      	movs	r2, #0
+ 6fc:	2382      	movs	r3, #130	@ 0x82
+ 6fe:	05db      	lsls	r3, r3, #23
+ 700:	f000 ffd5 	bl	16ae <__aeabi_ddiv>
+ 704:	0002      	movs	r2, r0
+ 706:	000b      	movs	r3, r1
+ 708:	603a      	str	r2, [r7, #0]
+ 70a:	607b      	str	r3, [r7, #4]
+ 70c:	2308      	movs	r3, #8
+ 70e:	18f2      	adds	r2, r6, r3
+ 710:	19d3      	adds	r3, r2, r7
+ 712:	881b      	ldrh	r3, [r3, #0]
+ 714:	0018      	movs	r0, r3
+ 716:	f001 faac 	bl	1c72 <__aeabi_ui2d>
+ 71a:	2200      	movs	r2, #0
+ 71c:	2300      	movs	r3, #0
+ 71e:	f2c4 03c0 	movt	r3, #16576	@ 0x40c0
+ 722:	f000 ffc4 	bl	16ae <__aeabi_ddiv>
+ 726:	0002      	movs	r2, r0
+ 728:	000b      	movs	r3, r1
+ 72a:	6838      	ldr	r0, [r7, #0]
+ 72c:	6879      	ldr	r1, [r7, #4]
+ 72e:	f001 fac1 	bl	1cb4 <__aeabi_dsub>
+ 732:	0002      	movs	r2, r0
+ 734:	000b      	movs	r3, r1
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
+    var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
+ 736:	0020      	movs	r0, r4
+ 738:	0029      	movs	r1, r5
+ 73a:	f000 fe5d 	bl	13f8 <__aeabi_dmul>
+ 73e:	0002      	movs	r2, r0
+ 740:	000b      	movs	r3, r1
+ 742:	0014      	movs	r4, r2
+ 744:	001d      	movs	r5, r3
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:146
+        ((double)digT3);
+ 746:	2112      	movs	r1, #18
+ 748:	2308      	movs	r3, #8
+ 74a:	18cb      	adds	r3, r1, r3
+ 74c:	19db      	adds	r3, r3, r7
+ 74e:	2200      	movs	r2, #0
+ 750:	5e9b      	ldrsh	r3, [r3, r2]
+ 752:	0018      	movs	r0, r3
+ 754:	f001 fa7f 	bl	1c56 <__aeabi_i2d>
+ 758:	0002      	movs	r2, r0
+ 75a:	000b      	movs	r3, r1
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
+    var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
+ 75c:	0020      	movs	r0, r4
+ 75e:	0029      	movs	r1, r5
+ 760:	f000 fe4a 	bl	13f8 <__aeabi_dmul>
+ 764:	0002      	movs	r2, r0
+ 766:	000b      	movs	r3, r1
+ 768:	60ba      	str	r2, [r7, #8]
+ 76a:	60fb      	str	r3, [r7, #12]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:147
+    t_fine = (int32_t)(var1 + var2);
+ 76c:	68ba      	ldr	r2, [r7, #8]
+ 76e:	68fb      	ldr	r3, [r7, #12]
+ 770:	6938      	ldr	r0, [r7, #16]
+ 772:	6979      	ldr	r1, [r7, #20]
+ 774:	f000 fb9f 	bl	eb6 <__aeabi_dadd>
+ 778:	0002      	movs	r2, r0
+ 77a:	000b      	movs	r3, r1
+ 77c:	0010      	movs	r0, r2
+ 77e:	0019      	movs	r1, r3
+ 780:	f001 f9ee 	bl	1b60 <__aeabi_d2iz>
+ 784:	0002      	movs	r2, r0
+ 786:	f240 0340 	movw	r3, #64	@ 0x40
+ 78a:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 78e:	601a      	str	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:148
+    T = (var1 + var2) / 5120.0;
+ 790:	68ba      	ldr	r2, [r7, #8]
+ 792:	68fb      	ldr	r3, [r7, #12]
+ 794:	6938      	ldr	r0, [r7, #16]
+ 796:	6979      	ldr	r1, [r7, #20]
+ 798:	f000 fb8d 	bl	eb6 <__aeabi_dadd>
+ 79c:	0002      	movs	r2, r0
+ 79e:	000b      	movs	r3, r1
+ 7a0:	0010      	movs	r0, r2
+ 7a2:	0019      	movs	r1, r3
+ 7a4:	2200      	movs	r2, #0
+ 7a6:	2300      	movs	r3, #0
+ 7a8:	f2c4 03b4 	movt	r3, #16564	@ 0x40b4
+ 7ac:	f000 ff7f 	bl	16ae <__aeabi_ddiv>
+ 7b0:	0002      	movs	r2, r0
+ 7b2:	000b      	movs	r3, r1
+ 7b4:	0010      	movs	r0, r2
+ 7b6:	0019      	movs	r1, r3
+ 7b8:	f240 0348 	movw	r3, #72	@ 0x48
+ 7bc:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 7c0:	6018      	str	r0, [r3, #0]
+ 7c2:	6059      	str	r1, [r3, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:149
+}
+ 7c4:	46c0      	nop			@ (mov r8, r8)
+ 7c6:	46bd      	mov	sp, r7
+ 7c8:	b009      	add	sp, #36	@ 0x24
+ 7ca:	bdf0      	pop	{r4, r5, r6, r7, pc}
+
+000007cc <calc_wClick_press>:
+calc_wClick_press():
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:151
+
+void calc_wClick_press(void){
+ 7cc:	b5f0      	push	{r4, r5, r6, r7, lr}
+ 7ce:	b08b      	sub	sp, #44	@ 0x2c
+ 7d0:	af00      	add	r7, sp, #0
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:153
+    double var1, var2;
+    press_raw.byte2 = press[1];
+ 7d2:	f240 0308 	movw	r3, #8
+ 7d6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 7da:	785b      	ldrb	r3, [r3, #1]
+ 7dc:	b25a      	sxtb	r2, r3
+ 7de:	f240 0360 	movw	r3, #96	@ 0x60
+ 7e2:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 7e6:	709a      	strb	r2, [r3, #2]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:154
+    press_raw.byte1 = press[2];
+ 7e8:	f240 0308 	movw	r3, #8
+ 7ec:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 7f0:	789b      	ldrb	r3, [r3, #2]
+ 7f2:	b25a      	sxtb	r2, r3
+ 7f4:	f240 0360 	movw	r3, #96	@ 0x60
+ 7f8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 7fc:	705a      	strb	r2, [r3, #1]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:155
+    press_raw.byte0 = press[3];
+ 7fe:	f240 0308 	movw	r3, #8
+ 802:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 806:	78db      	ldrb	r3, [r3, #3]
+ 808:	b25a      	sxtb	r2, r3
+ 80a:	f240 0360 	movw	r3, #96	@ 0x60
+ 80e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 812:	701a      	strb	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:156
+    press_raw.raw = press_raw.raw >> 4;
+ 814:	f240 0360 	movw	r3, #96	@ 0x60
+ 818:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 81c:	681b      	ldr	r3, [r3, #0]
+ 81e:	111a      	asrs	r2, r3, #4
+ 820:	f240 0360 	movw	r3, #96	@ 0x60
+ 824:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 828:	601a      	str	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:157
+    uint16_t digP1 = (uDigP[2] << 8) + (uDigP[1]);
+ 82a:	f240 031c 	movw	r3, #28
+ 82e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 832:	789b      	ldrb	r3, [r3, #2]
+ 834:	021b      	lsls	r3, r3, #8
+ 836:	b29a      	uxth	r2, r3
+ 838:	f240 031c 	movw	r3, #28
+ 83c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 840:	785b      	ldrb	r3, [r3, #1]
+ 842:	0019      	movs	r1, r3
+ 844:	2626      	movs	r6, #38	@ 0x26
+ 846:	19bb      	adds	r3, r7, r6
+ 848:	1852      	adds	r2, r2, r1
+ 84a:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:158
+    int16_t digP2 = (sDigP[2] << 8) + (sDigP[1]);
+ 84c:	f240 0320 	movw	r3, #32
+ 850:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 854:	789b      	ldrb	r3, [r3, #2]
+ 856:	021b      	lsls	r3, r3, #8
+ 858:	b29a      	uxth	r2, r3
+ 85a:	f240 0320 	movw	r3, #32
+ 85e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 862:	785b      	ldrb	r3, [r3, #1]
+ 864:	18d3      	adds	r3, r2, r3
+ 866:	b29a      	uxth	r2, r3
+ 868:	2324      	movs	r3, #36	@ 0x24
+ 86a:	18fb      	adds	r3, r7, r3
+ 86c:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:159
+    int16_t digP3 = (sDigP[4] << 8) + (sDigP[3]);
+ 86e:	f240 0320 	movw	r3, #32
+ 872:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 876:	791b      	ldrb	r3, [r3, #4]
+ 878:	021b      	lsls	r3, r3, #8
+ 87a:	b29a      	uxth	r2, r3
+ 87c:	f240 0320 	movw	r3, #32
+ 880:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 884:	78db      	ldrb	r3, [r3, #3]
+ 886:	18d3      	adds	r3, r2, r3
+ 888:	b29a      	uxth	r2, r3
+ 88a:	2122      	movs	r1, #34	@ 0x22
+ 88c:	187b      	adds	r3, r7, r1
+ 88e:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:160
+    int16_t digP4 = (sDigP[6] << 8) + (sDigP[5]);
+ 890:	f240 0320 	movw	r3, #32
+ 894:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 898:	799b      	ldrb	r3, [r3, #6]
+ 89a:	021b      	lsls	r3, r3, #8
+ 89c:	b29a      	uxth	r2, r3
+ 89e:	f240 0320 	movw	r3, #32
+ 8a2:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 8a6:	795b      	ldrb	r3, [r3, #5]
+ 8a8:	18d3      	adds	r3, r2, r3
+ 8aa:	b29a      	uxth	r2, r3
+ 8ac:	2020      	movs	r0, #32
+ 8ae:	183b      	adds	r3, r7, r0
+ 8b0:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:161
+    int16_t digP5 = (sDigP[8] << 8) + (sDigP[7]);
+ 8b2:	f240 0320 	movw	r3, #32
+ 8b6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 8ba:	7a1b      	ldrb	r3, [r3, #8]
+ 8bc:	021b      	lsls	r3, r3, #8
+ 8be:	b29a      	uxth	r2, r3
+ 8c0:	f240 0320 	movw	r3, #32
+ 8c4:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 8c8:	79db      	ldrb	r3, [r3, #7]
+ 8ca:	18d3      	adds	r3, r2, r3
+ 8cc:	b29a      	uxth	r2, r3
+ 8ce:	241e      	movs	r4, #30
+ 8d0:	193b      	adds	r3, r7, r4
+ 8d2:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:162
+    int16_t digP6 = (sDigP[10] << 8) + (sDigP[9]);
+ 8d4:	f240 0320 	movw	r3, #32
+ 8d8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 8dc:	7a9b      	ldrb	r3, [r3, #10]
+ 8de:	021b      	lsls	r3, r3, #8
+ 8e0:	b29a      	uxth	r2, r3
+ 8e2:	f240 0320 	movw	r3, #32
+ 8e6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 8ea:	7a5b      	ldrb	r3, [r3, #9]
+ 8ec:	18d3      	adds	r3, r2, r3
+ 8ee:	b29a      	uxth	r2, r3
+ 8f0:	251c      	movs	r5, #28
+ 8f2:	197b      	adds	r3, r7, r5
+ 8f4:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:163
+    int16_t digP7 = (sDigP[12] << 8) + (sDigP[11]);
+ 8f6:	f240 0320 	movw	r3, #32
+ 8fa:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 8fe:	7b1b      	ldrb	r3, [r3, #12]
+ 900:	021b      	lsls	r3, r3, #8
+ 902:	b29a      	uxth	r2, r3
+ 904:	f240 0320 	movw	r3, #32
+ 908:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 90c:	7adb      	ldrb	r3, [r3, #11]
+ 90e:	18d3      	adds	r3, r2, r3
+ 910:	b29a      	uxth	r2, r3
+ 912:	251a      	movs	r5, #26
+ 914:	197b      	adds	r3, r7, r5
+ 916:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:164
+    int16_t digP8 = (sDigP[14] << 8) + (sDigP[13]);
+ 918:	f240 0320 	movw	r3, #32
+ 91c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 920:	7b9b      	ldrb	r3, [r3, #14]
+ 922:	021b      	lsls	r3, r3, #8
+ 924:	b29a      	uxth	r2, r3
+ 926:	f240 0320 	movw	r3, #32
+ 92a:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 92e:	7b5b      	ldrb	r3, [r3, #13]
+ 930:	18d3      	adds	r3, r2, r3
+ 932:	b29a      	uxth	r2, r3
+ 934:	2518      	movs	r5, #24
+ 936:	197b      	adds	r3, r7, r5
+ 938:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:165
+    int16_t digP9 = (sDigP[16] << 8) + (sDigP[15]);
+ 93a:	f240 0320 	movw	r3, #32
+ 93e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 942:	7c1b      	ldrb	r3, [r3, #16]
+ 944:	021b      	lsls	r3, r3, #8
+ 946:	b29a      	uxth	r2, r3
+ 948:	f240 0320 	movw	r3, #32
+ 94c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 950:	7bdb      	ldrb	r3, [r3, #15]
+ 952:	18d3      	adds	r3, r2, r3
+ 954:	b29a      	uxth	r2, r3
+ 956:	2516      	movs	r5, #22
+ 958:	197b      	adds	r3, r7, r5
+ 95a:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:166
+    var1 = ((double)t_fine / 2.0) -64000.0;
+ 95c:	f240 0340 	movw	r3, #64	@ 0x40
+ 960:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ 964:	681b      	ldr	r3, [r3, #0]
+ 966:	0018      	movs	r0, r3
+ 968:	f001 f975 	bl	1c56 <__aeabi_i2d>
+ 96c:	2200      	movs	r2, #0
+ 96e:	2380      	movs	r3, #128	@ 0x80
+ 970:	05db      	lsls	r3, r3, #23
+ 972:	f000 fe9c 	bl	16ae <__aeabi_ddiv>
+ 976:	0002      	movs	r2, r0
+ 978:	000b      	movs	r3, r1
+ 97a:	0010      	movs	r0, r2
+ 97c:	0019      	movs	r1, r3
+ 97e:	2200      	movs	r2, #0
+ 980:	f244 0300 	movw	r3, #16384	@ 0x4000
+ 984:	f2c4 03ef 	movt	r3, #16623	@ 0x40ef
+ 988:	f001 f994 	bl	1cb4 <__aeabi_dsub>
+ 98c:	0002      	movs	r2, r0
+ 98e:	000b      	movs	r3, r1
+ 990:	60ba      	str	r2, [r7, #8]
+ 992:	60fb      	str	r3, [r7, #12]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:167
+    var2 = var1 * var1 * ((double)digP6) /32768.0;
+ 994:	68ba      	ldr	r2, [r7, #8]
+ 996:	68fb      	ldr	r3, [r7, #12]
+ 998:	68b8      	ldr	r0, [r7, #8]
+ 99a:	68f9      	ldr	r1, [r7, #12]
+ 99c:	f000 fd2c 	bl	13f8 <__aeabi_dmul>
+ 9a0:	0002      	movs	r2, r0
+ 9a2:	000b      	movs	r3, r1
+ 9a4:	0014      	movs	r4, r2
+ 9a6:	001d      	movs	r5, r3
+ 9a8:	221c      	movs	r2, #28
+ 9aa:	18bb      	adds	r3, r7, r2
+ 9ac:	2200      	movs	r2, #0
+ 9ae:	5e9b      	ldrsh	r3, [r3, r2]
+ 9b0:	0018      	movs	r0, r3
+ 9b2:	f001 f950 	bl	1c56 <__aeabi_i2d>
+ 9b6:	0002      	movs	r2, r0
+ 9b8:	000b      	movs	r3, r1
+ 9ba:	0020      	movs	r0, r4
+ 9bc:	0029      	movs	r1, r5
+ 9be:	f000 fd1b 	bl	13f8 <__aeabi_dmul>
+ 9c2:	0002      	movs	r2, r0
+ 9c4:	000b      	movs	r3, r1
+ 9c6:	0010      	movs	r0, r2
+ 9c8:	0019      	movs	r1, r3
+ 9ca:	2200      	movs	r2, #0
+ 9cc:	2300      	movs	r3, #0
+ 9ce:	f2c4 03e0 	movt	r3, #16608	@ 0x40e0
+ 9d2:	f000 fe6c 	bl	16ae <__aeabi_ddiv>
+ 9d6:	0002      	movs	r2, r0
+ 9d8:	000b      	movs	r3, r1
+ 9da:	603a      	str	r2, [r7, #0]
+ 9dc:	607b      	str	r3, [r7, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:168
+    var2 = var2 + var1 * ((double)digP5) *2.0;
+ 9de:	241e      	movs	r4, #30
+ 9e0:	193b      	adds	r3, r7, r4
+ 9e2:	2200      	movs	r2, #0
+ 9e4:	5e9b      	ldrsh	r3, [r3, r2]
+ 9e6:	0018      	movs	r0, r3
+ 9e8:	f001 f935 	bl	1c56 <__aeabi_i2d>
+ 9ec:	68ba      	ldr	r2, [r7, #8]
+ 9ee:	68fb      	ldr	r3, [r7, #12]
+ 9f0:	f000 fd02 	bl	13f8 <__aeabi_dmul>
+ 9f4:	0002      	movs	r2, r0
+ 9f6:	000b      	movs	r3, r1
+ 9f8:	0010      	movs	r0, r2
+ 9fa:	0019      	movs	r1, r3
+ 9fc:	0002      	movs	r2, r0
+ 9fe:	000b      	movs	r3, r1
+ a00:	f000 fa59 	bl	eb6 <__aeabi_dadd>
+ a04:	0002      	movs	r2, r0
+ a06:	000b      	movs	r3, r1
+ a08:	6838      	ldr	r0, [r7, #0]
+ a0a:	6879      	ldr	r1, [r7, #4]
+ a0c:	f000 fa53 	bl	eb6 <__aeabi_dadd>
+ a10:	0002      	movs	r2, r0
+ a12:	000b      	movs	r3, r1
+ a14:	603a      	str	r2, [r7, #0]
+ a16:	607b      	str	r3, [r7, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:169
+    var2 = (var2 / 4.0) + (((double)digP4) *65536.0);
+ a18:	2200      	movs	r2, #0
+ a1a:	2300      	movs	r3, #0
+ a1c:	f2c4 0310 	movt	r3, #16400	@ 0x4010
+ a20:	6838      	ldr	r0, [r7, #0]
+ a22:	6879      	ldr	r1, [r7, #4]
+ a24:	f000 fe43 	bl	16ae <__aeabi_ddiv>
+ a28:	0002      	movs	r2, r0
+ a2a:	000b      	movs	r3, r1
+ a2c:	0014      	movs	r4, r2
+ a2e:	001d      	movs	r5, r3
+ a30:	2020      	movs	r0, #32
+ a32:	183b      	adds	r3, r7, r0
+ a34:	2200      	movs	r2, #0
+ a36:	5e9b      	ldrsh	r3, [r3, r2]
+ a38:	0018      	movs	r0, r3
+ a3a:	f001 f90c 	bl	1c56 <__aeabi_i2d>
+ a3e:	2200      	movs	r2, #0
+ a40:	2300      	movs	r3, #0
+ a42:	f2c4 03f0 	movt	r3, #16624	@ 0x40f0
+ a46:	f000 fcd7 	bl	13f8 <__aeabi_dmul>
+ a4a:	0002      	movs	r2, r0
+ a4c:	000b      	movs	r3, r1
+ a4e:	0020      	movs	r0, r4
+ a50:	0029      	movs	r1, r5
+ a52:	f000 fa30 	bl	eb6 <__aeabi_dadd>
+ a56:	0002      	movs	r2, r0
+ a58:	000b      	movs	r3, r1
+ a5a:	603a      	str	r2, [r7, #0]
+ a5c:	607b      	str	r3, [r7, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:170
+    var1 = (((double)digP3) * var1 * var1 / 524288.0 + ((double)digP2) *
+ a5e:	2122      	movs	r1, #34	@ 0x22
+ a60:	187b      	adds	r3, r7, r1
+ a62:	2200      	movs	r2, #0
+ a64:	5e9b      	ldrsh	r3, [r3, r2]
+ a66:	0018      	movs	r0, r3
+ a68:	f001 f8f5 	bl	1c56 <__aeabi_i2d>
+ a6c:	68ba      	ldr	r2, [r7, #8]
+ a6e:	68fb      	ldr	r3, [r7, #12]
+ a70:	f000 fcc2 	bl	13f8 <__aeabi_dmul>
+ a74:	0002      	movs	r2, r0
+ a76:	000b      	movs	r3, r1
+ a78:	0010      	movs	r0, r2
+ a7a:	0019      	movs	r1, r3
+ a7c:	68ba      	ldr	r2, [r7, #8]
+ a7e:	68fb      	ldr	r3, [r7, #12]
+ a80:	f000 fcba 	bl	13f8 <__aeabi_dmul>
+ a84:	0002      	movs	r2, r0
+ a86:	000b      	movs	r3, r1
+ a88:	0010      	movs	r0, r2
+ a8a:	0019      	movs	r1, r3
+ a8c:	2200      	movs	r2, #0
+ a8e:	2300      	movs	r3, #0
+ a90:	f2c4 1320 	movt	r3, #16672	@ 0x4120
+ a94:	f000 fe0b 	bl	16ae <__aeabi_ddiv>
+ a98:	0002      	movs	r2, r0
+ a9a:	000b      	movs	r3, r1
+ a9c:	0014      	movs	r4, r2
+ a9e:	001d      	movs	r5, r3
+ aa0:	2324      	movs	r3, #36	@ 0x24
+ aa2:	18fb      	adds	r3, r7, r3
+ aa4:	2200      	movs	r2, #0
+ aa6:	5e9b      	ldrsh	r3, [r3, r2]
+ aa8:	0018      	movs	r0, r3
+ aaa:	f001 f8d4 	bl	1c56 <__aeabi_i2d>
+ aae:	68ba      	ldr	r2, [r7, #8]
+ ab0:	68fb      	ldr	r3, [r7, #12]
+ ab2:	f000 fca1 	bl	13f8 <__aeabi_dmul>
+ ab6:	0002      	movs	r2, r0
+ ab8:	000b      	movs	r3, r1
+ aba:	0020      	movs	r0, r4
+ abc:	0029      	movs	r1, r5
+ abe:	f000 f9fa 	bl	eb6 <__aeabi_dadd>
+ ac2:	0002      	movs	r2, r0
+ ac4:	000b      	movs	r3, r1
+ ac6:	0010      	movs	r0, r2
+ ac8:	0019      	movs	r1, r3
+ aca:	2200      	movs	r2, #0
+ acc:	2300      	movs	r3, #0
+ ace:	f2c4 1320 	movt	r3, #16672	@ 0x4120
+ ad2:	f000 fdec 	bl	16ae <__aeabi_ddiv>
+ ad6:	0002      	movs	r2, r0
+ ad8:	000b      	movs	r3, r1
+ ada:	60ba      	str	r2, [r7, #8]
+ adc:	60fb      	str	r3, [r7, #12]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:172
+    var1) / 524288.0;
+    var1 = (1.0 + var1 / 32768.0) * ((double)digP1);
+ ade:	2200      	movs	r2, #0
+ ae0:	2300      	movs	r3, #0
+ ae2:	f2c4 03e0 	movt	r3, #16608	@ 0x40e0
+ ae6:	68b8      	ldr	r0, [r7, #8]
+ ae8:	68f9      	ldr	r1, [r7, #12]
+ aea:	f000 fde0 	bl	16ae <__aeabi_ddiv>
+ aee:	0002      	movs	r2, r0
+ af0:	000b      	movs	r3, r1
+ af2:	0010      	movs	r0, r2
+ af4:	0019      	movs	r1, r3
+ af6:	2200      	movs	r2, #0
+ af8:	2300      	movs	r3, #0
+ afa:	f6c3 73f0 	movt	r3, #16368	@ 0x3ff0
+ afe:	f000 f9da 	bl	eb6 <__aeabi_dadd>
+ b02:	0002      	movs	r2, r0
+ b04:	000b      	movs	r3, r1
+ b06:	0014      	movs	r4, r2
+ b08:	001d      	movs	r5, r3
+ b0a:	19bb      	adds	r3, r7, r6
+ b0c:	881b      	ldrh	r3, [r3, #0]
+ b0e:	0018      	movs	r0, r3
+ b10:	f001 f8af 	bl	1c72 <__aeabi_ui2d>
+ b14:	0002      	movs	r2, r0
+ b16:	000b      	movs	r3, r1
+ b18:	0020      	movs	r0, r4
+ b1a:	0029      	movs	r1, r5
+ b1c:	f000 fc6c 	bl	13f8 <__aeabi_dmul>
+ b20:	0002      	movs	r2, r0
+ b22:	000b      	movs	r3, r1
+ b24:	60ba      	str	r2, [r7, #8]
+ b26:	60fb      	str	r3, [r7, #12]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:173
+    if (var1 == 0.0)
+ b28:	2200      	movs	r2, #0
+ b2a:	2300      	movs	r3, #0
+ b2c:	68b8      	ldr	r0, [r7, #8]
+ b2e:	68f9      	ldr	r1, [r7, #12]
+ b30:	f001 f830 	bl	1b94 <__aeabi_dcmpeq>
+ b34:	0003      	movs	r3, r0
+ b36:	b13b      	cbz	r3, b48 <calc_wClick_press+0x37c>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:175
+    {
+    P = 0;
+ b38:	f240 0350 	movw	r3, #80	@ 0x50
+ b3c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ b40:	2000      	movs	r0, #0
+ b42:	2100      	movs	r1, #0
+ b44:	6018      	str	r0, [r3, #0]
+ b46:	6059      	str	r1, [r3, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:177
+    }
+    P = 1048576.0 - (double)press_raw.raw;
+ b48:	f240 0360 	movw	r3, #96	@ 0x60
+ b4c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ b50:	681b      	ldr	r3, [r3, #0]
+ b52:	0018      	movs	r0, r3
+ b54:	f001 f87f 	bl	1c56 <__aeabi_i2d>
+ b58:	0002      	movs	r2, r0
+ b5a:	000b      	movs	r3, r1
+ b5c:	2000      	movs	r0, #0
+ b5e:	2100      	movs	r1, #0
+ b60:	f2c4 1130 	movt	r1, #16688	@ 0x4130
+ b64:	f001 f8a6 	bl	1cb4 <__aeabi_dsub>
+ b68:	0002      	movs	r2, r0
+ b6a:	000b      	movs	r3, r1
+ b6c:	0010      	movs	r0, r2
+ b6e:	0019      	movs	r1, r3
+ b70:	f240 0350 	movw	r3, #80	@ 0x50
+ b74:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ b78:	6018      	str	r0, [r3, #0]
+ b7a:	6059      	str	r1, [r3, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:178
+    P = (P - (var2 / 4096.0)) * 6250.0 / var1;
+ b7c:	f240 0350 	movw	r3, #80	@ 0x50
+ b80:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ b84:	681c      	ldr	r4, [r3, #0]
+ b86:	685d      	ldr	r5, [r3, #4]
+ b88:	2200      	movs	r2, #0
+ b8a:	2300      	movs	r3, #0
+ b8c:	f2c4 03b0 	movt	r3, #16560	@ 0x40b0
+ b90:	6838      	ldr	r0, [r7, #0]
+ b92:	6879      	ldr	r1, [r7, #4]
+ b94:	f000 fd8b 	bl	16ae <__aeabi_ddiv>
+ b98:	0002      	movs	r2, r0
+ b9a:	000b      	movs	r3, r1
+ b9c:	0020      	movs	r0, r4
+ b9e:	0029      	movs	r1, r5
+ ba0:	f001 f888 	bl	1cb4 <__aeabi_dsub>
+ ba4:	0002      	movs	r2, r0
+ ba6:	000b      	movs	r3, r1
+ ba8:	0010      	movs	r0, r2
+ baa:	0019      	movs	r1, r3
+ bac:	2200      	movs	r2, #0
+ bae:	f646 2300 	movw	r3, #27136	@ 0x6a00
+ bb2:	f2c4 03b8 	movt	r3, #16568	@ 0x40b8
+ bb6:	f000 fc1f 	bl	13f8 <__aeabi_dmul>
+ bba:	0002      	movs	r2, r0
+ bbc:	000b      	movs	r3, r1
+ bbe:	0010      	movs	r0, r2
+ bc0:	0019      	movs	r1, r3
+ bc2:	68ba      	ldr	r2, [r7, #8]
+ bc4:	68fb      	ldr	r3, [r7, #12]
+ bc6:	f000 fd72 	bl	16ae <__aeabi_ddiv>
+ bca:	0002      	movs	r2, r0
+ bcc:	000b      	movs	r3, r1
+ bce:	0010      	movs	r0, r2
+ bd0:	0019      	movs	r1, r3
+ bd2:	f240 0350 	movw	r3, #80	@ 0x50
+ bd6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ bda:	6018      	str	r0, [r3, #0]
+ bdc:	6059      	str	r1, [r3, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:179
+    var1 = ((double)digP9) * P * P/ 2147483648.0;
+ bde:	2316      	movs	r3, #22
+ be0:	18fb      	adds	r3, r7, r3
+ be2:	2200      	movs	r2, #0
+ be4:	5e9b      	ldrsh	r3, [r3, r2]
+ be6:	0018      	movs	r0, r3
+ be8:	f001 f835 	bl	1c56 <__aeabi_i2d>
+ bec:	f240 0350 	movw	r3, #80	@ 0x50
+ bf0:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ bf4:	681a      	ldr	r2, [r3, #0]
+ bf6:	685b      	ldr	r3, [r3, #4]
+ bf8:	f000 fbfe 	bl	13f8 <__aeabi_dmul>
+ bfc:	0002      	movs	r2, r0
+ bfe:	000b      	movs	r3, r1
+ c00:	0010      	movs	r0, r2
+ c02:	0019      	movs	r1, r3
+ c04:	f240 0350 	movw	r3, #80	@ 0x50
+ c08:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ c0c:	681a      	ldr	r2, [r3, #0]
+ c0e:	685b      	ldr	r3, [r3, #4]
+ c10:	f000 fbf2 	bl	13f8 <__aeabi_dmul>
+ c14:	0002      	movs	r2, r0
+ c16:	000b      	movs	r3, r1
+ c18:	0010      	movs	r0, r2
+ c1a:	0019      	movs	r1, r3
+ c1c:	2200      	movs	r2, #0
+ c1e:	2300      	movs	r3, #0
+ c20:	f2c4 13e0 	movt	r3, #16864	@ 0x41e0
+ c24:	f000 fd43 	bl	16ae <__aeabi_ddiv>
+ c28:	0002      	movs	r2, r0
+ c2a:	000b      	movs	r3, r1
+ c2c:	60ba      	str	r2, [r7, #8]
+ c2e:	60fb      	str	r3, [r7, #12]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:180
+    var2 = P * ((double)digP8) /32768.0;
+ c30:	2318      	movs	r3, #24
+ c32:	18fb      	adds	r3, r7, r3
+ c34:	2200      	movs	r2, #0
+ c36:	5e9b      	ldrsh	r3, [r3, r2]
+ c38:	0018      	movs	r0, r3
+ c3a:	f001 f80c 	bl	1c56 <__aeabi_i2d>
+ c3e:	f240 0350 	movw	r3, #80	@ 0x50
+ c42:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ c46:	681a      	ldr	r2, [r3, #0]
+ c48:	685b      	ldr	r3, [r3, #4]
+ c4a:	f000 fbd5 	bl	13f8 <__aeabi_dmul>
+ c4e:	0002      	movs	r2, r0
+ c50:	000b      	movs	r3, r1
+ c52:	0010      	movs	r0, r2
+ c54:	0019      	movs	r1, r3
+ c56:	2200      	movs	r2, #0
+ c58:	2300      	movs	r3, #0
+ c5a:	f2c4 03e0 	movt	r3, #16608	@ 0x40e0
+ c5e:	f000 fd26 	bl	16ae <__aeabi_ddiv>
+ c62:	0002      	movs	r2, r0
+ c64:	000b      	movs	r3, r1
+ c66:	603a      	str	r2, [r7, #0]
+ c68:	607b      	str	r3, [r7, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:181
+    P = P + (var1 + var2 +((double)digP7)) / 16.0;
+ c6a:	683a      	ldr	r2, [r7, #0]
+ c6c:	687b      	ldr	r3, [r7, #4]
+ c6e:	68b8      	ldr	r0, [r7, #8]
+ c70:	68f9      	ldr	r1, [r7, #12]
+ c72:	f000 f920 	bl	eb6 <__aeabi_dadd>
+ c76:	0002      	movs	r2, r0
+ c78:	000b      	movs	r3, r1
+ c7a:	0014      	movs	r4, r2
+ c7c:	001d      	movs	r5, r3
+ c7e:	231a      	movs	r3, #26
+ c80:	18fb      	adds	r3, r7, r3
+ c82:	2200      	movs	r2, #0
+ c84:	5e9b      	ldrsh	r3, [r3, r2]
+ c86:	0018      	movs	r0, r3
+ c88:	f000 ffe5 	bl	1c56 <__aeabi_i2d>
+ c8c:	0002      	movs	r2, r0
+ c8e:	000b      	movs	r3, r1
+ c90:	0020      	movs	r0, r4
+ c92:	0029      	movs	r1, r5
+ c94:	f000 f90f 	bl	eb6 <__aeabi_dadd>
+ c98:	0002      	movs	r2, r0
+ c9a:	000b      	movs	r3, r1
+ c9c:	0010      	movs	r0, r2
+ c9e:	0019      	movs	r1, r3
+ ca0:	2200      	movs	r2, #0
+ ca2:	2300      	movs	r3, #0
+ ca4:	f2c4 0330 	movt	r3, #16432	@ 0x4030
+ ca8:	f000 fd01 	bl	16ae <__aeabi_ddiv>
+ cac:	0002      	movs	r2, r0
+ cae:	000b      	movs	r3, r1
+ cb0:	0010      	movs	r0, r2
+ cb2:	0019      	movs	r1, r3
+ cb4:	f240 0350 	movw	r3, #80	@ 0x50
+ cb8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ cbc:	681a      	ldr	r2, [r3, #0]
+ cbe:	685b      	ldr	r3, [r3, #4]
+ cc0:	f000 f8f9 	bl	eb6 <__aeabi_dadd>
+ cc4:	0002      	movs	r2, r0
+ cc6:	000b      	movs	r3, r1
+ cc8:	0010      	movs	r0, r2
+ cca:	0019      	movs	r1, r3
+ ccc:	f240 0350 	movw	r3, #80	@ 0x50
+ cd0:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ cd4:	6018      	str	r0, [r3, #0]
+ cd6:	6059      	str	r1, [r3, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:182
+}
+ cd8:	46c0      	nop			@ (mov r8, r8)
+ cda:	46bd      	mov	sp, r7
+ cdc:	b00b      	add	sp, #44	@ 0x2c
+ cde:	bdf0      	pop	{r4, r5, r6, r7, pc}
+
+00000ce0 <calc_wClick_hum>:
+calc_wClick_hum():
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:184
+
+void calc_wClick_hum(void){
+ ce0:	b5f0      	push	{r4, r5, r6, r7, lr}
+ ce2:	b085      	sub	sp, #20
+ ce4:	af00      	add	r7, sp, #0
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:186
+    int32_t var1;
+    hum_raw.byte1 = hum[1];
+ ce6:	f240 030c 	movw	r3, #12
+ cea:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ cee:	785b      	ldrb	r3, [r3, #1]
+ cf0:	b25a      	sxtb	r2, r3
+ cf2:	f240 0364 	movw	r3, #100	@ 0x64
+ cf6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ cfa:	705a      	strb	r2, [r3, #1]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:187
+    hum_raw.byte0 = hum[2];
+ cfc:	f240 030c 	movw	r3, #12
+ d00:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d04:	789b      	ldrb	r3, [r3, #2]
+ d06:	b25a      	sxtb	r2, r3
+ d08:	f240 0364 	movw	r3, #100	@ 0x64
+ d0c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d10:	701a      	strb	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:188
+    uint8_t digH1 = uDigH[1];
+ d12:	240f      	movs	r4, #15
+ d14:	193a      	adds	r2, r7, r4
+ d16:	f240 0334 	movw	r3, #52	@ 0x34
+ d1a:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d1e:	785b      	ldrb	r3, [r3, #1]
+ d20:	7013      	strb	r3, [r2, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:189
+    int16_t digH2 = (sDigH[2] << 8) + (sDigH[1]);
+ d22:	f240 0338 	movw	r3, #56	@ 0x38
+ d26:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d2a:	789b      	ldrb	r3, [r3, #2]
+ d2c:	021b      	lsls	r3, r3, #8
+ d2e:	b29a      	uxth	r2, r3
+ d30:	f240 0338 	movw	r3, #56	@ 0x38
+ d34:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d38:	785b      	ldrb	r3, [r3, #1]
+ d3a:	18d3      	adds	r3, r2, r3
+ d3c:	b29a      	uxth	r2, r3
+ d3e:	250c      	movs	r5, #12
+ d40:	197b      	adds	r3, r7, r5
+ d42:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:190
+    uint8_t digH3 = uDigH[2];
+ d44:	200b      	movs	r0, #11
+ d46:	183a      	adds	r2, r7, r0
+ d48:	f240 0334 	movw	r3, #52	@ 0x34
+ d4c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d50:	789b      	ldrb	r3, [r3, #2]
+ d52:	7013      	strb	r3, [r2, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:191
+    int16_t digH4 = (sDigH[3] << 4) + (sDigH[4] & 0x0F);
+ d54:	f240 0338 	movw	r3, #56	@ 0x38
+ d58:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d5c:	78db      	ldrb	r3, [r3, #3]
+ d5e:	011b      	lsls	r3, r3, #4
+ d60:	b29a      	uxth	r2, r3
+ d62:	f240 0338 	movw	r3, #56	@ 0x38
+ d66:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d6a:	791b      	ldrb	r3, [r3, #4]
+ d6c:	0019      	movs	r1, r3
+ d6e:	230f      	movs	r3, #15
+ d70:	400b      	ands	r3, r1
+ d72:	b29b      	uxth	r3, r3
+ d74:	18d3      	adds	r3, r2, r3
+ d76:	b29a      	uxth	r2, r3
+ d78:	2608      	movs	r6, #8
+ d7a:	19bb      	adds	r3, r7, r6
+ d7c:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:192
+    int16_t digH5 = (sDigH[5] << 4) + ((sDigH[4] >> 4) & 0x0F);
+ d7e:	f240 0338 	movw	r3, #56	@ 0x38
+ d82:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d86:	795b      	ldrb	r3, [r3, #5]
+ d88:	011b      	lsls	r3, r3, #4
+ d8a:	b29a      	uxth	r2, r3
+ d8c:	f240 0338 	movw	r3, #56	@ 0x38
+ d90:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ d94:	791b      	ldrb	r3, [r3, #4]
+ d96:	091b      	lsrs	r3, r3, #4
+ d98:	b2db      	uxtb	r3, r3
+ d9a:	0019      	movs	r1, r3
+ d9c:	230f      	movs	r3, #15
+ d9e:	400b      	ands	r3, r1
+ da0:	b29b      	uxth	r3, r3
+ da2:	18d3      	adds	r3, r2, r3
+ da4:	b29a      	uxth	r2, r3
+ da6:	1dbb      	adds	r3, r7, #6
+ da8:	801a      	strh	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:193
+    int8_t digH6 = sDigH[6];
+ daa:	f240 0338 	movw	r3, #56	@ 0x38
+ dae:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ db2:	799a      	ldrb	r2, [r3, #6]
+ db4:	1d7b      	adds	r3, r7, #5
+ db6:	701a      	strb	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:194
+    var1 = (t_fine - ((int32_t) 76000));
+ db8:	f240 0340 	movw	r3, #64	@ 0x40
+ dbc:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ dc0:	681b      	ldr	r3, [r3, #0]
+ dc2:	f24d 7c20 	movw	ip, #55072	@ 0xd720
+ dc6:	f6cf 7cfe 	movt	ip, #65534	@ 0xfffe
+ dca:	4463      	add	r3, ip
+ dcc:	603b      	str	r3, [r7, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:195
+    var1 = (((((temp_raw.raw << 14) - (((int32_t) digH4) << 20) -
+ dce:	f240 035c 	movw	r3, #92	@ 0x5c
+ dd2:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ dd6:	681b      	ldr	r3, [r3, #0]
+ dd8:	039a      	lsls	r2, r3, #14
+ dda:	19bb      	adds	r3, r7, r6
+ ddc:	2100      	movs	r1, #0
+ dde:	5e5b      	ldrsh	r3, [r3, r1]
+ de0:	051b      	lsls	r3, r3, #20
+ de2:	1ad2      	subs	r2, r2, r3
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:196
+    (((int32_t) digH5) * var1)) + ((int32_t) 16384)) >> 15) *
+ de4:	1dbb      	adds	r3, r7, #6
+ de6:	2100      	movs	r1, #0
+ de8:	5e5b      	ldrsh	r3, [r3, r1]
+ dea:	6839      	ldr	r1, [r7, #0]
+ dec:	434b      	muls	r3, r1
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:195
+    var1 = (((((temp_raw.raw << 14) - (((int32_t) digH4) << 20) -
+ dee:	1ad3      	subs	r3, r2, r3
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:196
+    (((int32_t) digH5) * var1)) + ((int32_t) 16384)) >> 15) *
+ df0:	f244 0c00 	movw	ip, #16384	@ 0x4000
+ df4:	4463      	add	r3, ip
+ df6:	13db      	asrs	r3, r3, #15
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:197
+    (((((((var1 * ((int32_t) digH6)) >> 10) *
+ df8:	1d7a      	adds	r2, r7, #5
+ dfa:	7812      	ldrb	r2, [r2, #0]
+ dfc:	b252      	sxtb	r2, r2
+ dfe:	6839      	ldr	r1, [r7, #0]
+ e00:	434a      	muls	r2, r1
+ e02:	1292      	asrs	r2, r2, #10
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:198
+    (((var1 * ((int32_t) digH3)) >> 11) + ((int32_t)32768))) >> 10) +
+ e04:	1839      	adds	r1, r7, r0
+ e06:	7809      	ldrb	r1, [r1, #0]
+ e08:	6838      	ldr	r0, [r7, #0]
+ e0a:	4341      	muls	r1, r0
+ e0c:	12c9      	asrs	r1, r1, #11
+ e0e:	f248 0c00 	movw	ip, #32768	@ 0x8000
+ e12:	4461      	add	r1, ip
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:197
+    (((((((var1 * ((int32_t) digH6)) >> 10) *
+ e14:	434a      	muls	r2, r1
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:198
+    (((var1 * ((int32_t) digH3)) >> 11) + ((int32_t)32768))) >> 10) +
+ e16:	1292      	asrs	r2, r2, #10
+ e18:	2180      	movs	r1, #128	@ 0x80
+ e1a:	0389      	lsls	r1, r1, #14
+ e1c:	468c      	mov	ip, r1
+ e1e:	4462      	add	r2, ip
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:199
+    ((int32_t) 2097152)) * ((int32_t)digH2) + 8192) >> 14));
+ e20:	1979      	adds	r1, r7, r5
+ e22:	2000      	movs	r0, #0
+ e24:	5e09      	ldrsh	r1, [r1, r0]
+ e26:	434a      	muls	r2, r1
+ e28:	f242 0c00 	movw	ip, #8192	@ 0x2000
+ e2c:	4462      	add	r2, ip
+ e2e:	1392      	asrs	r2, r2, #14
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:195
+    var1 = (((((temp_raw.raw << 14) - (((int32_t) digH4) << 20) -
+ e30:	4353      	muls	r3, r2
+ e32:	603b      	str	r3, [r7, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:200
+    var1 = (var1 - (((((var1 >> 15) * (var1 >> 15)) >> 7) *
+ e34:	683b      	ldr	r3, [r7, #0]
+ e36:	13db      	asrs	r3, r3, #15
+ e38:	683a      	ldr	r2, [r7, #0]
+ e3a:	13d2      	asrs	r2, r2, #15
+ e3c:	4353      	muls	r3, r2
+ e3e:	11db      	asrs	r3, r3, #7
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:201
+    ((int32_t) digH1))>> 4));
+ e40:	193a      	adds	r2, r7, r4
+ e42:	7812      	ldrb	r2, [r2, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:200
+    var1 = (var1 - (((((var1 >> 15) * (var1 >> 15)) >> 7) *
+ e44:	4353      	muls	r3, r2
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:201
+    ((int32_t) digH1))>> 4));
+ e46:	111b      	asrs	r3, r3, #4
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:200
+    var1 = (var1 - (((((var1 >> 15) * (var1 >> 15)) >> 7) *
+ e48:	683a      	ldr	r2, [r7, #0]
+ e4a:	1ad3      	subs	r3, r2, r3
+ e4c:	603b      	str	r3, [r7, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:202
+    var1 = (var1 < 0 ? 0 :var1);
+ e4e:	683b      	ldr	r3, [r7, #0]
+ e50:	2b00      	cmp	r3, #0
+ e52:	da00      	bge.n	e56 <calc_wClick_hum+0x176>
+ e54:	2300      	movs	r3, #0
+ e56:	603b      	str	r3, [r7, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:203
+    var1 = (var1 > 419430400 ? 419430400 : var1);
+ e58:	683a      	ldr	r2, [r7, #0]
+ e5a:	2301      	movs	r3, #1
+ e5c:	f6c1 1300 	movt	r3, #6400	@ 0x1900
+ e60:	429a      	cmp	r2, r3
+ e62:	db01      	blt.n	e68 <calc_wClick_hum+0x188>
+ e64:	23c8      	movs	r3, #200	@ 0xc8
+ e66:	055a      	lsls	r2, r3, #21
+ e68:	603a      	str	r2, [r7, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:204
+    H = (uint32_t) (var1 >> 12);
+ e6a:	683b      	ldr	r3, [r7, #0]
+ e6c:	131b      	asrs	r3, r3, #12
+ e6e:	001a      	movs	r2, r3
+ e70:	f240 0358 	movw	r3, #88	@ 0x58
+ e74:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ e78:	601a      	str	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:205
+    H = H / 1024.0;
+ e7a:	f240 0358 	movw	r3, #88	@ 0x58
+ e7e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ e82:	681b      	ldr	r3, [r3, #0]
+ e84:	0018      	movs	r0, r3
+ e86:	f000 fef4 	bl	1c72 <__aeabi_ui2d>
+ e8a:	2200      	movs	r2, #0
+ e8c:	2300      	movs	r3, #0
+ e8e:	f2c4 0390 	movt	r3, #16528	@ 0x4090
+ e92:	f000 fc0c 	bl	16ae <__aeabi_ddiv>
+ e96:	0002      	movs	r2, r0
+ e98:	000b      	movs	r3, r1
+ e9a:	0010      	movs	r0, r2
+ e9c:	0019      	movs	r1, r3
+ e9e:	f000 fe90 	bl	1bc2 <__aeabi_d2uiz>
+ ea2:	0002      	movs	r2, r0
+ ea4:	f240 0358 	movw	r3, #88	@ 0x58
+ ea8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
+ eac:	601a      	str	r2, [r3, #0]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:206
+ eae:	46c0      	nop			@ (mov r8, r8)
+ eb0:	46bd      	mov	sp, r7
+ eb2:	b005      	add	sp, #20
+ eb4:	bdf0      	pop	{r4, r5, r6, r7, pc}
+
+Disassembly of section .text.__aeabi_dadd%53:
+
+00000eb6 <__aeabi_dadd>:
+__aeabi_dadd():
+     eb6:	b4f0      	push	{r4, r5, r6, r7}
+     eb8:	2501      	movs	r5, #1
+     eba:	07ed      	lsls	r5, r5, #31
+
+00000ebc <.L__aeabi_dadd_fast_entry>:
+     ebc:	000f      	movs	r7, r1
+     ebe:	405f      	eors	r7, r3
+     ec0:	d45a      	bmi.n	f78 <.L__aeabi_dadd_fast_entry+0xbc>
+     ec2:	428b      	cmp	r3, r1
+     ec4:	d100      	bne.n	ec8 <.L__aeabi_dadd_fast_entry+0xc>
+     ec6:	4282      	cmp	r2, r0
+     ec8:	d905      	bls.n	ed6 <.L__aeabi_dadd_fast_entry+0x1a>
+     eca:	4050      	eors	r0, r2
+     ecc:	4042      	eors	r2, r0
+     ece:	4050      	eors	r0, r2
+     ed0:	4059      	eors	r1, r3
+     ed2:	404b      	eors	r3, r1
+     ed4:	4059      	eors	r1, r3
+     ed6:	184e      	adds	r6, r1, r1
+     ed8:	0d76      	lsrs	r6, r6, #21
+     eda:	18df      	adds	r7, r3, r3
+     edc:	0d7f      	lsrs	r7, r7, #21
+     ede:	d03b      	beq.n	f58 <.L__aeabi_dadd_fast_entry+0x9c>
+     ee0:	1c74      	adds	r4, r6, #1
+     ee2:	0564      	lsls	r4, r4, #21
+     ee4:	d029      	beq.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     ee6:	1bf4      	subs	r4, r6, r7
+     ee8:	2c35      	cmp	r4, #53	@ 0x35
+     eea:	d826      	bhi.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     eec:	0d0e      	lsrs	r6, r1, #20
+     eee:	02db      	lsls	r3, r3, #11
+     ef0:	432b      	orrs	r3, r5
+     ef2:	0adb      	lsrs	r3, r3, #11
+     ef4:	02c9      	lsls	r1, r1, #11
+     ef6:	4329      	orrs	r1, r5
+     ef8:	12c9      	asrs	r1, r1, #11
+     efa:	0017      	movs	r7, r2
+     efc:	2c20      	cmp	r4, #32
+     efe:	d21e      	bcs.n	f3e <.L__aeabi_dadd_fast_entry+0x82>
+     f00:	41e7      	rors	r7, r4
+     f02:	40e2      	lsrs	r2, r4
+     f04:	4057      	eors	r7, r2
+     f06:	41e3      	rors	r3, r4
+     f08:	405a      	eors	r2, r3
+     f0a:	40a3      	lsls	r3, r4
+     f0c:	40e3      	lsrs	r3, r4
+     f0e:	405a      	eors	r2, r3
+     f10:	2400      	movs	r4, #0
+     f12:	1880      	adds	r0, r0, r2
+     f14:	4159      	adcs	r1, r3
+     f16:	d30a      	bcc.n	f2e <.L__aeabi_dadd_fast_entry+0x72>
+     f18:	1cb2      	adds	r2, r6, #2
+     f1a:	0552      	lsls	r2, r2, #21
+     f1c:	d021      	beq.n	f62 <.L__aeabi_dadd_fast_entry+0xa6>
+     f1e:	07c2      	lsls	r2, r0, #31
+     f20:	2f01      	cmp	r7, #1
+     f22:	4162      	adcs	r2, r4
+     f24:	0017      	movs	r7, r2
+     f26:	0840      	lsrs	r0, r0, #1
+     f28:	07cb      	lsls	r3, r1, #31
+     f2a:	4318      	orrs	r0, r3
+     f2c:	0849      	lsrs	r1, r1, #1
+     f2e:	3601      	adds	r6, #1
+     f30:	0536      	lsls	r6, r6, #20
+     f32:	0842      	lsrs	r2, r0, #1
+     f34:	41af      	sbcs	r7, r5
+     f36:	4160      	adcs	r0, r4
+     f38:	4171      	adcs	r1, r6
+     f3a:	bcf0      	pop	{r4, r5, r6, r7}
+     f3c:	4770      	bx	lr
+     f3e:	3c20      	subs	r4, #32
+     f40:	d006      	beq.n	f50 <.L__aeabi_dadd_fast_entry+0x94>
+     f42:	001f      	movs	r7, r3
+     f44:	41e7      	rors	r7, r4
+     f46:	40e3      	lsrs	r3, r4
+     f48:	405f      	eors	r7, r3
+     f4a:	2400      	movs	r4, #0
+     f4c:	2a01      	cmp	r2, #1
+     f4e:	4167      	adcs	r7, r4
+     f50:	18c0      	adds	r0, r0, r3
+     f52:	4161      	adcs	r1, r4
+     f54:	d3eb      	bcc.n	f2e <.L__aeabi_dadd_fast_entry+0x72>
+     f56:	e7df      	b.n	f18 <.L__aeabi_dadd_fast_entry+0x5c>
+     f58:	2e00      	cmp	r6, #0
+     f5a:	d1ee      	bne.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     f5c:	4029      	ands	r1, r5
+     f5e:	2000      	movs	r0, #0
+     f60:	e7eb      	b.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     f62:	3601      	adds	r6, #1
+     f64:	0531      	lsls	r1, r6, #20
+     f66:	2000      	movs	r0, #0
+     f68:	e7e7      	b.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     f6a:	42e7      	cmn	r7, r4
+     f6c:	d1e5      	bne.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     f6e:	2000      	movs	r0, #0
+     f70:	43c1      	mvns	r1, r0
+     f72:	0d09      	lsrs	r1, r1, #20
+     f74:	04c9      	lsls	r1, r1, #19
+     f76:	e7e0      	b.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     f78:	406b      	eors	r3, r5
+     f7a:	000e      	movs	r6, r1
+     f7c:	1a87      	subs	r7, r0, r2
+     f7e:	419e      	sbcs	r6, r3
+     f80:	d204      	bcs.n	f8c <.L__aeabi_dadd_fast_entry+0xd0>
+     f82:	406e      	eors	r6, r5
+     f84:	1bc0      	subs	r0, r0, r7
+     f86:	41b1      	sbcs	r1, r6
+     f88:	19d2      	adds	r2, r2, r7
+     f8a:	4173      	adcs	r3, r6
+     f8c:	184e      	adds	r6, r1, r1
+     f8e:	18df      	adds	r7, r3, r3
+     f90:	0aac      	lsrs	r4, r5, #10
+     f92:	42e6      	cmn	r6, r4
+     f94:	d2e9      	bcs.n	f6a <.L__aeabi_dadd_fast_entry+0xae>
+     f96:	0d76      	lsrs	r6, r6, #21
+     f98:	0d7f      	lsrs	r7, r7, #21
+     f9a:	d031      	beq.n	1000 <.L__aeabi_dadd_fast_entry+0x144>
+     f9c:	1bf4      	subs	r4, r6, r7
+     f9e:	2c36      	cmp	r4, #54	@ 0x36
+     fa0:	d8cb      	bhi.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     fa2:	46b4      	mov	ip, r6
+     fa4:	0d0e      	lsrs	r6, r1, #20
+     fa6:	02db      	lsls	r3, r3, #11
+     fa8:	432b      	orrs	r3, r5
+     faa:	0adb      	lsrs	r3, r3, #11
+     fac:	02c9      	lsls	r1, r1, #11
+     fae:	4329      	orrs	r1, r5
+     fb0:	0ac9      	lsrs	r1, r1, #11
+     fb2:	2c01      	cmp	r4, #1
+     fb4:	d832      	bhi.n	101c <.L__aeabi_dadd_fast_entry+0x160>
+     fb6:	d104      	bne.n	fc2 <.L__aeabi_dadd_fast_entry+0x106>
+     fb8:	07d4      	lsls	r4, r2, #31
+     fba:	0852      	lsrs	r2, r2, #1
+     fbc:	07df      	lsls	r7, r3, #31
+     fbe:	433a      	orrs	r2, r7
+     fc0:	085b      	lsrs	r3, r3, #1
+     fc2:	0aef      	lsrs	r7, r5, #11
+     fc4:	4264      	negs	r4, r4
+     fc6:	4190      	sbcs	r0, r2
+     fc8:	4199      	sbcs	r1, r3
+     fca:	d01e      	beq.n	100a <.L__aeabi_dadd_fast_entry+0x14e>
+     fcc:	2200      	movs	r2, #0
+     fce:	4239      	tst	r1, r7
+     fd0:	d14d      	bne.n	106e <.L__aeabi_dadd_fast_entry+0x1b2>
+     fd2:	1924      	adds	r4, r4, r4
+     fd4:	4140      	adcs	r0, r0
+     fd6:	4149      	adcs	r1, r1
+     fd8:	2401      	movs	r4, #1
+     fda:	4239      	tst	r1, r7
+     fdc:	d104      	bne.n	fe8 <.L__aeabi_dadd_fast_entry+0x12c>
+     fde:	3401      	adds	r4, #1
+     fe0:	1800      	adds	r0, r0, r0
+     fe2:	4149      	adcs	r1, r1
+     fe4:	4239      	tst	r1, r7
+     fe6:	d0fa      	beq.n	fde <.L__aeabi_dadd_fast_entry+0x122>
+     fe8:	4662      	mov	r2, ip
+     fea:	42a2      	cmp	r2, r4
+     fec:	d904      	bls.n	ff8 <.L__aeabi_dadd_fast_entry+0x13c>
+     fee:	1b36      	subs	r6, r6, r4
+     ff0:	3e01      	subs	r6, #1
+     ff2:	0536      	lsls	r6, r6, #20
+     ff4:	1989      	adds	r1, r1, r6
+     ff6:	e7a0      	b.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+     ff8:	0af1      	lsrs	r1, r6, #11
+     ffa:	07c9      	lsls	r1, r1, #31
+     ffc:	2000      	movs	r0, #0
+     ffe:	e79c      	b.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+    1000:	4236      	tst	r6, r6
+    1002:	d19a      	bne.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+    1004:	2000      	movs	r0, #0
+    1006:	2100      	movs	r1, #0
+    1008:	e797      	b.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+    100a:	0002      	movs	r2, r0
+    100c:	4322      	orrs	r2, r4
+    100e:	d094      	beq.n	f3a <.L__aeabi_dadd_fast_entry+0x7e>
+    1010:	42b8      	cmp	r0, r7
+    1012:	d2de      	bcs.n	fd2 <.L__aeabi_dadd_fast_entry+0x116>
+    1014:	0001      	movs	r1, r0
+    1016:	0020      	movs	r0, r4
+    1018:	2420      	movs	r4, #32
+    101a:	d1e3      	bne.n	fe4 <.L__aeabi_dadd_fast_entry+0x128>
+    101c:	2c20      	cmp	r4, #32
+    101e:	dd13      	ble.n	1048 <.L__aeabi_dadd_fast_entry+0x18c>
+    1020:	3c20      	subs	r4, #32
+    1022:	41e2      	rors	r2, r4
+    1024:	0017      	movs	r7, r2
+    1026:	40a2      	lsls	r2, r4
+    1028:	40e2      	lsrs	r2, r4
+    102a:	4057      	eors	r7, r2
+    102c:	41e3      	rors	r3, r4
+    102e:	405a      	eors	r2, r3
+    1030:	40a3      	lsls	r3, r4
+    1032:	40e3      	lsrs	r3, r4
+    1034:	405a      	eors	r2, r3
+    1036:	2f01      	cmp	r7, #1
+    1038:	41bf      	sbcs	r7, r7
+    103a:	3701      	adds	r7, #1
+    103c:	4317      	orrs	r7, r2
+    103e:	2200      	movs	r2, #0
+    1040:	427c      	negs	r4, r7
+    1042:	4198      	sbcs	r0, r3
+    1044:	4191      	sbcs	r1, r2
+    1046:	e00c      	b.n	1062 <.L__aeabi_dadd_fast_entry+0x1a6>
+    1048:	0017      	movs	r7, r2
+    104a:	41e7      	rors	r7, r4
+    104c:	40e2      	lsrs	r2, r4
+    104e:	4057      	eors	r7, r2
+    1050:	41e3      	rors	r3, r4
+    1052:	405a      	eors	r2, r3
+    1054:	40a3      	lsls	r3, r4
+    1056:	40e3      	lsrs	r3, r4
+    1058:	405a      	eors	r2, r3
+    105a:	427c      	negs	r4, r7
+    105c:	4190      	sbcs	r0, r2
+    105e:	4199      	sbcs	r1, r3
+    1060:	2200      	movs	r2, #0
+    1062:	030f      	lsls	r7, r1, #12
+    1064:	d203      	bcs.n	106e <.L__aeabi_dadd_fast_entry+0x1b2>
+    1066:	3e01      	subs	r6, #1
+    1068:	1924      	adds	r4, r4, r4
+    106a:	4140      	adcs	r0, r0
+    106c:	4149      	adcs	r1, r1
+    106e:	3e01      	subs	r6, #1
+    1070:	0536      	lsls	r6, r6, #20
+    1072:	0847      	lsrs	r7, r0, #1
+    1074:	41ac      	sbcs	r4, r5
+    1076:	4150      	adcs	r0, r2
+    1078:	4171      	adcs	r1, r6
+    107a:	bcf0      	pop	{r4, r5, r6, r7}
+    107c:	4770      	bx	lr
+
+Disassembly of section .text%54:
+
+0000107e <init_system>:
 init_system():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:226
 // #pragma config statements should precede project file includes.
@@ -698,269 +2129,269 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:226
 #include <xc.h>
 
 void init_system(void){
- 4ca:	b580      	push	{r7, lr}
- 4cc:	af00      	add	r7, sp, #0
+    107e:	b580      	push	{r7, lr}
+    1080:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:228
     
     NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3U);
- 4ce:	f244 0300 	movw	r3, #16384	@ 0x4000
- 4d2:	f2c4 1300 	movt	r3, #16640	@ 0x4100
- 4d6:	2206      	movs	r2, #6
- 4d8:	605a      	str	r2, [r3, #4]
+    1082:	f244 0300 	movw	r3, #16384	@ 0x4000
+    1086:	f2c4 1300 	movt	r3, #16640	@ 0x4100
+    108a:	2206      	movs	r2, #6
+    108c:	605a      	str	r2, [r3, #4]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:230
 
     init_OSCCTRL();
- 4da:	f000 f807 	bl	4ec <init_OSCCTRL>
+    108e:	f000 f807 	bl	10a0 <init_OSCCTRL>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:231
     init_GCLK();
- 4de:	f000 f81b 	bl	518 <init_GCLK>
+    1092:	f000 f81b 	bl	10cc <init_GCLK>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:232
     init_ports();
- 4e2:	f000 f856 	bl	592 <init_ports>
+    1096:	f000 f856 	bl	1146 <init_ports>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:233
 }
- 4e6:	46c0      	nop			@ (mov r8, r8)
- 4e8:	46bd      	mov	sp, r7
- 4ea:	bd80      	pop	{r7, pc}
+    109a:	46c0      	nop			@ (mov r8, r8)
+    109c:	46bd      	mov	sp, r7
+    109e:	bd80      	pop	{r7, pc}
 
-000004ec <init_OSCCTRL>:
+000010a0 <init_OSCCTRL>:
 init_OSCCTRL():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:235
 
 void init_OSCCTRL(){
- 4ec:	b580      	push	{r7, lr}
- 4ee:	af00      	add	r7, sp, #0
+    10a0:	b580      	push	{r7, lr}
+    10a2:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:238
     //Configure Oscillator controller to run at 16MHz using OSC16M
 
     OSCCTRL_REGS->OSCCTRL_OSC16MCTRL = OSCCTRL_OSC16MCTRL_RUNSTDBY_Msk | OSCCTRL_OSC16MCTRL_FSEL_16MHZ | OSCCTRL_OSC16MCTRL_ENABLE_Msk;
- 4f0:	f241 0300 	movw	r3, #4096	@ 0x1000
- 4f4:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 4f8:	224e      	movs	r2, #78	@ 0x4e
- 4fa:	761a      	strb	r2, [r3, #24]
+    10a4:	f241 0300 	movw	r3, #4096	@ 0x1000
+    10a8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    10ac:	224e      	movs	r2, #78	@ 0x4e
+    10ae:	761a      	strb	r2, [r3, #24]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:241
 
     //Wait for OSC16M ready state
     while((OSCCTRL_REGS->OSCCTRL_STATUS & OSCCTRL_STATUS_OSC16MRDY_Msk) != OSCCTRL_STATUS_OSC16MRDY_Msk);
- 4fc:	46c0      	nop			@ (mov r8, r8)
+    10b0:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:241 (discriminator 1)
- 4fe:	f241 0300 	movw	r3, #4096	@ 0x1000
- 502:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 506:	691b      	ldr	r3, [r3, #16]
- 508:	2210      	movs	r2, #16
- 50a:	4013      	ands	r3, r2
- 50c:	2b10      	cmp	r3, #16
- 50e:	d1f6      	bne.n	4fe <init_OSCCTRL+0x12>
+    10b2:	f241 0300 	movw	r3, #4096	@ 0x1000
+    10b6:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    10ba:	691b      	ldr	r3, [r3, #16]
+    10bc:	2210      	movs	r2, #16
+    10be:	4013      	ands	r3, r2
+    10c0:	2b10      	cmp	r3, #16
+    10c2:	d1f6      	bne.n	10b2 <init_OSCCTRL+0x12>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:242
 }
- 510:	46c0      	nop			@ (mov r8, r8)
- 512:	46c0      	nop			@ (mov r8, r8)
- 514:	46bd      	mov	sp, r7
- 516:	bd80      	pop	{r7, pc}
+    10c4:	46c0      	nop			@ (mov r8, r8)
+    10c6:	46c0      	nop			@ (mov r8, r8)
+    10c8:	46bd      	mov	sp, r7
+    10ca:	bd80      	pop	{r7, pc}
 
-00000518 <init_GCLK>:
+000010cc <init_GCLK>:
 init_GCLK():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:244
 
 void init_GCLK(){
- 518:	b580      	push	{r7, lr}
- 51a:	af00      	add	r7, sp, #0
+    10cc:	b580      	push	{r7, lr}
+    10ce:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:246
     //Configure GCLK0 to run at 48MHz using the OSC16M for the main clock
     GCLK_REGS->GCLK_GENCTRL[0] = GCLK_GENCTRL_DIV(1UL) | GCLK_GENCTRL_SRC(5UL) | GCLK_GENCTRL_GENEN_Msk;
- 51c:	f641 4300 	movw	r3, #7168	@ 0x1c00
- 520:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 524:	f240 1205 	movw	r2, #261	@ 0x105
- 528:	f2c0 0201 	movt	r2, #1
- 52c:	621a      	str	r2, [r3, #32]
+    10d0:	f641 4300 	movw	r3, #7168	@ 0x1c00
+    10d4:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    10d8:	f240 1205 	movw	r2, #261	@ 0x105
+    10dc:	f2c0 0201 	movt	r2, #1
+    10e0:	621a      	str	r2, [r3, #32]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:249
     
     //Wait for synchronization to complete
     while((GCLK_REGS->GCLK_SYNCBUSY & GCLK_SYNCBUSY_GENCTRL0_Msk) == GCLK_SYNCBUSY_GENCTRL0_Msk);
- 52e:	46c0      	nop			@ (mov r8, r8)
+    10e2:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:249 (discriminator 1)
- 530:	f641 4300 	movw	r3, #7168	@ 0x1c00
- 534:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 538:	685b      	ldr	r3, [r3, #4]
- 53a:	2204      	movs	r2, #4
- 53c:	4013      	ands	r3, r2
- 53e:	2b04      	cmp	r3, #4
- 540:	d0f6      	beq.n	530 <init_GCLK+0x18>
+    10e4:	f641 4300 	movw	r3, #7168	@ 0x1c00
+    10e8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    10ec:	685b      	ldr	r3, [r3, #4]
+    10ee:	2204      	movs	r2, #4
+    10f0:	4013      	ands	r3, r2
+    10f2:	2b04      	cmp	r3, #4
+    10f4:	d0f6      	beq.n	10e4 <init_GCLK+0x18>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:252
 
     //Enable peripheral channel for SERCOM1 on GCLK0
     GCLK_REGS->GCLK_PCHCTRL[18] = GCLK_PCHCTRL_WRTLOCK(0x0U) | GCLK_PCHCTRL_CHEN(0x0U) | GCLK_PCHCTRL_CHEN_Msk;
- 542:	f641 4300 	movw	r3, #7168	@ 0x1c00
- 546:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 54a:	22c8      	movs	r2, #200	@ 0xc8
- 54c:	2140      	movs	r1, #64	@ 0x40
- 54e:	5099      	str	r1, [r3, r2]
+    10f6:	f641 4300 	movw	r3, #7168	@ 0x1c00
+    10fa:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    10fe:	22c8      	movs	r2, #200	@ 0xc8
+    1100:	2140      	movs	r1, #64	@ 0x40
+    1102:	5099      	str	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:255
 
     //wait for synchronization
     while((GCLK_REGS->GCLK_PCHCTRL[18] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk);
- 550:	46c0      	nop			@ (mov r8, r8)
+    1104:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:255 (discriminator 1)
- 552:	f641 4300 	movw	r3, #7168	@ 0x1c00
- 556:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 55a:	22c8      	movs	r2, #200	@ 0xc8
- 55c:	589b      	ldr	r3, [r3, r2]
- 55e:	2240      	movs	r2, #64	@ 0x40
- 560:	4013      	ands	r3, r2
- 562:	2b40      	cmp	r3, #64	@ 0x40
- 564:	d1f5      	bne.n	552 <init_GCLK+0x3a>
+    1106:	f641 4300 	movw	r3, #7168	@ 0x1c00
+    110a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    110e:	22c8      	movs	r2, #200	@ 0xc8
+    1110:	589b      	ldr	r3, [r3, r2]
+    1112:	2240      	movs	r2, #64	@ 0x40
+    1114:	4013      	ands	r3, r2
+    1116:	2b40      	cmp	r3, #64	@ 0x40
+    1118:	d1f5      	bne.n	1106 <init_GCLK+0x3a>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:258
 
     //Enable peripheral channel for SERCOM3 on GCLK0
     GCLK_REGS->GCLK_PCHCTRL[20] = GCLK_PCHCTRL_WRTLOCK(0x0U) | GCLK_PCHCTRL_CHEN(0x0U) | GCLK_PCHCTRL_CHEN_Msk;
- 566:	f641 4300 	movw	r3, #7168	@ 0x1c00
- 56a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 56e:	22d0      	movs	r2, #208	@ 0xd0
- 570:	2140      	movs	r1, #64	@ 0x40
- 572:	5099      	str	r1, [r3, r2]
+    111a:	f641 4300 	movw	r3, #7168	@ 0x1c00
+    111e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1122:	22d0      	movs	r2, #208	@ 0xd0
+    1124:	2140      	movs	r1, #64	@ 0x40
+    1126:	5099      	str	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:261
 
     //wait for synchronization
     while((GCLK_REGS->GCLK_PCHCTRL[20] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk);
- 574:	46c0      	nop			@ (mov r8, r8)
+    1128:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:261 (discriminator 1)
- 576:	f641 4300 	movw	r3, #7168	@ 0x1c00
- 57a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 57e:	22d0      	movs	r2, #208	@ 0xd0
- 580:	589b      	ldr	r3, [r3, r2]
- 582:	2240      	movs	r2, #64	@ 0x40
- 584:	4013      	ands	r3, r2
- 586:	2b40      	cmp	r3, #64	@ 0x40
- 588:	d1f5      	bne.n	576 <init_GCLK+0x5e>
+    112a:	f641 4300 	movw	r3, #7168	@ 0x1c00
+    112e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1132:	22d0      	movs	r2, #208	@ 0xd0
+    1134:	589b      	ldr	r3, [r3, r2]
+    1136:	2240      	movs	r2, #64	@ 0x40
+    1138:	4013      	ands	r3, r2
+    113a:	2b40      	cmp	r3, #64	@ 0x40
+    113c:	d1f5      	bne.n	112a <init_GCLK+0x5e>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:263
 
 }
- 58a:	46c0      	nop			@ (mov r8, r8)
- 58c:	46c0      	nop			@ (mov r8, r8)
- 58e:	46bd      	mov	sp, r7
- 590:	bd80      	pop	{r7, pc}
+    113e:	46c0      	nop			@ (mov r8, r8)
+    1140:	46c0      	nop			@ (mov r8, r8)
+    1142:	46bd      	mov	sp, r7
+    1144:	bd80      	pop	{r7, pc}
 
-00000592 <init_ports>:
+00001146 <init_ports>:
 init_ports():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:265
 
 void init_ports(){
- 592:	b580      	push	{r7, lr}
- 594:	af00      	add	r7, sp, #0
+    1146:	b580      	push	{r7, lr}
+    1148:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:267
     //Configure Ports (BaseAddress: 0x41000000)
     PORT_REGS->GROUP[0].PORT_DIR = (LED_PIN | SPI_SCK | SPI_SDO | SPI_SS );     // Set LED, USART TX, SPI SCK, SPI SDO, and SPI SS pins as outputs
- 596:	f243 0300 	movw	r3, #12288	@ 0x3000
- 59a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 59e:	f248 7200 	movw	r2, #34560	@ 0x8700
- 5a2:	601a      	str	r2, [r3, #0]
+    114a:	f243 0300 	movw	r3, #12288	@ 0x3000
+    114e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1152:	f248 7200 	movw	r2, #34560	@ 0x8700
+    1156:	601a      	str	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:268
     PORT_REGS->GROUP[1].PORT_DIR = (USART_TX_PIN);     // Set LED, USART TX, SPI SCK, SPI SDO, and SPI SS pins as outputs
- 5a4:	f243 0300 	movw	r3, #12288	@ 0x3000
- 5a8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 5ac:	2280      	movs	r2, #128	@ 0x80
- 5ae:	f240 1100 	movw	r1, #256	@ 0x100
- 5b2:	5099      	str	r1, [r3, r2]
+    1158:	f243 0300 	movw	r3, #12288	@ 0x3000
+    115c:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1160:	2280      	movs	r2, #128	@ 0x80
+    1162:	f240 1100 	movw	r1, #256	@ 0x100
+    1166:	5099      	str	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:271
     //PORT_REGS->GROUP[0].PORT_DIR = (uint32_t)USART_TX_PIN;     // Set LED pin as an output
     //PORT_REGS->GROUP[0].PORT_OUT = SW_PIN; // Set switch pin high (pull-up)
     PORT_REGS->GROUP[1].PORT_PINCFG[8] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PB8 [USART_TX_PIN]
- 5b4:	f243 0300 	movw	r3, #12288	@ 0x3000
- 5b8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 5bc:	22c8      	movs	r2, #200	@ 0xc8
- 5be:	2101      	movs	r1, #1
- 5c0:	5499      	strb	r1, [r3, r2]
+    1168:	f243 0300 	movw	r3, #12288	@ 0x3000
+    116c:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1170:	22c8      	movs	r2, #200	@ 0xc8
+    1172:	2101      	movs	r1, #1
+    1174:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:272
     PORT_REGS->GROUP[1].PORT_PINCFG[9] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PB9 [USART_RX_PIN]
- 5c2:	f243 0300 	movw	r3, #12288	@ 0x3000
- 5c6:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 5ca:	22c9      	movs	r2, #201	@ 0xc9
- 5cc:	2101      	movs	r1, #1
- 5ce:	5499      	strb	r1, [r3, r2]
+    1176:	f243 0300 	movw	r3, #12288	@ 0x3000
+    117a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    117e:	22c9      	movs	r2, #201	@ 0xc9
+    1180:	2101      	movs	r1, #1
+    1182:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:273
     PORT_REGS->GROUP[0].PORT_PINCFG[11] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA11 [SPI_SDI]
- 5d0:	f243 0300 	movw	r3, #12288	@ 0x3000
- 5d4:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 5d8:	224b      	movs	r2, #75	@ 0x4b
- 5da:	2101      	movs	r1, #1
- 5dc:	5499      	strb	r1, [r3, r2]
+    1184:	f243 0300 	movw	r3, #12288	@ 0x3000
+    1188:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    118c:	224b      	movs	r2, #75	@ 0x4b
+    118e:	2101      	movs	r1, #1
+    1190:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:274
     PORT_REGS->GROUP[0].PORT_PINCFG[8] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA08 [SPI_SDO]
- 5de:	f243 0300 	movw	r3, #12288	@ 0x3000
- 5e2:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 5e6:	2248      	movs	r2, #72	@ 0x48
- 5e8:	2101      	movs	r1, #1
- 5ea:	5499      	strb	r1, [r3, r2]
+    1192:	f243 0300 	movw	r3, #12288	@ 0x3000
+    1196:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    119a:	2248      	movs	r2, #72	@ 0x48
+    119c:	2101      	movs	r1, #1
+    119e:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:275
     PORT_REGS->GROUP[0].PORT_PINCFG[9] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA09 [SPI_SCK]
- 5ec:	f243 0300 	movw	r3, #12288	@ 0x3000
- 5f0:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 5f4:	2249      	movs	r2, #73	@ 0x49
- 5f6:	2101      	movs	r1, #1
- 5f8:	5499      	strb	r1, [r3, r2]
+    11a0:	f243 0300 	movw	r3, #12288	@ 0x3000
+    11a4:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    11a8:	2249      	movs	r2, #73	@ 0x49
+    11aa:	2101      	movs	r1, #1
+    11ac:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:276
     PORT_REGS->GROUP[0].PORT_PINCFG[10] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA10 [SPI_SS]
- 5fa:	f243 0300 	movw	r3, #12288	@ 0x3000
- 5fe:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 602:	224a      	movs	r2, #74	@ 0x4a
- 604:	2101      	movs	r1, #1
- 606:	5499      	strb	r1, [r3, r2]
+    11ae:	f243 0300 	movw	r3, #12288	@ 0x3000
+    11b2:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    11b6:	224a      	movs	r2, #74	@ 0x4a
+    11b8:	2101      	movs	r1, #1
+    11ba:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:277
     PORT_REGS->GROUP[0].PORT_PINCFG[23] = (uint8_t)0x6UL; // Configure port control for switch, enable internal pullup, enable input buffer 
- 608:	f243 0300 	movw	r3, #12288	@ 0x3000
- 60c:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 610:	2257      	movs	r2, #87	@ 0x57
- 612:	2106      	movs	r1, #6
- 614:	5499      	strb	r1, [r3, r2]
+    11bc:	f243 0300 	movw	r3, #12288	@ 0x3000
+    11c0:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    11c4:	2257      	movs	r2, #87	@ 0x57
+    11c6:	2106      	movs	r1, #6
+    11c8:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:278
     PORT_REGS->GROUP[0].PORT_PINCFG[15] = (uint8_t)0x0UL; // Configure port control for LED, no pullup, enable output buffer
- 616:	f243 0300 	movw	r3, #12288	@ 0x3000
- 61a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 61e:	224f      	movs	r2, #79	@ 0x4f
- 620:	2100      	movs	r1, #0
- 622:	5499      	strb	r1, [r3, r2]
+    11ca:	f243 0300 	movw	r3, #12288	@ 0x3000
+    11ce:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    11d2:	224f      	movs	r2, #79	@ 0x4f
+    11d4:	2100      	movs	r1, #0
+    11d6:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:280
     //Figure out how to configure the ports for peripheral operation
     PORT_REGS->GROUP[1].PORT_PMUX[4] = (uint8_t)0x33UL; //Configure PB8 and PB9 for peripheral function D (SERCOM_ALT)
- 624:	f243 0300 	movw	r3, #12288	@ 0x3000
- 628:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 62c:	22b4      	movs	r2, #180	@ 0xb4
- 62e:	2133      	movs	r1, #51	@ 0x33
- 630:	5499      	strb	r1, [r3, r2]
+    11d8:	f243 0300 	movw	r3, #12288	@ 0x3000
+    11dc:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    11e0:	22b4      	movs	r2, #180	@ 0xb4
+    11e2:	2133      	movs	r1, #51	@ 0x33
+    11e4:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:281
     PORT_REGS->GROUP[0].PORT_PMUX[4] = (uint8_t)0x22;   //Configure PA8 and PA9 for peripheral function C (SERCOM)
- 632:	f243 0300 	movw	r3, #12288	@ 0x3000
- 636:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 63a:	2234      	movs	r2, #52	@ 0x34
- 63c:	2122      	movs	r1, #34	@ 0x22
- 63e:	5499      	strb	r1, [r3, r2]
+    11e6:	f243 0300 	movw	r3, #12288	@ 0x3000
+    11ea:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    11ee:	2234      	movs	r2, #52	@ 0x34
+    11f0:	2122      	movs	r1, #34	@ 0x22
+    11f2:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:282
     PORT_REGS->GROUP[0].PORT_PMUX[5] = (uint8_t)0x22;   //Configure PA10 and PA11 for peripheral function C (SERCOM)
- 640:	f243 0300 	movw	r3, #12288	@ 0x3000
- 644:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 648:	2235      	movs	r2, #53	@ 0x35
- 64a:	2122      	movs	r1, #34	@ 0x22
- 64c:	5499      	strb	r1, [r3, r2]
+    11f4:	f243 0300 	movw	r3, #12288	@ 0x3000
+    11f8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    11fc:	2235      	movs	r2, #53	@ 0x35
+    11fe:	2122      	movs	r1, #34	@ 0x22
+    1200:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:284
     //PORT_REGS->GROUP[0].PORT_WRCONFIG =  PORT_WRCONFIG_HWSEL(0x0UL) | PORT_WRCONFIG_WRPINCFG(0x1UL) | PORT_WRCONFIG_WRPMUX(0x2UL) | PORT_WRCONFIG_PMUXEN(0x1UL) | PORT_WRCONFIG_PINMASK(0x8UL); 
     PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN; // Turn off LED (active low)
- 64e:	f243 0300 	movw	r3, #12288	@ 0x3000
- 652:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 656:	699a      	ldr	r2, [r3, #24]
- 658:	f243 0300 	movw	r3, #12288	@ 0x3000
- 65c:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 660:	f248 0100 	movw	r1, #32768	@ 0x8000
- 664:	430a      	orrs	r2, r1
- 666:	619a      	str	r2, [r3, #24]
+    1202:	f243 0300 	movw	r3, #12288	@ 0x3000
+    1206:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    120a:	699a      	ldr	r2, [r3, #24]
+    120c:	f243 0300 	movw	r3, #12288	@ 0x3000
+    1210:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1214:	f248 0100 	movw	r1, #32768	@ 0x8000
+    1218:	430a      	orrs	r2, r1
+    121a:	619a      	str	r2, [r3, #24]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:285
 }
- 668:	46c0      	nop			@ (mov r8, r8)
- 66a:	46bd      	mov	sp, r7
- 66c:	bd80      	pop	{r7, pc}
+    121c:	46c0      	nop			@ (mov r8, r8)
+    121e:	46bd      	mov	sp, r7
+    1220:	bd80      	pop	{r7, pc}
 
-Disassembly of section .text%54:
+Disassembly of section .text%55:
 
-00000670 <__NVIC_EnableIRQ>:
+00001224 <__NVIC_EnableIRQ>:
 __NVIC_EnableIRQ():
 C:/Users/gregw/.mchp_packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include/core_cm23.h:1481
   \details Enables a device specific interrupt in the NVIC interrupt controller.
@@ -969,49 +2400,49 @@ C:/Users/gregw/.mchp_packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include/core_cm23.h:1481
  */
 __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
 {
- 670:	b580      	push	{r7, lr}
- 672:	b082      	sub	sp, #8
- 674:	af00      	add	r7, sp, #0
- 676:	0002      	movs	r2, r0
- 678:	1dfb      	adds	r3, r7, #7
- 67a:	701a      	strb	r2, [r3, #0]
+    1224:	b580      	push	{r7, lr}
+    1226:	b082      	sub	sp, #8
+    1228:	af00      	add	r7, sp, #0
+    122a:	0002      	movs	r2, r0
+    122c:	1dfb      	adds	r3, r7, #7
+    122e:	701a      	strb	r2, [r3, #0]
 C:/Users/gregw/.mchp_packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include/core_cm23.h:1482
   if ((int32_t)(IRQn) >= 0)
- 67c:	1dfb      	adds	r3, r7, #7
- 67e:	781b      	ldrb	r3, [r3, #0]
- 680:	2b7f      	cmp	r3, #127	@ 0x7f
- 682:	d812      	bhi.n	6aa <__NVIC_EnableIRQ+0x3a>
+    1230:	1dfb      	adds	r3, r7, #7
+    1232:	781b      	ldrb	r3, [r3, #0]
+    1234:	2b7f      	cmp	r3, #127	@ 0x7f
+    1236:	d812      	bhi.n	125e <__NVIC_EnableIRQ+0x3a>
 C:/Users/gregw/.mchp_packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include/core_cm23.h:1485
   {
     __COMPILER_BARRIER();
     NVIC->ISER[(((uint32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)IRQn) & 0x1FUL));
- 684:	1dfb      	adds	r3, r7, #7
- 686:	781b      	ldrb	r3, [r3, #0]
- 688:	001a      	movs	r2, r3
- 68a:	231f      	movs	r3, #31
- 68c:	401a      	ands	r2, r3
- 68e:	0011      	movs	r1, r2
- 690:	f24e 1300 	movw	r3, #57600	@ 0xe100
- 694:	f2ce 0300 	movt	r3, #57344	@ 0xe000
- 698:	1dfa      	adds	r2, r7, #7
- 69a:	7812      	ldrb	r2, [r2, #0]
- 69c:	b252      	sxtb	r2, r2
- 69e:	0952      	lsrs	r2, r2, #5
- 6a0:	2001      	movs	r0, #1
- 6a2:	4088      	lsls	r0, r1
- 6a4:	0001      	movs	r1, r0
- 6a6:	0092      	lsls	r2, r2, #2
- 6a8:	50d1      	str	r1, [r2, r3]
+    1238:	1dfb      	adds	r3, r7, #7
+    123a:	781b      	ldrb	r3, [r3, #0]
+    123c:	001a      	movs	r2, r3
+    123e:	231f      	movs	r3, #31
+    1240:	401a      	ands	r2, r3
+    1242:	0011      	movs	r1, r2
+    1244:	f24e 1300 	movw	r3, #57600	@ 0xe100
+    1248:	f2ce 0300 	movt	r3, #57344	@ 0xe000
+    124c:	1dfa      	adds	r2, r7, #7
+    124e:	7812      	ldrb	r2, [r2, #0]
+    1250:	b252      	sxtb	r2, r2
+    1252:	0952      	lsrs	r2, r2, #5
+    1254:	2001      	movs	r0, #1
+    1256:	4088      	lsls	r0, r1
+    1258:	0001      	movs	r1, r0
+    125a:	0092      	lsls	r2, r2, #2
+    125c:	50d1      	str	r1, [r2, r3]
 C:/Users/gregw/.mchp_packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include/core_cm23.h:1488
     __COMPILER_BARRIER();
   }
 }
- 6aa:	46c0      	nop			@ (mov r8, r8)
- 6ac:	46bd      	mov	sp, r7
- 6ae:	b002      	add	sp, #8
- 6b0:	bd80      	pop	{r7, pc}
+    125e:	46c0      	nop			@ (mov r8, r8)
+    1260:	46bd      	mov	sp, r7
+    1262:	b002      	add	sp, #8
+    1264:	bd80      	pop	{r7, pc}
 
-000006b2 <init_USART>:
+00001266 <init_USART>:
 init_USART():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:42
 #include "usart.h"
@@ -1020,256 +2451,458 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:42
 #include "definitions.h"
 
 void init_USART(){
- 6b2:	b580      	push	{r7, lr}
- 6b4:	af00      	add	r7, sp, #0
+    1266:	b580      	push	{r7, lr}
+    1268:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:45
 
     //Connect sercom 1 to APBC (for the USART)
     MCLK_REGS -> MCLK_APBCMASK |= MCLK_APBCMASK_SERCOM3_Msk;
- 6b6:	f640 0300 	movw	r3, #2048	@ 0x800
- 6ba:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 6be:	69da      	ldr	r2, [r3, #28]
- 6c0:	f640 0300 	movw	r3, #2048	@ 0x800
- 6c4:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 6c8:	2110      	movs	r1, #16
- 6ca:	430a      	orrs	r2, r1
- 6cc:	61da      	str	r2, [r3, #28]
+    126a:	f640 0300 	movw	r3, #2048	@ 0x800
+    126e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1272:	69da      	ldr	r2, [r3, #28]
+    1274:	f640 0300 	movw	r3, #2048	@ 0x800
+    1278:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    127c:	2110      	movs	r1, #16
+    127e:	430a      	orrs	r2, r1
+    1280:	61da      	str	r2, [r3, #28]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:48
 
     //Configure CTRLA: internal clk, Generic clk disabled when transfer is finished, 16x sampling, TXP set to SERCOM_PAD[0], RXP set to SERCOM_PAD[1], Sample Adjustment set to 7-8-9, USART Frame, Async Mode, Rising XCK (TX), MSB first
     SERCOM3_REGS -> USART_INT.SERCOM_CTRLA = SERCOM_USART_INT_CTRLA_DORD_LSB | SERCOM_USART_INT_CTRLA_CPOL_IDLE_HIGH | SERCOM_USART_INT_CTRLA_CMODE_ASYNC |
- 6ce:	f241 0300 	movw	r3, #4096	@ 0x1000
- 6d2:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 6d6:	2284      	movs	r2, #132	@ 0x84
- 6d8:	f2c6 0210 	movt	r2, #24592	@ 0x6010
- 6dc:	601a      	str	r2, [r3, #0]
+    1282:	f241 0300 	movw	r3, #4096	@ 0x1000
+    1286:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    128a:	2284      	movs	r2, #132	@ 0x84
+    128c:	f2c6 0210 	movt	r2, #24592	@ 0x6010
+    1290:	601a      	str	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:53
     SERCOM_USART_INT_CTRLA_FORM_USART_FRAME_NO_PARITY | SERCOM_USART_INT_CTRLA_SAMPA_ADJ0 | SERCOM_USART_INT_CTRLA_RXPO_PAD1 |
     SERCOM_USART_INT_CTRLA_TXPO_PAD0 | SERCOM_USART_INT_CTRLA_SAMPR_16X_ARITHMETIC | SERCOM_USART_INT_CTRLA_RUNSTDBY_Msk | SERCOM_USART_INT_CTRLA_MODE_USART_INT_CLK;
 
     //Configure baud rate for 9600 Baud
     SERCOM3_REGS -> USART_INT.SERCOM_BAUD = (uint16_t)SERCOM_USART_INT_BAUD_BAUD(64907UL);
- 6de:	f241 0300 	movw	r3, #4096	@ 0x1000
- 6e2:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 6e6:	4a1a      	ldr	r2, [pc, #104]	@ (750 <init_USART+0x9e>)
- 6e8:	819a      	strh	r2, [r3, #12]
+    1292:	f241 0300 	movw	r3, #4096	@ 0x1000
+    1296:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    129a:	4a1a      	ldr	r2, [pc, #104]	@ (1304 <init_USART+0x9e>)
+    129c:	819a      	strh	r2, [r3, #12]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:56
 
     //Configure CTRLB: 8 Bit char size, 1 stop bit, no collision detection, ST of Frame detection disabled, Data is not Encoded, Even Parity, TX enabled, RX disabled (for now), Normal UART tx
     SERCOM3_REGS -> USART_INT.SERCOM_CTRLB = SERCOM_USART_INT_CTRLB_RXEN_Msk | SERCOM_USART_INT_CTRLB_TXEN_Msk | SERCOM_USART_INT_CTRLB_PMODE_EVEN |
- 6ea:	f241 0300 	movw	r3, #4096	@ 0x1000
- 6ee:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 6f2:	22c0      	movs	r2, #192	@ 0xc0
- 6f4:	0292      	lsls	r2, r2, #10
- 6f6:	605a      	str	r2, [r3, #4]
+    129e:	f241 0300 	movw	r3, #4096	@ 0x1000
+    12a2:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    12a6:	22c0      	movs	r2, #192	@ 0xc0
+    12a8:	0292      	lsls	r2, r2, #10
+    12aa:	605a      	str	r2, [r3, #4]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:60
     SERCOM_USART_INT_CTRLB_ENC_DISABLE | SERCOM_USART_INT_CTRLB_SFDE(0x0UL) | SERCOM_USART_INT_CTRLB_COLDEN(0x0UL) | SERCOM_USART_INT_CTRLB_SBMODE_1_BIT | SERCOM_USART_INT_CTRLB_CHSIZE_8_BIT;
 
     //Synchronize the CTRLB register (LINCMD, RXEN, and TXEN have been updated)
     while((SERCOM3_REGS -> USART_INT.SERCOM_SYNCBUSY & SERCOM_USART_INT_SYNCBUSY_CTRLB_Msk) == SERCOM_USART_INT_SYNCBUSY_CTRLB_Msk);
- 6f8:	46c0      	nop			@ (mov r8, r8)
+    12ac:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:60 (discriminator 1)
- 6fa:	f241 0300 	movw	r3, #4096	@ 0x1000
- 6fe:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 702:	69db      	ldr	r3, [r3, #28]
- 704:	2204      	movs	r2, #4
- 706:	4013      	ands	r3, r2
- 708:	2b04      	cmp	r3, #4
- 70a:	d0f6      	beq.n	6fa <init_USART+0x48>
+    12ae:	f241 0300 	movw	r3, #4096	@ 0x1000
+    12b2:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    12b6:	69db      	ldr	r3, [r3, #28]
+    12b8:	2204      	movs	r2, #4
+    12ba:	4013      	ands	r3, r2
+    12bc:	2b04      	cmp	r3, #4
+    12be:	d0f6      	beq.n	12ae <init_USART+0x48>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:63
 
     //Enable the USART
     SERCOM3_REGS -> USART_INT.SERCOM_CTRLA |= SERCOM_USART_INT_CTRLA_ENABLE_Msk;
- 70c:	f241 0300 	movw	r3, #4096	@ 0x1000
- 710:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 714:	681a      	ldr	r2, [r3, #0]
- 716:	f241 0300 	movw	r3, #4096	@ 0x1000
- 71a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 71e:	2102      	movs	r1, #2
- 720:	430a      	orrs	r2, r1
- 722:	601a      	str	r2, [r3, #0]
+    12c0:	f241 0300 	movw	r3, #4096	@ 0x1000
+    12c4:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    12c8:	681a      	ldr	r2, [r3, #0]
+    12ca:	f241 0300 	movw	r3, #4096	@ 0x1000
+    12ce:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    12d2:	2102      	movs	r1, #2
+    12d4:	430a      	orrs	r2, r1
+    12d6:	601a      	str	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:66
 
     //Synchronize the USART
     while((SERCOM3_REGS -> USART_INT.SERCOM_SYNCBUSY & SERCOM_USART_INT_SYNCBUSY_ENABLE_Msk) == SERCOM_USART_INT_SYNCBUSY_ENABLE_Msk);
- 724:	46c0      	nop			@ (mov r8, r8)
+    12d8:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:66 (discriminator 1)
- 726:	f241 0300 	movw	r3, #4096	@ 0x1000
- 72a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 72e:	69db      	ldr	r3, [r3, #28]
- 730:	2202      	movs	r2, #2
- 732:	4013      	ands	r3, r2
- 734:	2b02      	cmp	r3, #2
- 736:	d0f6      	beq.n	726 <init_USART+0x74>
+    12da:	f241 0300 	movw	r3, #4096	@ 0x1000
+    12de:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    12e2:	69db      	ldr	r3, [r3, #28]
+    12e4:	2202      	movs	r2, #2
+    12e6:	4013      	ands	r3, r2
+    12e8:	2b02      	cmp	r3, #2
+    12ea:	d0f6      	beq.n	12da <init_USART+0x74>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:69
 
     //Enable the RX interrupt
     SERCOM3_REGS -> USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
- 738:	f241 0300 	movw	r3, #4096	@ 0x1000
- 73c:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 740:	2204      	movs	r2, #4
- 742:	759a      	strb	r2, [r3, #22]
+    12ec:	f241 0300 	movw	r3, #4096	@ 0x1000
+    12f0:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    12f4:	2204      	movs	r2, #4
+    12f6:	759a      	strb	r2, [r3, #22]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:72
 
     //Enable NVIC interrupt for SERCOM3
     NVIC_EnableIRQ(SERCOM3_2_IRQn);
- 744:	202d      	movs	r0, #45	@ 0x2d
- 746:	f7ff ff93 	bl	670 <__NVIC_EnableIRQ>
+    12f8:	202d      	movs	r0, #45	@ 0x2d
+    12fa:	f7ff ff93 	bl	1224 <__NVIC_EnableIRQ>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:73
 }
- 74a:	46c0      	nop			@ (mov r8, r8)
- 74c:	46bd      	mov	sp, r7
- 74e:	bd80      	pop	{r7, pc}
- 750:	fffffd8b 	.word	0xfffffd8b
+    12fe:	46c0      	nop			@ (mov r8, r8)
+    1300:	46bd      	mov	sp, r7
+    1302:	bd80      	pop	{r7, pc}
+    1304:	fffffd8b 	.word	0xfffffd8b
 
-00000754 <USART_sendChar>:
+00001308 <USART_sendChar>:
 USART_sendChar():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:75
 
 void USART_sendChar(char charToSend){
- 754:	b580      	push	{r7, lr}
- 756:	b082      	sub	sp, #8
- 758:	af00      	add	r7, sp, #0
- 75a:	0002      	movs	r2, r0
- 75c:	1dfb      	adds	r3, r7, #7
- 75e:	701a      	strb	r2, [r3, #0]
+    1308:	b580      	push	{r7, lr}
+    130a:	b082      	sub	sp, #8
+    130c:	af00      	add	r7, sp, #0
+    130e:	0002      	movs	r2, r0
+    1310:	1dfb      	adds	r3, r7, #7
+    1312:	701a      	strb	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:76
     while((SERCOM3_REGS -> USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_DRE_Msk) != SERCOM_USART_INT_INTFLAG_DRE_Msk){}
- 760:	46c0      	nop			@ (mov r8, r8)
+    1314:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:76 (discriminator 1)
- 762:	f241 0300 	movw	r3, #4096	@ 0x1000
- 766:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 76a:	7e1b      	ldrb	r3, [r3, #24]
- 76c:	b2db      	uxtb	r3, r3
- 76e:	001a      	movs	r2, r3
- 770:	2301      	movs	r3, #1
- 772:	4013      	ands	r3, r2
- 774:	2b01      	cmp	r3, #1
- 776:	d1f4      	bne.n	762 <USART_sendChar+0xe>
+    1316:	f241 0300 	movw	r3, #4096	@ 0x1000
+    131a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    131e:	7e1b      	ldrb	r3, [r3, #24]
+    1320:	b2db      	uxtb	r3, r3
+    1322:	001a      	movs	r2, r3
+    1324:	2301      	movs	r3, #1
+    1326:	4013      	ands	r3, r2
+    1328:	2b01      	cmp	r3, #1
+    132a:	d1f4      	bne.n	1316 <USART_sendChar+0xe>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:77
     SERCOM3_REGS -> USART_INT.SERCOM_DATA = charToSend;
- 778:	f241 0300 	movw	r3, #4096	@ 0x1000
- 77c:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 780:	1dfa      	adds	r2, r7, #7
- 782:	7812      	ldrb	r2, [r2, #0]
- 784:	629a      	str	r2, [r3, #40]	@ 0x28
+    132c:	f241 0300 	movw	r3, #4096	@ 0x1000
+    1330:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    1334:	1dfa      	adds	r2, r7, #7
+    1336:	7812      	ldrb	r2, [r2, #0]
+    1338:	629a      	str	r2, [r3, #40]	@ 0x28
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:78
 }
- 786:	46c0      	nop			@ (mov r8, r8)
- 788:	46bd      	mov	sp, r7
- 78a:	b002      	add	sp, #8
- 78c:	bd80      	pop	{r7, pc}
+    133a:	46c0      	nop			@ (mov r8, r8)
+    133c:	46bd      	mov	sp, r7
+    133e:	b002      	add	sp, #8
+    1340:	bd80      	pop	{r7, pc}
 
-0000078e <USART_sendString>:
+00001342 <USART_sendString>:
 USART_sendString():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:80
 
 void USART_sendString(char *stringToSend){
- 78e:	b580      	push	{r7, lr}
- 790:	b082      	sub	sp, #8
- 792:	af00      	add	r7, sp, #0
- 794:	6078      	str	r0, [r7, #4]
+    1342:	b580      	push	{r7, lr}
+    1344:	b082      	sub	sp, #8
+    1346:	af00      	add	r7, sp, #0
+    1348:	6078      	str	r0, [r7, #4]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:81
     while(*stringToSend){
- 796:	e014      	b.n	7c2 <USART_sendString+0x34>
+    134a:	e014      	b.n	1376 <USART_sendString+0x34>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:82
         while((SERCOM3_REGS -> USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_DRE_Msk) != SERCOM_USART_INT_INTFLAG_DRE_Msk){}
- 798:	46c0      	nop			@ (mov r8, r8)
+    134c:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:82 (discriminator 1)
- 79a:	f241 0300 	movw	r3, #4096	@ 0x1000
- 79e:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 7a2:	7e1b      	ldrb	r3, [r3, #24]
- 7a4:	b2db      	uxtb	r3, r3
- 7a6:	001a      	movs	r2, r3
- 7a8:	2301      	movs	r3, #1
- 7aa:	4013      	ands	r3, r2
- 7ac:	2b01      	cmp	r3, #1
- 7ae:	d1f4      	bne.n	79a <USART_sendString+0xc>
+    134e:	f241 0300 	movw	r3, #4096	@ 0x1000
+    1352:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    1356:	7e1b      	ldrb	r3, [r3, #24]
+    1358:	b2db      	uxtb	r3, r3
+    135a:	001a      	movs	r2, r3
+    135c:	2301      	movs	r3, #1
+    135e:	4013      	ands	r3, r2
+    1360:	2b01      	cmp	r3, #1
+    1362:	d1f4      	bne.n	134e <USART_sendString+0xc>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:83
         SERCOM3_REGS -> USART_INT.SERCOM_DATA = *stringToSend++;
- 7b0:	687b      	ldr	r3, [r7, #4]
- 7b2:	1c5a      	adds	r2, r3, #1
- 7b4:	607a      	str	r2, [r7, #4]
- 7b6:	781a      	ldrb	r2, [r3, #0]
- 7b8:	f241 0300 	movw	r3, #4096	@ 0x1000
- 7bc:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 7c0:	629a      	str	r2, [r3, #40]	@ 0x28
+    1364:	687b      	ldr	r3, [r7, #4]
+    1366:	1c5a      	adds	r2, r3, #1
+    1368:	607a      	str	r2, [r7, #4]
+    136a:	781a      	ldrb	r2, [r3, #0]
+    136c:	f241 0300 	movw	r3, #4096	@ 0x1000
+    1370:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    1374:	629a      	str	r2, [r3, #40]	@ 0x28
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:81
     while(*stringToSend){
- 7c2:	687b      	ldr	r3, [r7, #4]
- 7c4:	781b      	ldrb	r3, [r3, #0]
- 7c6:	2b00      	cmp	r3, #0
- 7c8:	d1e6      	bne.n	798 <USART_sendString+0xa>
+    1376:	687b      	ldr	r3, [r7, #4]
+    1378:	781b      	ldrb	r3, [r3, #0]
+    137a:	2b00      	cmp	r3, #0
+    137c:	d1e6      	bne.n	134c <USART_sendString+0xa>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:85
     }
 }
- 7ca:	46c0      	nop			@ (mov r8, r8)
- 7cc:	46c0      	nop			@ (mov r8, r8)
- 7ce:	46bd      	mov	sp, r7
- 7d0:	b002      	add	sp, #8
- 7d2:	bd80      	pop	{r7, pc}
+    137e:	46c0      	nop			@ (mov r8, r8)
+    1380:	46c0      	nop			@ (mov r8, r8)
+    1382:	46bd      	mov	sp, r7
+    1384:	b002      	add	sp, #8
+    1386:	bd80      	pop	{r7, pc}
 
-000007d4 <SERCOM3_Handler>:
+00001388 <SERCOM3_Handler>:
 SERCOM3_Handler():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:87
 
 void SERCOM3_Handler(void){
- 7d4:	b580      	push	{r7, lr}
- 7d6:	b082      	sub	sp, #8
- 7d8:	af00      	add	r7, sp, #0
+    1388:	b580      	push	{r7, lr}
+    138a:	b082      	sub	sp, #8
+    138c:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:88
     if((SERCOM3_REGS -> USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_RXC_Msk) == SERCOM_USART_INT_INTFLAG_RXC_Msk){
- 7da:	f241 0300 	movw	r3, #4096	@ 0x1000
- 7de:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 7e2:	7e1b      	ldrb	r3, [r3, #24]
- 7e4:	b2db      	uxtb	r3, r3
- 7e6:	001a      	movs	r2, r3
- 7e8:	2304      	movs	r3, #4
- 7ea:	4013      	ands	r3, r2
- 7ec:	2b04      	cmp	r3, #4
- 7ee:	d10b      	bne.n	808 <SERCOM3_Handler+0x34>
+    138e:	f241 0300 	movw	r3, #4096	@ 0x1000
+    1392:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    1396:	7e1b      	ldrb	r3, [r3, #24]
+    1398:	b2db      	uxtb	r3, r3
+    139a:	001a      	movs	r2, r3
+    139c:	2304      	movs	r3, #4
+    139e:	4013      	ands	r3, r2
+    13a0:	2b04      	cmp	r3, #4
+    13a2:	d10b      	bne.n	13bc <SERCOM3_Handler+0x34>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:89
         char data = SERCOM3_REGS->USART_INT.SERCOM_DATA;
- 7f0:	f241 0300 	movw	r3, #4096	@ 0x1000
- 7f4:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 7f8:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
- 7fa:	1dfb      	adds	r3, r7, #7
- 7fc:	701a      	strb	r2, [r3, #0]
+    13a4:	f241 0300 	movw	r3, #4096	@ 0x1000
+    13a8:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    13ac:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
+    13ae:	1dfb      	adds	r3, r7, #7
+    13b0:	701a      	strb	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:90
         USART_sendChar(data);
- 7fe:	1dfb      	adds	r3, r7, #7
- 800:	781b      	ldrb	r3, [r3, #0]
- 802:	0018      	movs	r0, r3
- 804:	f7ff ffa6 	bl	754 <USART_sendChar>
+    13b2:	1dfb      	adds	r3, r7, #7
+    13b4:	781b      	ldrb	r3, [r3, #0]
+    13b6:	0018      	movs	r0, r3
+    13b8:	f7ff ffa6 	bl	1308 <USART_sendChar>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:92
     }
- 808:	46c0      	nop			@ (mov r8, r8)
- 80a:	46bd      	mov	sp, r7
- 80c:	b002      	add	sp, #8
- 80e:	bd80      	pop	{r7, pc}
+    13bc:	46c0      	nop			@ (mov r8, r8)
+    13be:	46bd      	mov	sp, r7
+    13c0:	b002      	add	sp, #8
+    13c2:	bd80      	pop	{r7, pc}
 
-Disassembly of section .text%55:
+Disassembly of section .text.__aeabi_dmul_aux%56:
 
-00000810 <init_SPI>:
+000013c4 <__aeabi_dmul_aux>:
+__aeabi_dmul_aux():
+    13c4:	d106      	bne.n	13d4 <__aeabi_dmul_aux+0x10>
+    13c6:	b928      	cbnz	r0, 13d4 <__aeabi_dmul_aux+0x10>
+    13c8:	42f5      	cmn	r5, r6
+    13ca:	d803      	bhi.n	13d4 <__aeabi_dmul_aux+0x10>
+    13cc:	d300      	bcc.n	13d0 <__aeabi_dmul_aux+0xc>
+    13ce:	b90a      	cbnz	r2, 13d4 <__aeabi_dmul_aux+0x10>
+    13d0:	0d6d      	lsrs	r5, r5, #21
+    13d2:	d109      	bne.n	13e8 <__aeabi_dmul_aux+0x24>
+    13d4:	2000      	movs	r0, #0
+    13d6:	43c1      	mvns	r1, r0
+    13d8:	0d09      	lsrs	r1, r1, #20
+    13da:	04c9      	lsls	r1, r1, #19
+    13dc:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    13de:	d1f9      	bne.n	13d4 <__aeabi_dmul_aux+0x10>
+    13e0:	4212      	tst	r2, r2
+    13e2:	d1f7      	bne.n	13d4 <__aeabi_dmul_aux+0x10>
+    13e4:	0d64      	lsrs	r4, r4, #21
+    13e6:	d0f5      	beq.n	13d4 <__aeabi_dmul_aux+0x10>
+    13e8:	2000      	movs	r0, #0
+    13ea:	43c1      	mvns	r1, r0
+    13ec:	0549      	lsls	r1, r1, #21
+    13ee:	0849      	lsrs	r1, r1, #1
+    13f0:	e0a6      	b.n	1540 <__aeabi_dmul+0x148>
+    13f2:	2000      	movs	r0, #0
+    13f4:	4661      	mov	r1, ip
+    13f6:	bdf0      	pop	{r4, r5, r6, r7, pc}
+
+000013f8 <__aeabi_dmul>:
+    13f8:	b5f0      	push	{r4, r5, r6, r7, lr}
+    13fa:	2701      	movs	r7, #1
+    13fc:	07ff      	lsls	r7, r7, #31
+    13fe:	000e      	movs	r6, r1
+    1400:	405e      	eors	r6, r3
+    1402:	403e      	ands	r6, r7
+    1404:	46b4      	mov	ip, r6
+    1406:	0abe      	lsrs	r6, r7, #10
+    1408:	184c      	adds	r4, r1, r1
+    140a:	18dd      	adds	r5, r3, r3
+    140c:	42f4      	cmn	r4, r6
+    140e:	d2d9      	bcs.n	13c4 <__aeabi_dmul_aux>
+    1410:	42f5      	cmn	r5, r6
+    1412:	d2e4      	bcs.n	13de <__aeabi_dmul_aux+0x1a>
+    1414:	0d64      	lsrs	r4, r4, #21
+    1416:	d0ec      	beq.n	13f2 <__aeabi_dmul_aux+0x2e>
+    1418:	0d6d      	lsrs	r5, r5, #21
+    141a:	d0ea      	beq.n	13f2 <__aeabi_dmul_aux+0x2e>
+    141c:	1964      	adds	r4, r4, r5
+    141e:	02c9      	lsls	r1, r1, #11
+    1420:	4339      	orrs	r1, r7
+    1422:	0d46      	lsrs	r6, r0, #21
+    1424:	02c0      	lsls	r0, r0, #11
+    1426:	4331      	orrs	r1, r6
+    1428:	02db      	lsls	r3, r3, #11
+    142a:	433b      	orrs	r3, r7
+    142c:	0adb      	lsrs	r3, r3, #11
+    142e:	b410      	push	{r4}
+    1430:	468e      	mov	lr, r1
+    1432:	b285      	uxth	r5, r0
+    1434:	b297      	uxth	r7, r2
+    1436:	436f      	muls	r7, r5
+    1438:	0c14      	lsrs	r4, r2, #16
+    143a:	436c      	muls	r4, r5
+    143c:	0c3e      	lsrs	r6, r7, #16
+    143e:	19a4      	adds	r4, r4, r6
+    1440:	0c26      	lsrs	r6, r4, #16
+    1442:	0424      	lsls	r4, r4, #16
+    1444:	b2bf      	uxth	r7, r7
+    1446:	4327      	orrs	r7, r4
+    1448:	b29c      	uxth	r4, r3
+    144a:	436c      	muls	r4, r5
+    144c:	19a4      	adds	r4, r4, r6
+    144e:	0c19      	lsrs	r1, r3, #16
+    1450:	4369      	muls	r1, r5
+    1452:	0c25      	lsrs	r5, r4, #16
+    1454:	b2a4      	uxth	r4, r4
+    1456:	1949      	adds	r1, r1, r5
+    1458:	040d      	lsls	r5, r1, #16
+    145a:	0c09      	lsrs	r1, r1, #16
+    145c:	1964      	adds	r4, r4, r5
+    145e:	0c00      	lsrs	r0, r0, #16
+    1460:	b295      	uxth	r5, r2
+    1462:	4345      	muls	r5, r0
+    1464:	0c3e      	lsrs	r6, r7, #16
+    1466:	1976      	adds	r6, r6, r5
+    1468:	4337      	orrs	r7, r6
+    146a:	b2bf      	uxth	r7, r7
+    146c:	0c36      	lsrs	r6, r6, #16
+    146e:	0c15      	lsrs	r5, r2, #16
+    1470:	4345      	muls	r5, r0
+    1472:	19ad      	adds	r5, r5, r6
+    1474:	b2a6      	uxth	r6, r4
+    1476:	0c24      	lsrs	r4, r4, #16
+    1478:	19ad      	adds	r5, r5, r6
+    147a:	042e      	lsls	r6, r5, #16
+    147c:	4337      	orrs	r7, r6
+    147e:	0c2e      	lsrs	r6, r5, #16
+    1480:	1936      	adds	r6, r6, r4
+    1482:	b29d      	uxth	r5, r3
+    1484:	4345      	muls	r5, r0
+    1486:	19ad      	adds	r5, r5, r6
+    1488:	b2ac      	uxth	r4, r5
+    148a:	0c2e      	lsrs	r6, r5, #16
+    148c:	1989      	adds	r1, r1, r6
+    148e:	0c1d      	lsrs	r5, r3, #16
+    1490:	4345      	muls	r5, r0
+    1492:	186d      	adds	r5, r5, r1
+    1494:	042e      	lsls	r6, r5, #16
+    1496:	0c29      	lsrs	r1, r5, #16
+    1498:	4334      	orrs	r4, r6
+    149a:	4670      	mov	r0, lr
+    149c:	b280      	uxth	r0, r0
+    149e:	b295      	uxth	r5, r2
+    14a0:	4345      	muls	r5, r0
+    14a2:	0c3e      	lsrs	r6, r7, #16
+    14a4:	1976      	adds	r6, r6, r5
+    14a6:	4337      	orrs	r7, r6
+    14a8:	b2bf      	uxth	r7, r7
+    14aa:	0c36      	lsrs	r6, r6, #16
+    14ac:	0c15      	lsrs	r5, r2, #16
+    14ae:	4345      	muls	r5, r0
+    14b0:	19ad      	adds	r5, r5, r6
+    14b2:	b2a6      	uxth	r6, r4
+    14b4:	19ad      	adds	r5, r5, r6
+    14b6:	0c24      	lsrs	r4, r4, #16
+    14b8:	042e      	lsls	r6, r5, #16
+    14ba:	4337      	orrs	r7, r6
+    14bc:	0c2e      	lsrs	r6, r5, #16
+    14be:	1936      	adds	r6, r6, r4
+    14c0:	b29d      	uxth	r5, r3
+    14c2:	4345      	muls	r5, r0
+    14c4:	19ad      	adds	r5, r5, r6
+    14c6:	b2ac      	uxth	r4, r5
+    14c8:	0c2e      	lsrs	r6, r5, #16
+    14ca:	1989      	adds	r1, r1, r6
+    14cc:	0c1d      	lsrs	r5, r3, #16
+    14ce:	4345      	muls	r5, r0
+    14d0:	186d      	adds	r5, r5, r1
+    14d2:	042e      	lsls	r6, r5, #16
+    14d4:	4334      	orrs	r4, r6
+    14d6:	0c29      	lsrs	r1, r5, #16
+    14d8:	4675      	mov	r5, lr
+    14da:	0c2d      	lsrs	r5, r5, #16
+    14dc:	b290      	uxth	r0, r2
+    14de:	4368      	muls	r0, r5
+    14e0:	0c3e      	lsrs	r6, r7, #16
+    14e2:	1980      	adds	r0, r0, r6
+    14e4:	0406      	lsls	r6, r0, #16
+    14e6:	b2bf      	uxth	r7, r7
+    14e8:	433e      	orrs	r6, r7
+    14ea:	0c07      	lsrs	r7, r0, #16
+    14ec:	b2a0      	uxth	r0, r4
+    14ee:	183f      	adds	r7, r7, r0
+    14f0:	0c12      	lsrs	r2, r2, #16
+    14f2:	436a      	muls	r2, r5
+    14f4:	19d0      	adds	r0, r2, r7
+    14f6:	0c02      	lsrs	r2, r0, #16
+    14f8:	b280      	uxth	r0, r0
+    14fa:	0c24      	lsrs	r4, r4, #16
+    14fc:	18a4      	adds	r4, r4, r2
+    14fe:	b29a      	uxth	r2, r3
+    1500:	436a      	muls	r2, r5
+    1502:	1912      	adds	r2, r2, r4
+    1504:	0414      	lsls	r4, r2, #16
+    1506:	4320      	orrs	r0, r4
+    1508:	0c12      	lsrs	r2, r2, #16
+    150a:	1889      	adds	r1, r1, r2
+    150c:	0c1b      	lsrs	r3, r3, #16
+    150e:	436b      	muls	r3, r5
+    1510:	18c9      	adds	r1, r1, r3
+    1512:	bc10      	pop	{r4}
+    1514:	2701      	movs	r7, #1
+    1516:	053d      	lsls	r5, r7, #20
+    1518:	4229      	tst	r1, r5
+    151a:	d103      	bne.n	1524 <__aeabi_dmul+0x12c>
+    151c:	19b6      	adds	r6, r6, r6
+    151e:	4140      	adcs	r0, r0
+    1520:	4149      	adcs	r1, r1
+    1522:	3c01      	subs	r4, #1
+    1524:	07ff      	lsls	r7, r7, #31
+    1526:	0d7d      	lsrs	r5, r7, #21
+    1528:	3d01      	subs	r5, #1
+    152a:	1b64      	subs	r4, r4, r5
+    152c:	db0b      	blt.n	1546 <__aeabi_dmul+0x14e>
+    152e:	006d      	lsls	r5, r5, #1
+    1530:	42ac      	cmp	r4, r5
+    1532:	da09      	bge.n	1548 <__aeabi_dmul+0x150>
+    1534:	0524      	lsls	r4, r4, #20
+    1536:	2500      	movs	r5, #0
+    1538:	0842      	lsrs	r2, r0, #1
+    153a:	41be      	sbcs	r6, r7
+    153c:	4168      	adcs	r0, r5
+    153e:	4161      	adcs	r1, r4
+    1540:	4666      	mov	r6, ip
+    1542:	4331      	orrs	r1, r6
+    1544:	bdf0      	pop	{r4, r5, r6, r7, pc}
+    1546:	e754      	b.n	13f2 <__aeabi_dmul_aux+0x2e>
+    1548:	e74e      	b.n	13e8 <__aeabi_dmul_aux+0x24>
+
+Disassembly of section .text%57:
+
+0000154a <init_SPI>:
 init_SPI():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:4
 #include "definitions.h"
 #include <component/sercom.h>
 
 void init_SPI(){
- 810:	b580      	push	{r7, lr}
- 812:	af00      	add	r7, sp, #0
+    154a:	b580      	push	{r7, lr}
+    154c:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:6
     //Connect APBC to SERCOM1
     MCLK_REGS -> MCLK_APBCMASK |= MCLK_APBCMASK_SERCOM1_Msk;
- 814:	f640 0300 	movw	r3, #2048	@ 0x800
- 818:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 81c:	69da      	ldr	r2, [r3, #28]
- 81e:	f640 0300 	movw	r3, #2048	@ 0x800
- 822:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- 826:	2104      	movs	r1, #4
- 828:	430a      	orrs	r2, r1
- 82a:	61da      	str	r2, [r3, #28]
+    154e:	f640 0300 	movw	r3, #2048	@ 0x800
+    1552:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1556:	69da      	ldr	r2, [r3, #28]
+    1558:	f640 0300 	movw	r3, #2048	@ 0x800
+    155c:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1560:	2104      	movs	r1, #4
+    1562:	430a      	orrs	r2, r1
+    1564:	61da      	str	r2, [r3, #28]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:36
       * IBON: Immediate buffer overflow notification [0x0], enable-protected, not synchronized
       * RUNSTDBY: Generic clock is enabled in all sleep modes [0x1]. enable-protected, not synchronized
@@ -1277,20 +2910,20 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:36
      */
 
      SERCOM1_REGS -> SPIM.SERCOM_CTRLA = SERCOM_SPIM_CTRLA_DORD_MSB | SERCOM_SPIM_CTRLA_CPOL_IDLE_HIGH | SERCOM_SPIM_CTRLA_CPHA_LEADING_EDGE |
- 82c:	f640 0300 	movw	r3, #2048	@ 0x800
- 830:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 834:	228c      	movs	r2, #140	@ 0x8c
- 836:	f2c2 0201 	movt	r2, #8193	@ 0x2001
- 83a:	601a      	str	r2, [r3, #0]
+    1566:	f640 0300 	movw	r3, #2048	@ 0x800
+    156a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    156e:	228c      	movs	r2, #140	@ 0x8c
+    1570:	f2c2 0201 	movt	r2, #8193	@ 0x2001
+    1574:	601a      	str	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:40
      SERCOM_SPIM_CTRLA_DIPO_PAD0 | SERCOM_SPIS_CTRLA_DOPO(0x1) | SERCOM_SPIM_CTRLA_RUNSTDBY_Msk | SERCOM_SPIM_CTRLA_MODE_SPI_MASTER;
 
      // Configure BAUD rate for 9600 baud
      SERCOM1_REGS -> SPIM.SERCOM_BAUD = (uint16_t)SERCOM_SPIM_BAUD_BAUD(64907UL);
- 83c:	f640 0300 	movw	r3, #2048	@ 0x800
- 840:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 844:	228b      	movs	r2, #139	@ 0x8b
- 846:	731a      	strb	r2, [r3, #12]
+    1576:	f640 0300 	movw	r3, #2048	@ 0x800
+    157a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    157e:	228b      	movs	r2, #139	@ 0x8b
+    1580:	731a      	strb	r2, [r3, #12]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:49
      *  AMODE: Address mode (not applicable in this case) [0x0], enable-protected, not synchronized
      *  MSSEN: Enable Host SPI Select [0x1]. enable-protected, not synchronized
@@ -1298,50 +2931,50 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:49
      *  CHSIZE: 8-bit character size [0x0]. enable-protected, not synchronized
      */
      SERCOM1_REGS -> SPIM.SERCOM_CTRLB = SERCOM_SPIM_CTRLB_RXEN_Msk | SERCOM_SPIM_CTRLB_MSSEN_ENABLE |
- 848:	f640 0300 	movw	r3, #2048	@ 0x800
- 84c:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 850:	f242 2200 	movw	r2, #8704	@ 0x2200
- 854:	f2c0 0202 	movt	r2, #2
- 858:	605a      	str	r2, [r3, #4]
+    1582:	f640 0300 	movw	r3, #2048	@ 0x800
+    1586:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    158a:	f242 2200 	movw	r2, #8704	@ 0x2200
+    158e:	f2c0 0202 	movt	r2, #2
+    1592:	605a      	str	r2, [r3, #4]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:53
      SERCOM_SPIM_CTRLB_SSDE_ENABLE | SERCOM_SPIM_CTRLB_CHSIZE_8_BIT;
 
      //Synchronize the CTRLB register
      while((SERCOM1_REGS -> SPIM.SERCOM_SYNCBUSY & SERCOM_SPIM_SYNCBUSY_CTRLB_Msk) == SERCOM_SPIM_SYNCBUSY_CTRLB_Msk){}
- 85a:	46c0      	nop			@ (mov r8, r8)
+    1594:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:53 (discriminator 1)
- 85c:	f640 0300 	movw	r3, #2048	@ 0x800
- 860:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 864:	69db      	ldr	r3, [r3, #28]
- 866:	2204      	movs	r2, #4
- 868:	4013      	ands	r3, r2
- 86a:	2b04      	cmp	r3, #4
- 86c:	d0f6      	beq.n	85c <init_SPI+0x4c>
+    1596:	f640 0300 	movw	r3, #2048	@ 0x800
+    159a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    159e:	69db      	ldr	r3, [r3, #28]
+    15a0:	2204      	movs	r2, #4
+    15a2:	4013      	ands	r3, r2
+    15a4:	2b04      	cmp	r3, #4
+    15a6:	d0f6      	beq.n	1596 <init_SPI+0x4c>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:56
 
      //Enable the SPI
      SERCOM1_REGS -> SPIM.SERCOM_CTRLA |= SERCOM_SPIM_CTRLA_ENABLE_Msk;
- 86e:	f640 0300 	movw	r3, #2048	@ 0x800
- 872:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 876:	681a      	ldr	r2, [r3, #0]
- 878:	f640 0300 	movw	r3, #2048	@ 0x800
- 87c:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 880:	2102      	movs	r1, #2
- 882:	430a      	orrs	r2, r1
- 884:	601a      	str	r2, [r3, #0]
+    15a8:	f640 0300 	movw	r3, #2048	@ 0x800
+    15ac:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    15b0:	681a      	ldr	r2, [r3, #0]
+    15b2:	f640 0300 	movw	r3, #2048	@ 0x800
+    15b6:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    15ba:	2102      	movs	r1, #2
+    15bc:	430a      	orrs	r2, r1
+    15be:	601a      	str	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:59
 
      //Synchronize the SPI
      while((SERCOM1_REGS -> SPIM.SERCOM_SYNCBUSY & SERCOM_SPIM_SYNCBUSY_ENABLE_Msk) == SERCOM_SPIM_SYNCBUSY_ENABLE_Msk){}
- 886:	46c0      	nop			@ (mov r8, r8)
+    15c0:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:59 (discriminator 1)
- 888:	f640 0300 	movw	r3, #2048	@ 0x800
- 88c:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 890:	69db      	ldr	r3, [r3, #28]
- 892:	2202      	movs	r2, #2
- 894:	4013      	ands	r3, r2
- 896:	2b02      	cmp	r3, #2
- 898:	d0f6      	beq.n	888 <init_SPI+0x78>
+    15c2:	f640 0300 	movw	r3, #2048	@ 0x800
+    15c6:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    15ca:	69db      	ldr	r3, [r3, #28]
+    15cc:	2202      	movs	r2, #2
+    15ce:	4013      	ands	r3, r2
+    15d0:	2b02      	cmp	r3, #2
+    15d2:	d0f6      	beq.n	15c2 <init_SPI+0x78>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:66
      // Enable the RX interrupt
      //SERCOM1_REGS -> SPIM.SERCOM_INTENSET = SERCOM_SPIM_INTENSET_RXC_Msk;
@@ -1349,340 +2982,247 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:66
      //Enable NVIC interrupt for SERCOM1
      //NVIC_EnableIRQ(SERCOM1_IRQn);
 }
- 89a:	46c0      	nop			@ (mov r8, r8)
- 89c:	46c0      	nop			@ (mov r8, r8)
- 89e:	46bd      	mov	sp, r7
- 8a0:	bd80      	pop	{r7, pc}
+    15d4:	46c0      	nop			@ (mov r8, r8)
+    15d6:	46c0      	nop			@ (mov r8, r8)
+    15d8:	46bd      	mov	sp, r7
+    15da:	bd80      	pop	{r7, pc}
 
-000008a2 <spi_data_exchange>:
+000015dc <spi_data_exchange>:
 spi_data_exchange():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:68
 
 char spi_data_exchange(uint8_t cmd){
- 8a2:	b590      	push	{r4, r7, lr}
- 8a4:	b085      	sub	sp, #20
- 8a6:	af00      	add	r7, sp, #0
- 8a8:	0002      	movs	r2, r0
- 8aa:	1dfb      	adds	r3, r7, #7
- 8ac:	701a      	strb	r2, [r3, #0]
+    15dc:	b590      	push	{r4, r7, lr}
+    15de:	b085      	sub	sp, #20
+    15e0:	af00      	add	r7, sp, #0
+    15e2:	0002      	movs	r2, r0
+    15e4:	1dfb      	adds	r3, r7, #7
+    15e6:	701a      	strb	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:70
     char rx_data;
     while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_DRE_Msk) != SERCOM_SPIM_INTFLAG_DRE_Msk){}
- 8ae:	46c0      	nop			@ (mov r8, r8)
+    15e8:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:70 (discriminator 1)
- 8b0:	f640 0300 	movw	r3, #2048	@ 0x800
- 8b4:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 8b8:	7e1b      	ldrb	r3, [r3, #24]
- 8ba:	b2db      	uxtb	r3, r3
- 8bc:	001a      	movs	r2, r3
- 8be:	2301      	movs	r3, #1
- 8c0:	4013      	ands	r3, r2
- 8c2:	2b01      	cmp	r3, #1
- 8c4:	d1f4      	bne.n	8b0 <spi_data_exchange+0xe>
+    15ea:	f640 0300 	movw	r3, #2048	@ 0x800
+    15ee:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    15f2:	7e1b      	ldrb	r3, [r3, #24]
+    15f4:	b2db      	uxtb	r3, r3
+    15f6:	001a      	movs	r2, r3
+    15f8:	2301      	movs	r3, #1
+    15fa:	4013      	ands	r3, r2
+    15fc:	2b01      	cmp	r3, #1
+    15fe:	d1f4      	bne.n	15ea <spi_data_exchange+0xe>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:71
     SERCOM1_REGS->SPIM.SERCOM_DATA = cmd;
- 8c6:	f640 0300 	movw	r3, #2048	@ 0x800
- 8ca:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 8ce:	1dfa      	adds	r2, r7, #7
- 8d0:	7812      	ldrb	r2, [r2, #0]
- 8d2:	629a      	str	r2, [r3, #40]	@ 0x28
+    1600:	f640 0300 	movw	r3, #2048	@ 0x800
+    1604:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    1608:	1dfa      	adds	r2, r7, #7
+    160a:	7812      	ldrb	r2, [r2, #0]
+    160c:	629a      	str	r2, [r3, #40]	@ 0x28
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:72
     while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_RXC_Msk) != SERCOM_SPIM_INTFLAG_RXC_Msk){}
- 8d4:	46c0      	nop			@ (mov r8, r8)
+    160e:	46c0      	nop			@ (mov r8, r8)
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:72 (discriminator 1)
- 8d6:	f640 0300 	movw	r3, #2048	@ 0x800
- 8da:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 8de:	7e1b      	ldrb	r3, [r3, #24]
- 8e0:	b2db      	uxtb	r3, r3
- 8e2:	001a      	movs	r2, r3
- 8e4:	2304      	movs	r3, #4
- 8e6:	4013      	ands	r3, r2
- 8e8:	2b04      	cmp	r3, #4
- 8ea:	d1f4      	bne.n	8d6 <spi_data_exchange+0x34>
+    1610:	f640 0300 	movw	r3, #2048	@ 0x800
+    1614:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    1618:	7e1b      	ldrb	r3, [r3, #24]
+    161a:	b2db      	uxtb	r3, r3
+    161c:	001a      	movs	r2, r3
+    161e:	2304      	movs	r3, #4
+    1620:	4013      	ands	r3, r2
+    1622:	2b04      	cmp	r3, #4
+    1624:	d1f4      	bne.n	1610 <spi_data_exchange+0x34>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:73
     rx_data = SERCOM1_REGS->SPIM.SERCOM_DATA;
- 8ec:	f640 0300 	movw	r3, #2048	@ 0x800
- 8f0:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 8f4:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
- 8f6:	240f      	movs	r4, #15
- 8f8:	193b      	adds	r3, r7, r4
- 8fa:	701a      	strb	r2, [r3, #0]
+    1626:	f640 0300 	movw	r3, #2048	@ 0x800
+    162a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    162e:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
+    1630:	240f      	movs	r4, #15
+    1632:	193b      	adds	r3, r7, r4
+    1634:	701a      	strb	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:74
     USART_sendString("SPI Char received: ");
- 8fc:	f640 5314 	movw	r3, #3348	@ 0xd14
- 900:	f2c0 0300 	movt	r3, #0
- 904:	0018      	movs	r0, r3
- 906:	f7ff ff42 	bl	78e <USART_sendString>
+    1636:	f641 438c 	movw	r3, #7308	@ 0x1c8c
+    163a:	f2c0 0300 	movt	r3, #0
+    163e:	0018      	movs	r0, r3
+    1640:	f7ff fe7f 	bl	1342 <USART_sendString>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:75
     USART_sendChar(rx_data);
- 90a:	193b      	adds	r3, r7, r4
- 90c:	781b      	ldrb	r3, [r3, #0]
- 90e:	0018      	movs	r0, r3
- 910:	f7ff ff20 	bl	754 <USART_sendChar>
+    1644:	193b      	adds	r3, r7, r4
+    1646:	781b      	ldrb	r3, [r3, #0]
+    1648:	0018      	movs	r0, r3
+    164a:	f7ff fe5d 	bl	1308 <USART_sendChar>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:76
     USART_sendChar('\n');
- 914:	200a      	movs	r0, #10
- 916:	f7ff ff1d 	bl	754 <USART_sendChar>
+    164e:	200a      	movs	r0, #10
+    1650:	f7ff fe5a 	bl	1308 <USART_sendChar>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:77
     return rx_data;
- 91a:	193b      	adds	r3, r7, r4
- 91c:	781b      	ldrb	r3, [r3, #0]
+    1654:	193b      	adds	r3, r7, r4
+    1656:	781b      	ldrb	r3, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:78
 }
- 91e:	0018      	movs	r0, r3
- 920:	46bd      	mov	sp, r7
- 922:	b005      	add	sp, #20
- 924:	bd90      	pop	{r4, r7, pc}
+    1658:	0018      	movs	r0, r3
+    165a:	46bd      	mov	sp, r7
+    165c:	b005      	add	sp, #20
+    165e:	bd90      	pop	{r4, r7, pc}
 
-00000926 <SERCOM1_Handler>:
+00001660 <SERCOM1_Handler>:
 SERCOM1_Handler():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:80
 
 void SERCOM1_Handler(void){
- 926:	b580      	push	{r7, lr}
- 928:	b082      	sub	sp, #8
- 92a:	af00      	add	r7, sp, #0
+    1660:	b580      	push	{r7, lr}
+    1662:	b082      	sub	sp, #8
+    1664:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:82
     //Check if RX complete interrupt flag is set
     if(SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_RXC_Msk){
- 92c:	f640 0300 	movw	r3, #2048	@ 0x800
- 930:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 934:	7e1b      	ldrb	r3, [r3, #24]
- 936:	b2db      	uxtb	r3, r3
- 938:	001a      	movs	r2, r3
- 93a:	2304      	movs	r3, #4
- 93c:	4013      	ands	r3, r2
- 93e:	b1ab      	cbz	r3, 96c <SERCOM1_Handler+0x46>
+    1666:	f640 0300 	movw	r3, #2048	@ 0x800
+    166a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    166e:	7e1b      	ldrb	r3, [r3, #24]
+    1670:	b2db      	uxtb	r3, r3
+    1672:	001a      	movs	r2, r3
+    1674:	2304      	movs	r3, #4
+    1676:	4013      	ands	r3, r2
+    1678:	b1ab      	cbz	r3, 16a6 <SERCOM1_Handler+0x46>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:84
         //Read received character
         char received_char = SERCOM1_REGS->SPIM.SERCOM_DATA;
- 940:	f640 0300 	movw	r3, #2048	@ 0x800
- 944:	f2c4 2300 	movt	r3, #16896	@ 0x4200
- 948:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
- 94a:	1dfb      	adds	r3, r7, #7
- 94c:	701a      	strb	r2, [r3, #0]
+    167a:	f640 0300 	movw	r3, #2048	@ 0x800
+    167e:	f2c4 2300 	movt	r3, #16896	@ 0x4200
+    1682:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
+    1684:	1dfb      	adds	r3, r7, #7
+    1686:	701a      	strb	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:85
         USART_sendString("SPI Char received: ");
- 94e:	f640 5314 	movw	r3, #3348	@ 0xd14
- 952:	f2c0 0300 	movt	r3, #0
- 956:	0018      	movs	r0, r3
- 958:	f7ff ff19 	bl	78e <USART_sendString>
+    1688:	f641 438c 	movw	r3, #7308	@ 0x1c8c
+    168c:	f2c0 0300 	movt	r3, #0
+    1690:	0018      	movs	r0, r3
+    1692:	f7ff fe56 	bl	1342 <USART_sendString>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:86
         USART_sendChar(received_char);
- 95c:	1dfb      	adds	r3, r7, #7
- 95e:	781b      	ldrb	r3, [r3, #0]
- 960:	0018      	movs	r0, r3
- 962:	f7ff fef7 	bl	754 <USART_sendChar>
+    1696:	1dfb      	adds	r3, r7, #7
+    1698:	781b      	ldrb	r3, [r3, #0]
+    169a:	0018      	movs	r0, r3
+    169c:	f7ff fe34 	bl	1308 <USART_sendChar>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:87
         USART_sendChar('\n');
- 966:	200a      	movs	r0, #10
- 968:	f7ff fef4 	bl	754 <USART_sendChar>
+    16a0:	200a      	movs	r0, #10
+    16a2:	f7ff fe31 	bl	1308 <USART_sendChar>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:91
         
         //add your code here to process/store received_char
     }
- 96c:	46c0      	nop			@ (mov r8, r8)
- 96e:	46bd      	mov	sp, r7
- 970:	b002      	add	sp, #8
- 972:	bd80      	pop	{r7, pc}
+    16a6:	46c0      	nop			@ (mov r8, r8)
+    16a8:	46bd      	mov	sp, r7
+    16aa:	b002      	add	sp, #8
+    16ac:	bd80      	pop	{r7, pc}
 
-Disassembly of section .text.Reset_Handler%57:
+Disassembly of section .text.__aeabi_ddiv%58:
 
-00000a34 <Reset_Handler>:
-Reset_Handler():
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:394
-#endif
-    __asm__ volatile ("add r7, sp, #0" : : : "r7");
-#endif
+000016ae <__aeabi_ddiv>:
+__aeabi_ddiv():
+    16ae:	b4f0      	push	{r4, r5, r6, r7}
+    16b0:	2501      	movs	r5, #1
+    16b2:	07ed      	lsls	r5, r5, #31
+    16b4:	000c      	movs	r4, r1
+    16b6:	405c      	eors	r4, r3
+    16b8:	402c      	ands	r4, r5
+    16ba:	46a4      	mov	ip, r4
+    16bc:	0aae      	lsrs	r6, r5, #10
+    16be:	184c      	adds	r4, r1, r1
+    16c0:	18df      	adds	r7, r3, r3
+    16c2:	42f4      	cmn	r4, r6
+    16c4:	d23d      	bcs.n	1742 <__aeabi_ddiv+0x94>
+    16c6:	42f7      	cmn	r7, r6
+    16c8:	d244      	bcs.n	1754 <__aeabi_ddiv+0xa6>
+    16ca:	0d64      	lsrs	r4, r4, #21
+    16cc:	d04a      	beq.n	1764 <__aeabi_ddiv+0xb6>
+    16ce:	0d7f      	lsrs	r7, r7, #21
+    16d0:	d03b      	beq.n	174a <__aeabi_ddiv+0x9c>
+    16d2:	1be4      	subs	r4, r4, r7
+    16d4:	02c9      	lsls	r1, r1, #11
+    16d6:	4329      	orrs	r1, r5
+    16d8:	0acf      	lsrs	r7, r1, #11
+    16da:	02db      	lsls	r3, r3, #11
+    16dc:	432b      	orrs	r3, r5
+    16de:	0adb      	lsrs	r3, r3, #11
+    16e0:	0006      	movs	r6, r0
+    16e2:	1ab6      	subs	r6, r6, r2
+    16e4:	419f      	sbcs	r7, r3
+    16e6:	d204      	bcs.n	16f2 <__aeabi_ddiv+0x44>
+    16e8:	3c01      	subs	r4, #1
+    16ea:	19b6      	adds	r6, r6, r6
+    16ec:	417f      	adcs	r7, r7
+    16ee:	18b6      	adds	r6, r6, r2
+    16f0:	415f      	adcs	r7, r3
+    16f2:	1268      	asrs	r0, r5, #9
+    16f4:	0d80      	lsrs	r0, r0, #22
+    16f6:	1824      	adds	r4, r4, r0
+    16f8:	dd36      	ble.n	1768 <__aeabi_ddiv+0xba>
+    16fa:	1800      	adds	r0, r0, r0
+    16fc:	4284      	cmp	r4, r0
+    16fe:	d824      	bhi.n	174a <__aeabi_ddiv+0x9c>
+    1700:	0ce8      	lsrs	r0, r5, #19
+    1702:	2100      	movs	r1, #0
+    1704:	19b6      	adds	r6, r6, r6
+    1706:	417f      	adcs	r7, r7
+    1708:	1ab6      	subs	r6, r6, r2
+    170a:	419f      	sbcs	r7, r3
+    170c:	d303      	bcc.n	1716 <__aeabi_ddiv+0x68>
+    170e:	4140      	adcs	r0, r0
+    1710:	4149      	adcs	r1, r1
+    1712:	d3f7      	bcc.n	1704 <__aeabi_ddiv+0x56>
+    1714:	e004      	b.n	1720 <__aeabi_ddiv+0x72>
+    1716:	18b6      	adds	r6, r6, r2
+    1718:	415f      	adcs	r7, r3
+    171a:	1800      	adds	r0, r0, r0
+    171c:	4149      	adcs	r1, r1
+    171e:	d3f1      	bcc.n	1704 <__aeabi_ddiv+0x56>
+    1720:	0524      	lsls	r4, r4, #20
+    1722:	19b6      	adds	r6, r6, r6
+    1724:	417f      	adcs	r7, r7
+    1726:	1ab6      	subs	r6, r6, r2
+    1728:	419f      	sbcs	r7, r3
+    172a:	d305      	bcc.n	1738 <__aeabi_ddiv+0x8a>
+    172c:	4337      	orrs	r7, r6
+    172e:	07c2      	lsls	r2, r0, #31
+    1730:	4317      	orrs	r7, r2
+    1732:	2200      	movs	r2, #0
+    1734:	2f01      	cmp	r7, #1
+    1736:	4150      	adcs	r0, r2
+    1738:	4161      	adcs	r1, r4
+    173a:	4662      	mov	r2, ip
+    173c:	4311      	orrs	r1, r2
+    173e:	bcf0      	pop	{r4, r5, r6, r7}
+    1740:	4770      	bx	lr
+    1742:	d10a      	bne.n	175a <__aeabi_ddiv+0xac>
+    1744:	b948      	cbnz	r0, 175a <__aeabi_ddiv+0xac>
+    1746:	42f7      	cmn	r7, r6
+    1748:	d207      	bcs.n	175a <__aeabi_ddiv+0xac>
+    174a:	2000      	movs	r0, #0
+    174c:	43c1      	mvns	r1, r0
+    174e:	0d49      	lsrs	r1, r1, #21
+    1750:	0509      	lsls	r1, r1, #20
+    1752:	e7f2      	b.n	173a <__aeabi_ddiv+0x8c>
+    1754:	b90a      	cbnz	r2, 175a <__aeabi_ddiv+0xac>
+    1756:	42f7      	cmn	r7, r6
+    1758:	d006      	beq.n	1768 <__aeabi_ddiv+0xba>
+    175a:	2000      	movs	r0, #0
+    175c:	43c1      	mvns	r1, r0
+    175e:	0d09      	lsrs	r1, r1, #20
+    1760:	04c9      	lsls	r1, r1, #19
+    1762:	e7ec      	b.n	173e <__aeabi_ddiv+0x90>
+    1764:	0d7f      	lsrs	r7, r7, #21
+    1766:	d0f8      	beq.n	175a <__aeabi_ddiv+0xac>
+    1768:	2000      	movs	r0, #0
+    176a:	4661      	mov	r1, ip
+    176c:	e7e7      	b.n	173e <__aeabi_ddiv+0x90>
 
-    /* Call the optional application-provided _on_reset() function. */
-    if (_on_reset)
- a34:	f240 0300 	movw	r3, #0
- a38:	f2c0 0300 	movt	r3, #0
- a3c:	b123      	cbz	r3, a48 <Reset_Handler+0x14>
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:395
-      _on_reset();
- a3e:	f240 0300 	movw	r3, #0
- a42:	f2c0 0300 	movt	r3, #0
- a46:	4798      	blx	r3
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:398
+Disassembly of section .text%60:
 
-    /* Reserved for use by MPLAB XC32. */
-    if (__xc32_on_reset)
- a48:	f240 0300 	movw	r3, #0
- a4c:	f2c0 0300 	movt	r3, #0
- a50:	b123      	cbz	r3, a5c <Reset_Handler+0x28>
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:399
-      __xc32_on_reset();
- a52:	f240 0300 	movw	r3, #0
- a56:	f2c0 0300 	movt	r3, #0
- a5a:	4798      	blx	r3
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:410
-
- 
-
-
-    /* Data initialization from the XC32 .dinit template */
-    __pic32c_data_initialization();
- a5c:	f000 f8fe 	bl	c5c <__pic32c_data_initialization>
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:417
-#ifdef SCB_VTOR_TBLOFF_Msk
-    /*  Set the vector-table base address. This may be in flash or TCM.
-     *  The __svectors symbol is created by the XC32 linker.
-     */
-    pSrc = (uint32_t *) & __svectors;
-    SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
- a60:	f240 0300 	movw	r3, #0
- a64:	f2c0 0300 	movt	r3, #0
- a68:	227f      	movs	r2, #127	@ 0x7f
- a6a:	4393      	bics	r3, r2
- a6c:	f64e 5200 	movw	r2, #60672	@ 0xed00
- a70:	f2ce 0200 	movt	r2, #57344	@ 0xe000
- a74:	6093      	str	r3, [r2, #8]
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:421
-#endif
- 
-    /* Initialize the C library */
-    __libc_init_array();
- a76:	f640 3379 	movw	r3, #2937	@ 0xb79
- a7a:	f2c0 0300 	movt	r3, #0
- a7e:	4798      	blx	r3
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:424
-
-    /* Call the optional application-provided _on_bootstrap() function. */
-    if (_on_bootstrap)
- a80:	f240 0300 	movw	r3, #0
- a84:	f2c0 0300 	movt	r3, #0
- a88:	b123      	cbz	r3, a94 <Reset_Handler+0x60>
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:425
-      _on_bootstrap();
- a8a:	f240 0300 	movw	r3, #0
- a8e:	f2c0 0300 	movt	r3, #0
- a92:	4798      	blx	r3
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:428
-
-    /* Reserved for use by MPLAB XC32. */
-    if (__xc32_on_bootstrap)
- a94:	f240 0300 	movw	r3, #0
- a98:	f2c0 0300 	movt	r3, #0
- a9c:	b123      	cbz	r3, aa8 <Reset_Handler+0x74>
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:429
-      __xc32_on_bootstrap();
- a9e:	f240 0300 	movw	r3, #0
- aa2:	f2c0 0300 	movt	r3, #0
- aa6:	4798      	blx	r3
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:432
-
-    /* Branch to application's main function.  See above about arguments. */
-    main(0, NULL);
- aa8:	2100      	movs	r1, #0
- aaa:	2000      	movs	r0, #0
- aac:	f000 f835 	bl	b1a <main>
-C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:438
-
-#if (defined(__DEBUG) || defined(__DEBUG_D))
-    __builtin_software_breakpoint();
-#endif
-    /* Infinite loop */
-    while (1) {}
- ab0:	e7fe      	b.n	ab0 <Reset_Handler+0x7c>
-
-Disassembly of section .text%58:
-
-00000ab2 <simple_delay>:
-simple_delay():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:6
-#include "utilities.h"
-#include "configuration.h"
-#include "definitions.h"
-#include "pic32cm5164ls00048.h"
-
-void simple_delay(uint32_t delay){
- ab2:	b580      	push	{r7, lr}
- ab4:	b082      	sub	sp, #8
- ab6:	af00      	add	r7, sp, #0
- ab8:	6078      	str	r0, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:7
-    while(delay > 0){
- aba:	e002      	b.n	ac2 <simple_delay+0x10>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:8
-        delay--;
- abc:	687b      	ldr	r3, [r7, #4]
- abe:	3b01      	subs	r3, #1
- ac0:	607b      	str	r3, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:7
-    while(delay > 0){
- ac2:	687b      	ldr	r3, [r7, #4]
- ac4:	2b00      	cmp	r3, #0
- ac6:	d1f9      	bne.n	abc <simple_delay+0xa>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:10
-    }
-}
- ac8:	46c0      	nop			@ (mov r8, r8)
- aca:	46c0      	nop			@ (mov r8, r8)
- acc:	46bd      	mov	sp, r7
- ace:	b002      	add	sp, #8
- ad0:	bd80      	pop	{r7, pc}
-
-00000ad2 <LED_on>:
-LED_on():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:12
-
-void LED_on(){
- ad2:	b580      	push	{r7, lr}
- ad4:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:13
-    PORT_REGS->GROUP[0].PORT_OUTCLR = LED_PIN; // Turn on LED (active low)
- ad6:	f243 0300 	movw	r3, #12288	@ 0x3000
- ada:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- ade:	f248 0200 	movw	r2, #32768	@ 0x8000
- ae2:	615a      	str	r2, [r3, #20]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:14
-}
- ae4:	46c0      	nop			@ (mov r8, r8)
- ae6:	46bd      	mov	sp, r7
- ae8:	bd80      	pop	{r7, pc}
-
-00000aea <LED_off>:
-LED_off():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:16
-
-void LED_off(){
- aea:	b580      	push	{r7, lr}
- aec:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:17
-    PORT_REGS->GROUP[0].PORT_OUTSET = LED_PIN; // Turn off LED (active low)
- aee:	f243 0300 	movw	r3, #12288	@ 0x3000
- af2:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- af6:	f248 0200 	movw	r2, #32768	@ 0x8000
- afa:	619a      	str	r2, [r3, #24]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:18
-}
- afc:	46c0      	nop			@ (mov r8, r8)
- afe:	46bd      	mov	sp, r7
- b00:	bd80      	pop	{r7, pc}
-
-00000b02 <toggle_LED>:
-toggle_LED():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:20
-
-void toggle_LED(){
- b02:	b580      	push	{r7, lr}
- b04:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:21
-    PORT_REGS->GROUP[0].PORT_OUTTGL = LED_PIN; // Toggle LED (active low)
- b06:	f243 0300 	movw	r3, #12288	@ 0x3000
- b0a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
- b0e:	f248 0200 	movw	r2, #32768	@ 0x8000
- b12:	61da      	str	r2, [r3, #28]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:22
- b14:	46c0      	nop			@ (mov r8, r8)
- b16:	46bd      	mov	sp, r7
- b18:	bd80      	pop	{r7, pc}
-
-Disassembly of section .text%59:
-
-00000b1a <main>:
+00001830 <main>:
 main():
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:12
 
@@ -1691,260 +3231,616 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:12
 #include <stdint.h>
 
 int main(){
- b1a:	b580      	push	{r7, lr}
- b1c:	af00      	add	r7, sp, #0
+    1830:	b580      	push	{r7, lr}
+    1832:	af00      	add	r7, sp, #0
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:14
 
     init_system();
- b1e:	f7ff fcd4 	bl	4ca <init_system>
+    1834:	f7ff fc23 	bl	107e <init_system>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:15
     init_USART();
- b22:	f7ff fdc6 	bl	6b2 <init_USART>
+    1838:	f7ff fd15 	bl	1266 <init_USART>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:16
     init_SPI();
- b26:	f7ff fe73 	bl	810 <init_SPI>
+    183c:	f7ff fe85 	bl	154a <init_SPI>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:18
 
      USART_sendString("SPI Weather Click Example\n");                       //Program appears to be tripping an interrupt at this point, from here it jumps to the dummy_handler function in the startup_pic32cm5164ls00048.c file
- b2a:	f640 33d4 	movw	r3, #3028	@ 0xbd4
- b2e:	f2c0 0300 	movt	r3, #0
- b32:	0018      	movs	r0, r3
- b34:	f7ff fe2b 	bl	78e <USART_sendString>
+    1840:	f641 133c 	movw	r3, #6460	@ 0x193c
+    1844:	f2c0 0300 	movt	r3, #0
+    1848:	0018      	movs	r0, r3
+    184a:	f7ff fd7a 	bl	1342 <USART_sendString>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:19
      USART_sendString("Initializing Weather Click\n");
- b38:	f640 33f0 	movw	r3, #3056	@ 0xbf0
- b3c:	f2c0 0300 	movt	r3, #0
- b40:	0018      	movs	r0, r3
- b42:	f7ff fe24 	bl	78e <USART_sendString>
+    184e:	f641 1358 	movw	r3, #6488	@ 0x1958
+    1852:	f2c0 0300 	movt	r3, #0
+    1856:	0018      	movs	r0, r3
+    1858:	f7ff fd73 	bl	1342 <USART_sendString>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:21
      //Begin by reading the WeatherClick's Compensation Parameters
      read_wClick_T_Params();
- b46:	f7ff fb5c 	bl	202 <read_wClick_T_Params>
+    185c:	f7fe fcd1 	bl	202 <read_wClick_T_Params>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:22
      read_wClick_P_Params();
- b4a:	f7ff fba2 	bl	292 <read_wClick_P_Params>
+    1860:	f7fe fd17 	bl	292 <read_wClick_P_Params>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:23
      read_wClick_H_Params();
- b4e:	f7ff fbe8 	bl	322 <read_wClick_H_Params>
+    1864:	f7fe fd5d 	bl	322 <read_wClick_H_Params>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:24
-     init_wClick();
- b52:	f7ff fb13 	bl	17c <init_wClick>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:28
+     USART_sendString("\r\n\r\nPIC32_LS00 Weather Station\r\n");
+    1868:	f641 1374 	movw	r3, #6516	@ 0x1974
+    186c:	f2c0 0300 	movt	r3, #0
+    1870:	0018      	movs	r0, r3
+    1872:	f7ff fd66 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:25
+     USART_sendString("BME280 Environmental Sensor Demo");
+    1876:	f641 1398 	movw	r3, #6552	@ 0x1998
+    187a:	f2c0 0300 	movt	r3, #0
+    187e:	0018      	movs	r0, r3
+    1880:	f7ff fd5f 	bl	1342 <USART_sendString>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:26
+     read_wClick_ID();
+    1884:	f7fe fc95 	bl	1b2 <read_wClick_ID>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:30
 
     while(1){
 
         toggle_LED();
- b56:	f7ff ffd4 	bl	b02 <toggle_LED>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:29
-        USART_sendString("USART Message\n ");
- b5a:	f640 430c 	movw	r3, #3084	@ 0xc0c
- b5e:	f2c0 0300 	movt	r3, #0
- b62:	0018      	movs	r0, r3
- b64:	f7ff fe13 	bl	78e <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:31 (discriminator 1)
-        //USART_sendChar('c');
+    1888:	f000 f8f5 	bl	1a76 <toggle_LED>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:31
+        init_wClick();
+    188c:	f7fe fc76 	bl	17c <init_wClick>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:32
+        read_wClick_temp();
+    1890:	f7fe fd8f 	bl	3b2 <read_wClick_temp>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:33
+        read_wClick_press();
+    1894:	f7fe fdb5 	bl	402 <read_wClick_press>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:34
+        read_wClick_hum();
+    1898:	f7fe fddb 	bl	452 <read_wClick_hum>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:35
+        calc_wClick_temp();
+    189c:	f7fe fe5b 	bl	556 <calc_wClick_temp>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:36
+        calc_wClick_press();
+    18a0:	f7fe ff94 	bl	7cc <calc_wClick_press>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:37
+        calc_wClick_hum();
+    18a4:	f7ff fa1c 	bl	ce0 <calc_wClick_hum>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:38
+        print_wClick_results();
+    18a8:	f7fe fdfb 	bl	4a2 <print_wClick_results>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:39 (discriminator 1)
         simple_delay(1200000);
- b68:	f644 7380 	movw	r3, #20352	@ 0x4f80
- b6c:	f2c0 0312 	movt	r3, #18
- b70:	0018      	movs	r0, r3
- b72:	f7ff ff9e 	bl	ab2 <simple_delay>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:28
+    18ac:	f644 7380 	movw	r3, #20352	@ 0x4f80
+    18b0:	f2c0 0312 	movt	r3, #18
+    18b4:	0018      	movs	r0, r3
+    18b6:	f000 f8b6 	bl	1a26 <simple_delay>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:30
         toggle_LED();
- b76:	e7ee      	b.n	b56 <main+0x3c>
+    18ba:	e7e5      	b.n	1888 <main+0x58>
 
-Disassembly of section .text.__libc_start_init%60:
+Disassembly of section .text.Reset_Handler%61:
 
-00000b78 <__libc_init_array>:
+000018bc <Reset_Handler>:
+Reset_Handler():
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:394
+#endif
+    __asm__ volatile ("add r7, sp, #0" : : : "r7");
+#endif
+
+    /* Call the optional application-provided _on_reset() function. */
+    if (_on_reset)
+    18bc:	f240 0300 	movw	r3, #0
+    18c0:	f2c0 0300 	movt	r3, #0
+    18c4:	b123      	cbz	r3, 18d0 <Reset_Handler+0x14>
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:395
+      _on_reset();
+    18c6:	f240 0300 	movw	r3, #0
+    18ca:	f2c0 0300 	movt	r3, #0
+    18ce:	4798      	blx	r3
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:398
+
+    /* Reserved for use by MPLAB XC32. */
+    if (__xc32_on_reset)
+    18d0:	f240 0300 	movw	r3, #0
+    18d4:	f2c0 0300 	movt	r3, #0
+    18d8:	b123      	cbz	r3, 18e4 <Reset_Handler+0x28>
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:399
+      __xc32_on_reset();
+    18da:	f240 0300 	movw	r3, #0
+    18de:	f2c0 0300 	movt	r3, #0
+    18e2:	4798      	blx	r3
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:410
+
+ 
+
+
+    /* Data initialization from the XC32 .dinit template */
+    __pic32c_data_initialization();
+    18e4:	f000 f922 	bl	1b2c <__pic32c_data_initialization>
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:417
+#ifdef SCB_VTOR_TBLOFF_Msk
+    /*  Set the vector-table base address. This may be in flash or TCM.
+     *  The __svectors symbol is created by the XC32 linker.
+     */
+    pSrc = (uint32_t *) & __svectors;
+    SCB->VTOR = ((uint32_t) pSrc & SCB_VTOR_TBLOFF_Msk);
+    18e8:	f240 0300 	movw	r3, #0
+    18ec:	f2c0 0300 	movt	r3, #0
+    18f0:	227f      	movs	r2, #127	@ 0x7f
+    18f2:	4393      	bics	r3, r2
+    18f4:	f64e 5200 	movw	r2, #60672	@ 0xed00
+    18f8:	f2ce 0200 	movt	r2, #57344	@ 0xe000
+    18fc:	6093      	str	r3, [r2, #8]
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:421
+#endif
+ 
+    /* Initialize the C library */
+    __libc_init_array();
+    18fe:	f641 2391 	movw	r3, #6801	@ 0x1a91
+    1902:	f2c0 0300 	movt	r3, #0
+    1906:	4798      	blx	r3
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:424
+
+    /* Call the optional application-provided _on_bootstrap() function. */
+    if (_on_bootstrap)
+    1908:	f240 0300 	movw	r3, #0
+    190c:	f2c0 0300 	movt	r3, #0
+    1910:	b123      	cbz	r3, 191c <Reset_Handler+0x60>
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:425
+      _on_bootstrap();
+    1912:	f240 0300 	movw	r3, #0
+    1916:	f2c0 0300 	movt	r3, #0
+    191a:	4798      	blx	r3
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:428
+
+    /* Reserved for use by MPLAB XC32. */
+    if (__xc32_on_bootstrap)
+    191c:	f240 0300 	movw	r3, #0
+    1920:	f2c0 0300 	movt	r3, #0
+    1924:	b123      	cbz	r3, 1930 <Reset_Handler+0x74>
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:429
+      __xc32_on_bootstrap();
+    1926:	f240 0300 	movw	r3, #0
+    192a:	f2c0 0300 	movt	r3, #0
+    192e:	4798      	blx	r3
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:432
+
+    /* Branch to application's main function.  See above about arguments. */
+    main(0, NULL);
+    1930:	2100      	movs	r1, #0
+    1932:	2000      	movs	r0, #0
+    1934:	f7ff ff7c 	bl	1830 <main>
+C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:438
+
+#if (defined(__DEBUG) || defined(__DEBUG_D))
+    __builtin_software_breakpoint();
+#endif
+    /* Infinite loop */
+    while (1) {}
+    1938:	e7fe      	b.n	1938 <Reset_Handler+0x7c>
+
+Disassembly of section .text%64:
+
+00001a26 <simple_delay>:
+simple_delay():
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:6
+#include "utilities.h"
+#include "configuration.h"
+#include "definitions.h"
+#include "pic32cm5164ls00048.h"
+
+void simple_delay(uint32_t delay){
+    1a26:	b580      	push	{r7, lr}
+    1a28:	b082      	sub	sp, #8
+    1a2a:	af00      	add	r7, sp, #0
+    1a2c:	6078      	str	r0, [r7, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:7
+    while(delay > 0){
+    1a2e:	e002      	b.n	1a36 <simple_delay+0x10>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:8
+        delay--;
+    1a30:	687b      	ldr	r3, [r7, #4]
+    1a32:	3b01      	subs	r3, #1
+    1a34:	607b      	str	r3, [r7, #4]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:7
+    while(delay > 0){
+    1a36:	687b      	ldr	r3, [r7, #4]
+    1a38:	2b00      	cmp	r3, #0
+    1a3a:	d1f9      	bne.n	1a30 <simple_delay+0xa>
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:10
+    }
+}
+    1a3c:	46c0      	nop			@ (mov r8, r8)
+    1a3e:	46c0      	nop			@ (mov r8, r8)
+    1a40:	46bd      	mov	sp, r7
+    1a42:	b002      	add	sp, #8
+    1a44:	bd80      	pop	{r7, pc}
+
+00001a46 <LED_on>:
+LED_on():
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:12
+
+void LED_on(){
+    1a46:	b580      	push	{r7, lr}
+    1a48:	af00      	add	r7, sp, #0
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:13
+    PORT_REGS->GROUP[0].PORT_OUTCLR = LED_PIN; // Turn on LED (active low)
+    1a4a:	f243 0300 	movw	r3, #12288	@ 0x3000
+    1a4e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1a52:	f248 0200 	movw	r2, #32768	@ 0x8000
+    1a56:	615a      	str	r2, [r3, #20]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:14
+}
+    1a58:	46c0      	nop			@ (mov r8, r8)
+    1a5a:	46bd      	mov	sp, r7
+    1a5c:	bd80      	pop	{r7, pc}
+
+00001a5e <LED_off>:
+LED_off():
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:16
+
+void LED_off(){
+    1a5e:	b580      	push	{r7, lr}
+    1a60:	af00      	add	r7, sp, #0
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:17
+    PORT_REGS->GROUP[0].PORT_OUTSET = LED_PIN; // Turn off LED (active low)
+    1a62:	f243 0300 	movw	r3, #12288	@ 0x3000
+    1a66:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1a6a:	f248 0200 	movw	r2, #32768	@ 0x8000
+    1a6e:	619a      	str	r2, [r3, #24]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:18
+}
+    1a70:	46c0      	nop			@ (mov r8, r8)
+    1a72:	46bd      	mov	sp, r7
+    1a74:	bd80      	pop	{r7, pc}
+
+00001a76 <toggle_LED>:
+toggle_LED():
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:20
+
+void toggle_LED(){
+    1a76:	b580      	push	{r7, lr}
+    1a78:	af00      	add	r7, sp, #0
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:21
+    PORT_REGS->GROUP[0].PORT_OUTTGL = LED_PIN; // Toggle LED (active low)
+    1a7a:	f243 0300 	movw	r3, #12288	@ 0x3000
+    1a7e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
+    1a82:	f248 0200 	movw	r2, #32768	@ 0x8000
+    1a86:	61da      	str	r2, [r3, #28]
+C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:22
+    1a88:	46c0      	nop			@ (mov r8, r8)
+    1a8a:	46bd      	mov	sp, r7
+    1a8c:	bd80      	pop	{r7, pc}
+
+Disassembly of section .text.__libc_start_init%65:
+
+00001a90 <__libc_init_array>:
 __init_libc():
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:21
- b78:	2300      	movs	r3, #0
- b7a:	4a0e      	ldr	r2, [pc, #56]	@ (bb4 <__libc_init_array+0x3c>)
+    1a90:	2300      	movs	r3, #0
+    1a92:	4a0e      	ldr	r2, [pc, #56]	@ (1acc <__libc_init_array+0x3c>)
 __libc_start_init():
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:31
- b7c:	b510      	push	{r4, lr}
+    1a94:	b510      	push	{r4, lr}
 __init_libc():
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:21
- b7e:	6013      	str	r3, [r2, #0]
+    1a96:	6013      	str	r3, [r2, #0]
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:22
- b80:	4a0d      	ldr	r2, [pc, #52]	@ (bb8 <__libc_init_array+0x40>)
+    1a98:	4a0d      	ldr	r2, [pc, #52]	@ (1ad0 <__libc_init_array+0x40>)
 __libc_start_init():
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:35
- b82:	4c0e      	ldr	r4, [pc, #56]	@ (bbc <__libc_init_array+0x44>)
+    1a9a:	4c0e      	ldr	r4, [pc, #56]	@ (1ad4 <__libc_init_array+0x44>)
 __init_libc():
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:22
- b84:	6013      	str	r3, [r2, #0]
+    1a9c:	6013      	str	r3, [r2, #0]
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:23
- b86:	4a0e      	ldr	r2, [pc, #56]	@ (bc0 <__libc_init_array+0x48>)
- b88:	6013      	str	r3, [r2, #0]
+    1a9e:	4a0e      	ldr	r2, [pc, #56]	@ (1ad8 <__libc_init_array+0x48>)
+    1aa0:	6013      	str	r3, [r2, #0]
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:24
- b8a:	4a0e      	ldr	r2, [pc, #56]	@ (bc4 <__libc_init_array+0x4c>)
- b8c:	6013      	str	r3, [r2, #0]
- b8e:	4a0e      	ldr	r2, [pc, #56]	@ (bc8 <__libc_init_array+0x50>)
- b90:	6013      	str	r3, [r2, #0]
+    1aa2:	4a0e      	ldr	r2, [pc, #56]	@ (1adc <__libc_init_array+0x4c>)
+    1aa4:	6013      	str	r3, [r2, #0]
+    1aa6:	4a0e      	ldr	r2, [pc, #56]	@ (1ae0 <__libc_init_array+0x50>)
+    1aa8:	6013      	str	r3, [r2, #0]
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:25
- b92:	4a0e      	ldr	r2, [pc, #56]	@ (bcc <__libc_init_array+0x54>)
- b94:	6253      	str	r3, [r2, #36]	@ 0x24
+    1aaa:	4a0e      	ldr	r2, [pc, #56]	@ (1ae4 <__libc_init_array+0x54>)
+    1aac:	6253      	str	r3, [r2, #36]	@ 0x24
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:26
- b96:	6113      	str	r3, [r2, #16]
+    1aae:	6113      	str	r3, [r2, #16]
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:27
- b98:	3301      	adds	r3, #1
- b9a:	6093      	str	r3, [r2, #8]
+    1ab0:	3301      	adds	r3, #1
+    1ab2:	6093      	str	r3, [r2, #8]
 __libc_start_init():
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:33
- b9c:	f000 f8d9 	bl	d52 <__init_host>
+    1ab4:	f7ff ff41 	bl	193a <__init_host>
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:34
- ba0:	f000 f8d7 	bl	d52 <__init_host>
+    1ab8:	f7ff ff3f 	bl	193a <__init_host>
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:36 (discriminator 1)
- ba4:	4b0a      	ldr	r3, [pc, #40]	@ (bd0 <__libc_init_array+0x58>)
- ba6:	429c      	cmp	r4, r3
- ba8:	d300      	bcc.n	bac <__libc_init_array+0x34>
+    1abc:	4b0a      	ldr	r3, [pc, #40]	@ (1ae8 <__libc_init_array+0x58>)
+    1abe:	429c      	cmp	r4, r3
+    1ac0:	d300      	bcc.n	1ac4 <__libc_init_array+0x34>
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:38
- baa:	bd10      	pop	{r4, pc}
+    1ac2:	bd10      	pop	{r4, pc}
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:37
- bac:	cc08      	ldmia	r4!, {r3}
- bae:	4798      	blx	r3
+    1ac4:	cc08      	ldmia	r4!, {r3}
+    1ac6:	4798      	blx	r3
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:36 (discriminator 2)
- bb0:	e7f8      	b.n	ba4 <__libc_init_array+0x2c>
- bb2:	46c0      	nop			@ (mov r8, r8)
- bb4:	200000d8 	.word	0x200000d8
- bb8:	20000074 	.word	0x20000074
- bbc:	00000168 	.word	0x00000168
- bc0:	20000070 	.word	0x20000070
- bc4:	20000068 	.word	0x20000068
- bc8:	2000006c 	.word	0x2000006c
- bcc:	20000078 	.word	0x20000078
- bd0:	0000016c 	.word	0x0000016c
+    1ac8:	e7f8      	b.n	1abc <__libc_init_array+0x2c>
+    1aca:	46c0      	nop			@ (mov r8, r8)
+    1acc:	200000d8 	.word	0x200000d8
+    1ad0:	20000074 	.word	0x20000074
+    1ad4:	00000168 	.word	0x00000168
+    1ad8:	20000070 	.word	0x20000070
+    1adc:	20000068 	.word	0x20000068
+    1ae0:	2000006c 	.word	0x2000006c
+    1ae4:	20000078 	.word	0x20000078
+    1ae8:	0000016c 	.word	0x0000016c
 
-Disassembly of section .text%62:
+Disassembly of section .text%66:
 
-00000c1c <__do_global_dtors_aux>:
+00001aec <__do_global_dtors_aux>:
 __do_global_dtors_aux():
- c1c:	b510      	push	{r4, lr}
- c1e:	4c05      	ldr	r4, [pc, #20]	@ (c34 <__do_global_dtors_aux+0x18>)
- c20:	7823      	ldrb	r3, [r4, #0]
- c22:	b933      	cbnz	r3, c32 <__do_global_dtors_aux+0x16>
- c24:	4b04      	ldr	r3, [pc, #16]	@ (c38 <__do_global_dtors_aux+0x1c>)
- c26:	b113      	cbz	r3, c2e <__do_global_dtors_aux+0x12>
- c28:	4804      	ldr	r0, [pc, #16]	@ (c3c <__do_global_dtors_aux+0x20>)
- c2a:	e000      	b.n	c2e <__do_global_dtors_aux+0x12>
- c2c:	bf00      	nop
- c2e:	2301      	movs	r3, #1
- c30:	7023      	strb	r3, [r4, #0]
- c32:	bd10      	pop	{r4, pc}
- c34:	200000b8 	.word	0x200000b8
+    1aec:	b510      	push	{r4, lr}
+    1aee:	4c05      	ldr	r4, [pc, #20]	@ (1b04 <__do_global_dtors_aux+0x18>)
+    1af0:	7823      	ldrb	r3, [r4, #0]
+    1af2:	b933      	cbnz	r3, 1b02 <__do_global_dtors_aux+0x16>
+    1af4:	4b04      	ldr	r3, [pc, #16]	@ (1b08 <__do_global_dtors_aux+0x1c>)
+    1af6:	b113      	cbz	r3, 1afe <__do_global_dtors_aux+0x12>
+    1af8:	4804      	ldr	r0, [pc, #16]	@ (1b0c <__do_global_dtors_aux+0x20>)
+    1afa:	e000      	b.n	1afe <__do_global_dtors_aux+0x12>
+    1afc:	bf00      	nop
+    1afe:	2301      	movs	r3, #1
+    1b00:	7023      	strb	r3, [r4, #0]
+    1b02:	bd10      	pop	{r4, pc}
+    1b04:	200000b8 	.word	0x200000b8
 	...
 
-00000c40 <frame_dummy>:
+00001b10 <frame_dummy>:
 frame_dummy():
- c40:	4b03      	ldr	r3, [pc, #12]	@ (c50 <frame_dummy+0x10>)
- c42:	b510      	push	{r4, lr}
- c44:	b11b      	cbz	r3, c4e <frame_dummy+0xe>
- c46:	4903      	ldr	r1, [pc, #12]	@ (c54 <frame_dummy+0x14>)
- c48:	4803      	ldr	r0, [pc, #12]	@ (c58 <frame_dummy+0x18>)
- c4a:	e000      	b.n	c4e <frame_dummy+0xe>
- c4c:	bf00      	nop
- c4e:	bd10      	pop	{r4, pc}
- c50:	00000000 	.word	0x00000000
- c54:	200000bc 	.word	0x200000bc
- c58:	00000000 	.word	0x00000000
+    1b10:	4b03      	ldr	r3, [pc, #12]	@ (1b20 <frame_dummy+0x10>)
+    1b12:	b510      	push	{r4, lr}
+    1b14:	b11b      	cbz	r3, 1b1e <frame_dummy+0xe>
+    1b16:	4903      	ldr	r1, [pc, #12]	@ (1b24 <frame_dummy+0x14>)
+    1b18:	4803      	ldr	r0, [pc, #12]	@ (1b28 <frame_dummy+0x18>)
+    1b1a:	e000      	b.n	1b1e <frame_dummy+0xe>
+    1b1c:	bf00      	nop
+    1b1e:	bd10      	pop	{r4, pc}
+    1b20:	00000000 	.word	0x00000000
+    1b24:	200000bc 	.word	0x200000bc
+    1b28:	00000000 	.word	0x00000000
 
-Disassembly of section .text.__pic32c_data_initialization%63:
+Disassembly of section .text.__pic32c_data_initialization%67:
 
-00000c5c <__pic32c_data_initialization>:
+00001b2c <__pic32c_data_initialization>:
 __pic32c_data_initialization():
 /pic32c-libs/libpic32c/stubs/data_init.c:54
- c5c:	b510      	push	{r4, lr}
+    1b2c:	b510      	push	{r4, lr}
 /pic32c-libs/libpic32c/stubs/data_init.c:69
- c5e:	480a      	ldr	r0, [pc, #40]	@ (c88 <__pic32c_data_initialization+0x2c>)
+    1b2e:	480a      	ldr	r0, [pc, #40]	@ (1b58 <__pic32c_data_initialization+0x2c>)
 /pic32c-libs/libpic32c/stubs/data_init.c:72
- c60:	6801      	ldr	r1, [r0, #0]
- c62:	b921      	cbnz	r1, c6e <__pic32c_data_initialization+0x12>
+    1b30:	6801      	ldr	r1, [r0, #0]
+    1b32:	b921      	cbnz	r1, 1b3e <__pic32c_data_initialization+0x12>
 /pic32c-libs/libpic32c/stubs/data_init.c:72 (discriminator 1)
- c64:	6843      	ldr	r3, [r0, #4]
- c66:	b913      	cbnz	r3, c6e <__pic32c_data_initialization+0x12>
+    1b34:	6843      	ldr	r3, [r0, #4]
+    1b36:	b913      	cbnz	r3, 1b3e <__pic32c_data_initialization+0x12>
 /pic32c-libs/libpic32c/stubs/data_init.c:89
- c68:	f000 f845 	bl	cf6 <xc32_init_tls>
+    1b38:	f7ff fe19 	bl	176e <xc32_init_tls>
 /pic32c-libs/libpic32c/stubs/data_init.c:90
- c6c:	bd10      	pop	{r4, pc}
+    1b3c:	bd10      	pop	{r4, pc}
 /pic32c-libs/libpic32c/stubs/data_init.c:83
- c6e:	0004      	movs	r4, r0
+    1b3e:	0004      	movs	r4, r0
 /pic32c-libs/libpic32c/stubs/data_init.c:85
- c70:	6883      	ldr	r3, [r0, #8]
- c72:	4a06      	ldr	r2, [pc, #24]	@ (c8c <__pic32c_data_initialization+0x30>)
- c74:	b29b      	uxth	r3, r3
+    1b40:	6883      	ldr	r3, [r0, #8]
+    1b42:	4a06      	ldr	r2, [pc, #24]	@ (1b5c <__pic32c_data_initialization+0x30>)
+    1b44:	b29b      	uxth	r3, r3
 /pic32c-libs/libpic32c/stubs/data_init.c:83
- c76:	340c      	adds	r4, #12
+    1b46:	340c      	adds	r4, #12
 /pic32c-libs/libpic32c/stubs/data_init.c:85
- c78:	009b      	lsls	r3, r3, #2
- c7a:	589b      	ldr	r3, [r3, r2]
- c7c:	6842      	ldr	r2, [r0, #4]
- c7e:	0020      	movs	r0, r4
- c80:	4798      	blx	r3
+    1b48:	009b      	lsls	r3, r3, #2
+    1b4a:	589b      	ldr	r3, [r3, r2]
+    1b4c:	6842      	ldr	r2, [r0, #4]
+    1b4e:	0020      	movs	r0, r4
+    1b50:	4798      	blx	r3
 /pic32c-libs/libpic32c/stubs/data_init.c:85 (discriminator 1)
- c82:	0080      	lsls	r0, r0, #2
- c84:	1820      	adds	r0, r4, r0
- c86:	e7eb      	b.n	c60 <__pic32c_data_initialization+0x4>
- c88:	00000974 	.word	0x00000974
- c8c:	00000d28 	.word	0x00000d28
+    1b52:	0080      	lsls	r0, r0, #2
+    1b54:	1820      	adds	r0, r4, r0
+    1b56:	e7eb      	b.n	1b30 <__pic32c_data_initialization+0x4>
+    1b58:	00001770 	.word	0x00001770
+    1b5c:	00001ca0 	.word	0x00001ca0
 
-Disassembly of section .text.__dinit_copy%66:
+Disassembly of section .text.__aeabi_d2iz%68:
 
-00000cd8 <__dinit_copy>:
+00001b60 <__aeabi_d2iz>:
+__aeabi_d2iz():
+    1b60:	46f4      	mov	ip, lr
+    1b62:	184a      	adds	r2, r1, r1
+    1b64:	d205      	bcs.n	1b72 <__aeabi_d2iz+0x12>
+    1b66:	f000 f82e 	bl	1bc6 <.L__aeabi_d2uiz_fast_entry>
+    1b6a:	d501      	bpl.n	1b70 <__aeabi_d2iz+0x10>
+    1b6c:	17c0      	asrs	r0, r0, #31
+    1b6e:	0840      	lsrs	r0, r0, #1
+    1b70:	4760      	bx	ip
+    1b72:	2301      	movs	r3, #1
+    1b74:	055b      	lsls	r3, r3, #21
+    1b76:	42d3      	cmn	r3, r2
+    1b78:	d206      	bcs.n	1b88 <__aeabi_d2iz+0x28>
+    1b7a:	f000 f824 	bl	1bc6 <.L__aeabi_d2uiz_fast_entry>
+    1b7e:	d501      	bpl.n	1b84 <__aeabi_d2iz+0x24>
+    1b80:	2001      	movs	r0, #1
+    1b82:	07c0      	lsls	r0, r0, #31
+    1b84:	4240      	negs	r0, r0
+    1b86:	4760      	bx	ip
+    1b88:	d101      	bne.n	1b8e <__aeabi_d2iz+0x2e>
+    1b8a:	4200      	tst	r0, r0
+    1b8c:	d0f5      	beq.n	1b7a <__aeabi_d2iz+0x1a>
+    1b8e:	17d0      	asrs	r0, r2, #31
+    1b90:	0840      	lsrs	r0, r0, #1
+    1b92:	4770      	bx	lr
+
+Disassembly of section .text.__aeabi_dcmpeq%69:
+
+00001b94 <__aeabi_dcmpeq>:
+__aeabi_dcmpeq():
+    1b94:	b470      	push	{r4, r5, r6}
+    1b96:	2601      	movs	r6, #1
+    1b98:	0576      	lsls	r6, r6, #21
+    1b9a:	004c      	lsls	r4, r1, #1
+    1b9c:	005d      	lsls	r5, r3, #1
+    1b9e:	42e6      	cmn	r6, r4
+    1ba0:	d80c      	bhi.n	1bbc <__aeabi_dcmpeq+0x28>
+    1ba2:	42ee      	cmn	r6, r5
+    1ba4:	d80a      	bhi.n	1bbc <__aeabi_dcmpeq+0x28>
+    1ba6:	4325      	orrs	r5, r4
+    1ba8:	4305      	orrs	r5, r0
+    1baa:	4315      	orrs	r5, r2
+    1bac:	d003      	beq.n	1bb6 <__aeabi_dcmpeq+0x22>
+    1bae:	4299      	cmp	r1, r3
+    1bb0:	d104      	bne.n	1bbc <__aeabi_dcmpeq+0x28>
+    1bb2:	4290      	cmp	r0, r2
+    1bb4:	d102      	bne.n	1bbc <__aeabi_dcmpeq+0x28>
+    1bb6:	2001      	movs	r0, #1
+    1bb8:	bc70      	pop	{r4, r5, r6}
+    1bba:	4770      	bx	lr
+    1bbc:	2000      	movs	r0, #0
+    1bbe:	bc70      	pop	{r4, r5, r6}
+    1bc0:	4770      	bx	lr
+
+Disassembly of section .text.__aeabi_d2uiz%70:
+
+00001bc2 <__aeabi_d2uiz>:
+__aeabi_d2uiz():
+    1bc2:	004a      	lsls	r2, r1, #1
+    1bc4:	d210      	bcs.n	1be8 <.L__aeabi_d2uiz_fast_entry+0x22>
+
+00001bc6 <.L__aeabi_d2uiz_fast_entry>:
+    1bc6:	0d52      	lsrs	r2, r2, #21
+    1bc8:	2303      	movs	r3, #3
+    1bca:	021b      	lsls	r3, r3, #8
+    1bcc:	33ff      	adds	r3, #255	@ 0xff
+    1bce:	1ad2      	subs	r2, r2, r3
+    1bd0:	d40a      	bmi.n	1be8 <.L__aeabi_d2uiz_fast_entry+0x22>
+    1bd2:	4252      	negs	r2, r2
+    1bd4:	321f      	adds	r2, #31
+    1bd6:	d409      	bmi.n	1bec <.L__aeabi_d2uiz_fast_entry+0x26>
+    1bd8:	0d40      	lsrs	r0, r0, #21
+    1bda:	02c9      	lsls	r1, r1, #11
+    1bdc:	4308      	orrs	r0, r1
+    1bde:	2301      	movs	r3, #1
+    1be0:	07db      	lsls	r3, r3, #31
+    1be2:	4318      	orrs	r0, r3
+    1be4:	40d0      	lsrs	r0, r2
+    1be6:	4770      	bx	lr
+    1be8:	2000      	movs	r0, #0
+    1bea:	4770      	bx	lr
+    1bec:	17d0      	asrs	r0, r2, #31
+    1bee:	4770      	bx	lr
+
+Disassembly of section .text.__dinit_copy%73:
+
+00001c38 <__dinit_copy>:
 __dinit_copy():
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:20
- cd8:	2300      	movs	r3, #0
+    1c38:	2300      	movs	r3, #0
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:12
- cda:	b510      	push	{r4, lr}
+    1c3a:	b510      	push	{r4, lr}
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:20 (discriminator 1)
- cdc:	4293      	cmp	r3, r2
- cde:	d106      	bne.n	cee <__dinit_copy+0x16>
+    1c3c:	4293      	cmp	r3, r2
+    1c3e:	d106      	bne.n	1c4e <__dinit_copy+0x16>
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:23
- ce0:	2003      	movs	r0, #3
- ce2:	4018      	ands	r0, r3
- ce4:	1e42      	subs	r2, r0, #1
- ce6:	4190      	sbcs	r0, r2
- ce8:	089b      	lsrs	r3, r3, #2
+    1c40:	2003      	movs	r0, #3
+    1c42:	4018      	ands	r0, r3
+    1c44:	1e42      	subs	r2, r0, #1
+    1c46:	4190      	sbcs	r0, r2
+    1c48:	089b      	lsrs	r3, r3, #2
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:23 (discriminator 4)
- cea:	18c0      	adds	r0, r0, r3
+    1c4a:	18c0      	adds	r0, r0, r3
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:24
- cec:	bd10      	pop	{r4, pc}
+    1c4c:	bd10      	pop	{r4, pc}
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:21
- cee:	5cc4      	ldrb	r4, [r0, r3]
- cf0:	54cc      	strb	r4, [r1, r3]
+    1c4e:	5cc4      	ldrb	r4, [r0, r3]
+    1c50:	54cc      	strb	r4, [r1, r3]
 /pic32c-libs/libpic32c/stubs/pic32_data_init_copy.c:20 (discriminator 3)
- cf2:	3301      	adds	r3, #1
- cf4:	e7f2      	b.n	cdc <__dinit_copy+0x4>
+    1c52:	3301      	adds	r3, #1
+    1c54:	e7f2      	b.n	1c3c <__dinit_copy+0x4>
 
-Disassembly of section .text.__dinit_clear%70:
+Disassembly of section .text.__aeabi_i2d%74:
 
-00000d3c <__dinit_clear>:
+00001c56 <__aeabi_i2d>:
+__aeabi_i2d():
+    1c56:	f641 4373 	movw	r3, #7283	@ 0x1c73
+    1c5a:	f2c0 0300 	movt	r3, #0
+    1c5e:	4200      	tst	r0, r0
+    1c60:	d506      	bpl.n	1c70 <__aeabi_i2d+0x1a>
+    1c62:	4240      	negs	r0, r0
+    1c64:	b500      	push	{lr}
+    1c66:	4798      	blx	r3
+    1c68:	bc08      	pop	{r3}
+    1c6a:	2201      	movs	r2, #1
+    1c6c:	07d2      	lsls	r2, r2, #31
+    1c6e:	4311      	orrs	r1, r2
+    1c70:	4718      	bx	r3
+
+Disassembly of section .text.__aeabi_ui2d%75:
+
+00001c72 <__aeabi_ui2d>:
+__aeabi_ui2d():
+    1c72:	f240 421d 	movw	r2, #1053	@ 0x41d
+    1c76:	0001      	movs	r1, r0
+    1c78:	d007      	beq.n	1c8a <__aeabi_ui2d+0x18>
+    1c7a:	d402      	bmi.n	1c82 <__aeabi_ui2d+0x10>
+    1c7c:	3a01      	subs	r2, #1
+    1c7e:	1800      	adds	r0, r0, r0
+    1c80:	d5fc      	bpl.n	1c7c <__aeabi_ui2d+0xa>
+    1c82:	0512      	lsls	r2, r2, #20
+    1c84:	0ac3      	lsrs	r3, r0, #11
+    1c86:	0540      	lsls	r0, r0, #21
+    1c88:	1899      	adds	r1, r3, r2
+    1c8a:	4770      	bx	lr
+
+Disassembly of section .text.__aeabi_dsub%78:
+
+00001cb4 <__aeabi_dsub>:
+__aeabi_dsub():
+    1cb4:	b4f0      	push	{r4, r5, r6, r7}
+    1cb6:	2501      	movs	r5, #1
+    1cb8:	07ed      	lsls	r5, r5, #31
+    1cba:	406b      	eors	r3, r5
+    1cbc:	f640 64bd 	movw	r4, #3773	@ 0xebd
+    1cc0:	f2c0 0400 	movt	r4, #0
+    1cc4:	4720      	bx	r4
+
+Disassembly of section .text.__dinit_clear%79:
+
+00001cc6 <__dinit_clear>:
 __dinit_clear():
 /pic32c-libs/libpic32c/stubs/pic32_data_init_clear.c:15
- d3c:	188a      	adds	r2, r1, r2
+    1cc6:	188a      	adds	r2, r1, r2
 /pic32c-libs/libpic32c/stubs/pic32_data_init_clear.c:15 (discriminator 1)
- d3e:	4291      	cmp	r1, r2
- d40:	d101      	bne.n	d46 <__dinit_clear+0xa>
+    1cc8:	4291      	cmp	r1, r2
+    1cca:	d101      	bne.n	1cd0 <__dinit_clear+0xa>
 /pic32c-libs/libpic32c/stubs/pic32_data_init_clear.c:18
- d42:	2000      	movs	r0, #0
- d44:	4770      	bx	lr
+    1ccc:	2000      	movs	r0, #0
+    1cce:	4770      	bx	lr
 /pic32c-libs/libpic32c/stubs/pic32_data_init_clear.c:16
- d46:	2300      	movs	r3, #0
- d48:	700b      	strb	r3, [r1, #0]
+    1cd0:	2300      	movs	r3, #0
+    1cd2:	700b      	strb	r3, [r1, #0]
 /pic32c-libs/libpic32c/stubs/pic32_data_init_clear.c:15 (discriminator 3)
- d4a:	3101      	adds	r1, #1
- d4c:	e7f7      	b.n	d3e <__dinit_clear+0x2>
+    1cd4:	3101      	adds	r1, #1
+    1cd6:	e7f7      	b.n	1cc8 <__dinit_clear+0x2>
 
-Disassembly of section .text.__dummy_decompress%71:
+Disassembly of section .text.__dummy_decompress%80:
 
-00000d4e <__dinit_copy_emb>:
+00001cd8 <__dinit_copy_emb>:
 __dummy_decompress():
 /pic32c-libs/libpic32c/stubs/data_init.c:39
- d4e:	2000      	movs	r0, #0
- d50:	4770      	bx	lr
+    1cd8:	2000      	movs	r0, #0
+    1cda:	4770      	bx	lr
 
-Disassembly of section .text.Dummy_Handler%72:
+Disassembly of section .text.Dummy_Handler%81:
 
-0000066e <AC_Handler>:
+00001222 <AC_Handler>:
 Dummy_Handler():
 C:/Users/gregw/.mchp_packs/Microchip/PIC32CM-LS_DFP/1.3.278/PIC32CM-LS00/xc32/PIC32CM5164LS00048/startup_pic32cm5164ls00048.c:451
 Dummy_Handler(void)
@@ -1953,18 +3849,18 @@ Dummy_Handler(void)
     __builtin_software_breakpoint();
 #endif
     while (1) {}
- 66e:	e7fe      	b.n	66e <AC_Handler>
+    1222:	e7fe      	b.n	1222 <AC_Handler>
 
-Disassembly of section .text.__dummy_init_tls%73:
+Disassembly of section .text.__dummy_init_tls%82:
 
-00000cf6 <xc32_init_tls>:
+0000176e <xc32_init_tls>:
 __dummy_init_tls():
 /pic32c-libs/libpic32c/stubs/data_init.c:44
- cf6:	4770      	bx	lr
+    176e:	4770      	bx	lr
 
-Disassembly of section .text.__dummy%74:
+Disassembly of section .text.__dummy%83:
 
-00000d52 <__init_host>:
+0000193a <__init_host>:
 __dummy():
 /home/svcjenkins/workspace/XC32/release-XC32_5.00/src/xc32-musl-stdlib/musl/musl-1.1.18/src/env/mchp/__libc_start_main.c:11
- d52:	4770      	bx	lr
+    193a:	4770      	bx	lr
