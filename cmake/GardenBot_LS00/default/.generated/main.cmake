@@ -61,19 +61,19 @@ endif()
 
 
 # Main target for this project
-add_executable(GardenBot_LS00_default_image_fJSWT_np ${GardenBot_LS00_default_library_list})
+add_executable(GardenBot_LS00_default_image_li24FnlE ${GardenBot_LS00_default_library_list})
 
-set_target_properties(GardenBot_LS00_default_image_fJSWT_np PROPERTIES
+set_target_properties(GardenBot_LS00_default_image_li24FnlE PROPERTIES
     OUTPUT_NAME "default"
     SUFFIX ".elf"
     RUNTIME_OUTPUT_DIRECTORY "${GardenBot_LS00_default_output_dir}")
-target_link_libraries(GardenBot_LS00_default_image_fJSWT_np PRIVATE ${GardenBot_LS00_default_default_XC32_FILE_TYPE_link})
+target_link_libraries(GardenBot_LS00_default_image_li24FnlE PRIVATE ${GardenBot_LS00_default_default_XC32_FILE_TYPE_link})
 # Add the link options from the rule file.
-GardenBot_LS00_default_link_rule( GardenBot_LS00_default_image_fJSWT_np)
+GardenBot_LS00_default_link_rule( GardenBot_LS00_default_image_li24FnlE)
 
 # Call bin2hex function from the rule file
-GardenBot_LS00_default_bin2hex_rule(GardenBot_LS00_default_image_fJSWT_np)
+GardenBot_LS00_default_bin2hex_rule(GardenBot_LS00_default_image_li24FnlE)
 
 #Add objcopy steps
-GardenBot_LS00_default_objcopy_lss_rule(GardenBot_LS00_default_image_fJSWT_np)
+GardenBot_LS00_default_objcopy_lss_rule(GardenBot_LS00_default_image_li24FnlE)
 

@@ -84,7 +84,7 @@ void USART_sendString(char *stringToSend){
     }
 }
 
-void SERCOM3_Handler(void){
+void SERCOM3_2_Handler(void){
     if((SERCOM3_REGS -> USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_RXC_Msk) == SERCOM_USART_INT_INTFLAG_RXC_Msk){
         char data = SERCOM3_REGS->USART_INT.SERCOM_DATA;
         USART_sendChar(data);

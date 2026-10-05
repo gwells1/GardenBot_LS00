@@ -33,7 +33,7 @@ void init_SPI(){
       * MODE: Operating mode - SPI host operation [0x3], enable-protected, not synchronized
      */
 
-     SERCOM1_REGS -> SPIM.SERCOM_CTRLA = SERCOM_SPIM_CTRLA_DORD_MSB | SERCOM_SPIM_CTRLA_CPOL_IDLE_HIGH | SERCOM_SPIM_CTRLA_CPHA_LEADING_EDGE |
+     SERCOM1_REGS -> SPIM.SERCOM_CTRLA = SERCOM_SPIM_CTRLA_DORD_MSB | SERCOM_SPIM_CTRLA_CPOL_IDLE_LOW | SERCOM_SPIM_CTRLA_CPHA_LEADING_EDGE |
      SERCOM_SPIM_CTRLA_DIPO_PAD0 | SERCOM_SPIS_CTRLA_DOPO(0x1) | SERCOM_SPIM_CTRLA_RUNSTDBY_Msk | SERCOM_SPIM_CTRLA_MODE_SPI_MASTER;
 
      // Configure BAUD rate for 9600 baud
@@ -67,25 +67,26 @@ void init_SPI(){
 
 char spi_data_exchange(uint8_t cmd){
     char rx_data;
-    while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_DRE_Msk) != SERCOM_SPIM_INTFLAG_DRE_Msk){}
+    while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_DRE_Msk) != SERCOM_SPIM_INTFLAG_DRE_Msk){}   //Verify that the Data Register is empty before Transmitting
     SERCOM1_REGS->SPIM.SERCOM_DATA = cmd;
+    while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_DRE_Msk) != SERCOM_SPIM_INTFLAG_DRE_Msk){}   //Verify that the data Register is empty before Checking for a Recieved byte
     while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_RXC_Msk) != SERCOM_SPIM_INTFLAG_RXC_Msk){}
     rx_data = SERCOM1_REGS->SPIM.SERCOM_DATA;
-    USART_sendString("SPI Char received: ");
-    USART_sendChar(rx_data);
-    USART_sendChar('\n');
-    return rx_data;
+    // USART_sendString("SPI Char received: ");
+    // USART_sendChar(rx_data);
+    // USART_sendChar('\n');
+     return rx_data;
 }
 
-void SERCOM1_Handler(void){
-    //Check if RX complete interrupt flag is set
-    if(SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_RXC_Msk){
-        //Read received character
-        char received_char = SERCOM1_REGS->SPIM.SERCOM_DATA;
-        USART_sendString("SPI Char received: ");
-        USART_sendChar(received_char);
-        USART_sendChar('\n');
+// void SERCOM1_Handler(void){
+//     //Check if RX complete interrupt flag is set
+//     if(SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_RXC_Msk){
+//         //Read received character
+//         char received_char = SERCOM1_REGS->SPIM.SERCOM_DATA;
+//         USART_sendString("SPI Char received: ");
+//         USART_sendChar(received_char);
+//         USART_sendChar('\n');
         
-        //add your code here to process/store received_char
-    }
-}
+//         //add your code here to process/store received_char
+//     }
+// }

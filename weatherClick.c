@@ -119,14 +119,14 @@ void print_wClick_results(void){
     //Print the Temperature to the terminal
     USART_sendString("Temperature: ");
     USART_sendString("25");            //Placeholder for calculated temperature
-    USART_sendString("degC\r\n");
+    USART_sendString(" degC\r\n");
     //Print the Pressure to the terminal
     USART_sendString("Pressure: ");
     USART_sendString("100000");            //Placeholder for calculated pressure
-    USART_sendString("Pa\r\n");
+    USART_sendString(" Pa\r\n");
     //Print the Humidity to the terminal
     USART_sendString("Humidity: ");
-    USART_sendString("25");            //Placeholder for calculated humidity
+    USART_sendString(" 25");            //Placeholder for calculated humidity
     USART_sendString("%%\r\n");
 }
 
