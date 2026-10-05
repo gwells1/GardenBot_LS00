@@ -144,7 +144,7 @@ Disassembly of section .text%52:
 
 0000017c <init_wClick>:
 init_wClick():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:44
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:44
 
 
 //ToDo: Identify the proper way to initialize the weather clock
@@ -154,12 +154,12 @@ void init_wClick(){
  17c:	b580      	push	{r7, lr}
  17e:	b082      	sub	sp, #8
  180:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:45
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:45
     for(int i=0; i<7; i++){
  182:	2300      	movs	r3, #0
  184:	607b      	str	r3, [r7, #4]
  186:	e00c      	b.n	1a2 <init_wClick+0x26>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:46
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:46
         spi_data_exchange(cmd_initialize[i]);
  188:	f240 03e0 	movw	r3, #224	@ 0xe0
  18c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -168,16 +168,16 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:46
  194:	781b      	ldrb	r3, [r3, #0]
  196:	0018      	movs	r0, r3
  198:	f001 fa20 	bl	15dc <spi_data_exchange>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:45 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:45 (discriminator 3)
     for(int i=0; i<7; i++){
  19c:	687b      	ldr	r3, [r7, #4]
  19e:	3301      	adds	r3, #1
  1a0:	607b      	str	r3, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:45 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:45 (discriminator 1)
  1a2:	687b      	ldr	r3, [r7, #4]
  1a4:	2b06      	cmp	r3, #6
  1a6:	ddef      	ble.n	188 <init_wClick+0xc>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:48
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:48
     }
 }
  1a8:	46c0      	nop			@ (mov r8, r8)
@@ -188,20 +188,20 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:48
 
 000001b2 <read_wClick_ID>:
 read_wClick_ID():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:50
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:50
 
 void read_wClick_ID(void){
  1b2:	b590      	push	{r4, r7, lr}
  1b4:	b083      	sub	sp, #12
  1b6:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:52
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:52
     uint8_t i;
     for(i=0 ; i<2 ; i++){
  1b8:	1dfb      	adds	r3, r7, #7
  1ba:	2200      	movs	r2, #0
  1bc:	701a      	strb	r2, [r3, #0]
  1be:	e017      	b.n	1f0 <read_wClick_ID+0x3e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:53
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:53
         deviceID[i] = spi_data_exchange(cmd_deviceID[i]);
  1c0:	1dfb      	adds	r3, r7, #7
  1c2:	781a      	ldrb	r2, [r3, #0]
@@ -214,23 +214,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:53
  1d4:	f001 fa02 	bl	15dc <spi_data_exchange>
  1d8:	0003      	movs	r3, r0
  1da:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:53 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:53 (discriminator 1)
  1dc:	f240 0300 	movw	r3, #0
  1e0:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  1e4:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:52 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:52 (discriminator 3)
     for(i=0 ; i<2 ; i++){
  1e6:	1dfb      	adds	r3, r7, #7
  1e8:	781a      	ldrb	r2, [r3, #0]
  1ea:	1dfb      	adds	r3, r7, #7
  1ec:	3201      	adds	r2, #1
  1ee:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:52 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:52 (discriminator 1)
  1f0:	1dfb      	adds	r3, r7, #7
  1f2:	781b      	ldrb	r3, [r3, #0]
  1f4:	2b01      	cmp	r3, #1
  1f6:	d9e3      	bls.n	1c0 <read_wClick_ID+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:55
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:55
     }
 }
  1f8:	46c0      	nop			@ (mov r8, r8)
@@ -241,13 +241,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:55
 
 00000202 <read_wClick_T_Params>:
 read_wClick_T_Params():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:57
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:57
 
 void read_wClick_T_Params(void){
  202:	b590      	push	{r4, r7, lr}
  204:	b083      	sub	sp, #12
  206:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:61
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:61
     //Quiery the device for the first temperature compensation parameter
     uint8_t i;
     uint8_t j;
@@ -256,7 +256,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:61
  20a:	2200      	movs	r2, #0
  20c:	701a      	strb	r2, [r3, #0]
  20e:	e017      	b.n	240 <read_wClick_T_Params+0x3e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:62
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:62
         uDigT[i] = spi_data_exchange(cmd_uDigT[i]);
  210:	1dfb      	adds	r3, r7, #7
  212:	781a      	ldrb	r2, [r3, #0]
@@ -269,30 +269,30 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:62
  224:	f001 f9da 	bl	15dc <spi_data_exchange>
  228:	0003      	movs	r3, r0
  22a:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:62 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:62 (discriminator 1)
  22c:	f240 0310 	movw	r3, #16
  230:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  234:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:61 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:61 (discriminator 3)
     for(i=0; i<3 ; i++){
  236:	1dfb      	adds	r3, r7, #7
  238:	781a      	ldrb	r2, [r3, #0]
  23a:	1dfb      	adds	r3, r7, #7
  23c:	3201      	adds	r2, #1
  23e:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:61 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:61 (discriminator 1)
  240:	1dfb      	adds	r3, r7, #7
  242:	781b      	ldrb	r3, [r3, #0]
  244:	2b02      	cmp	r3, #2
  246:	d9e3      	bls.n	210 <read_wClick_T_Params+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:64
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:64
     }
     for(j=0; j<5 ; j++){
  248:	1dbb      	adds	r3, r7, #6
  24a:	2200      	movs	r2, #0
  24c:	701a      	strb	r2, [r3, #0]
  24e:	e017      	b.n	280 <read_wClick_T_Params+0x7e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:65
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:65
         sDigT[j] = spi_data_exchange(cmd_uDigT[j]);
  250:	1dbb      	adds	r3, r7, #6
  252:	781a      	ldrb	r2, [r3, #0]
@@ -305,23 +305,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:65
  264:	f001 f9ba 	bl	15dc <spi_data_exchange>
  268:	0003      	movs	r3, r0
  26a:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:65 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:65 (discriminator 1)
  26c:	f240 0314 	movw	r3, #20
  270:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  274:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:64 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:64 (discriminator 3)
     for(j=0; j<5 ; j++){
  276:	1dbb      	adds	r3, r7, #6
  278:	781a      	ldrb	r2, [r3, #0]
  27a:	1dbb      	adds	r3, r7, #6
  27c:	3201      	adds	r2, #1
  27e:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:64 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:64 (discriminator 1)
  280:	1dbb      	adds	r3, r7, #6
  282:	781b      	ldrb	r3, [r3, #0]
  284:	2b04      	cmp	r3, #4
  286:	d9e3      	bls.n	250 <read_wClick_T_Params+0x4e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:67
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:67
     }
 }
  288:	46c0      	nop			@ (mov r8, r8)
@@ -332,13 +332,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:67
 
 00000292 <read_wClick_P_Params>:
 read_wClick_P_Params():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:69
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:69
 
 void read_wClick_P_Params(void){
  292:	b590      	push	{r4, r7, lr}
  294:	b083      	sub	sp, #12
  296:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:73
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:73
     //Quiery the device for the first pressure compensation parameter
     uint8_t i;
     uint8_t j;
@@ -347,7 +347,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:73
  29a:	2200      	movs	r2, #0
  29c:	701a      	strb	r2, [r3, #0]
  29e:	e017      	b.n	2d0 <read_wClick_P_Params+0x3e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:74
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:74
         uDigP[i] = spi_data_exchange(cmd_uDigP[i]);
  2a0:	1dfb      	adds	r3, r7, #7
  2a2:	781a      	ldrb	r2, [r3, #0]
@@ -360,30 +360,30 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:74
  2b4:	f001 f992 	bl	15dc <spi_data_exchange>
  2b8:	0003      	movs	r3, r0
  2ba:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:74 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:74 (discriminator 1)
  2bc:	f240 031c 	movw	r3, #28
  2c0:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  2c4:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:73 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:73 (discriminator 3)
     for(i=0; i<3 ; i++){
  2c6:	1dfb      	adds	r3, r7, #7
  2c8:	781a      	ldrb	r2, [r3, #0]
  2ca:	1dfb      	adds	r3, r7, #7
  2cc:	3201      	adds	r2, #1
  2ce:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:73 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:73 (discriminator 1)
  2d0:	1dfb      	adds	r3, r7, #7
  2d2:	781b      	ldrb	r3, [r3, #0]
  2d4:	2b02      	cmp	r3, #2
  2d6:	d9e3      	bls.n	2a0 <read_wClick_P_Params+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:76
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:76
     }
     for(j=0; j<17; j++){
  2d8:	1dbb      	adds	r3, r7, #6
  2da:	2200      	movs	r2, #0
  2dc:	701a      	strb	r2, [r3, #0]
  2de:	e017      	b.n	310 <read_wClick_P_Params+0x7e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:77
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:77
         sDigP[j] = spi_data_exchange(cmd_sDigP[j]);
  2e0:	1dbb      	adds	r3, r7, #6
  2e2:	781a      	ldrb	r2, [r3, #0]
@@ -396,23 +396,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:77
  2f4:	f001 f972 	bl	15dc <spi_data_exchange>
  2f8:	0003      	movs	r3, r0
  2fa:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:77 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:77 (discriminator 1)
  2fc:	f240 0320 	movw	r3, #32
  300:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  304:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:76 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:76 (discriminator 3)
     for(j=0; j<17; j++){
  306:	1dbb      	adds	r3, r7, #6
  308:	781a      	ldrb	r2, [r3, #0]
  30a:	1dbb      	adds	r3, r7, #6
  30c:	3201      	adds	r2, #1
  30e:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:76 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:76 (discriminator 1)
  310:	1dbb      	adds	r3, r7, #6
  312:	781b      	ldrb	r3, [r3, #0]
  314:	2b10      	cmp	r3, #16
  316:	d9e3      	bls.n	2e0 <read_wClick_P_Params+0x4e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:79
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:79
     }
 }
  318:	46c0      	nop			@ (mov r8, r8)
@@ -423,13 +423,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:79
 
 00000322 <read_wClick_H_Params>:
 read_wClick_H_Params():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:81
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:81
 
 void read_wClick_H_Params(void){
  322:	b590      	push	{r4, r7, lr}
  324:	b083      	sub	sp, #12
  326:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:85
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:85
     //Quiery the device for the first pressure compensation parameter
     uint8_t i;
     uint8_t j;
@@ -438,7 +438,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:85
  32a:	2200      	movs	r2, #0
  32c:	701a      	strb	r2, [r3, #0]
  32e:	e017      	b.n	360 <read_wClick_H_Params+0x3e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:86
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:86
         uDigH[i] = spi_data_exchange(cmd_uDigH[i]);
  330:	1dfb      	adds	r3, r7, #7
  332:	781a      	ldrb	r2, [r3, #0]
@@ -451,30 +451,30 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:86
  344:	f001 f94a 	bl	15dc <spi_data_exchange>
  348:	0003      	movs	r3, r0
  34a:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:86 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:86 (discriminator 1)
  34c:	f240 0334 	movw	r3, #52	@ 0x34
  350:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  354:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:85 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:85 (discriminator 3)
     for(i=0; i<3 ; i++){
  356:	1dfb      	adds	r3, r7, #7
  358:	781a      	ldrb	r2, [r3, #0]
  35a:	1dfb      	adds	r3, r7, #7
  35c:	3201      	adds	r2, #1
  35e:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:85 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:85 (discriminator 1)
  360:	1dfb      	adds	r3, r7, #7
  362:	781b      	ldrb	r3, [r3, #0]
  364:	2b02      	cmp	r3, #2
  366:	d9e3      	bls.n	330 <read_wClick_H_Params+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:88
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:88
     }
     for(j=0; j<7; j++){
  368:	1dbb      	adds	r3, r7, #6
  36a:	2200      	movs	r2, #0
  36c:	701a      	strb	r2, [r3, #0]
  36e:	e017      	b.n	3a0 <read_wClick_H_Params+0x7e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:89
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:89
         sDigH[j] = spi_data_exchange(cmd_sDigH[j]);
  370:	1dbb      	adds	r3, r7, #6
  372:	781a      	ldrb	r2, [r3, #0]
@@ -487,23 +487,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:89
  384:	f001 f92a 	bl	15dc <spi_data_exchange>
  388:	0003      	movs	r3, r0
  38a:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:89 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:89 (discriminator 1)
  38c:	f240 0338 	movw	r3, #56	@ 0x38
  390:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  394:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:88 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:88 (discriminator 3)
     for(j=0; j<7; j++){
  396:	1dbb      	adds	r3, r7, #6
  398:	781a      	ldrb	r2, [r3, #0]
  39a:	1dbb      	adds	r3, r7, #6
  39c:	3201      	adds	r2, #1
  39e:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:88 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:88 (discriminator 1)
  3a0:	1dbb      	adds	r3, r7, #6
  3a2:	781b      	ldrb	r3, [r3, #0]
  3a4:	2b06      	cmp	r3, #6
  3a6:	d9e3      	bls.n	370 <read_wClick_H_Params+0x4e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:91
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:91
     }
 }
  3a8:	46c0      	nop			@ (mov r8, r8)
@@ -514,20 +514,20 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:91
 
 000003b2 <read_wClick_temp>:
 read_wClick_temp():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:93
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:93
 
 void read_wClick_temp(void){
  3b2:	b590      	push	{r4, r7, lr}
  3b4:	b083      	sub	sp, #12
  3b6:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:95
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:95
     uint8_t i;
     for(i=0 ; i<4 ; i++){
  3b8:	1dfb      	adds	r3, r7, #7
  3ba:	2200      	movs	r2, #0
  3bc:	701a      	strb	r2, [r3, #0]
  3be:	e017      	b.n	3f0 <read_wClick_temp+0x3e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:96
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:96
         temp[i] = spi_data_exchange(cmd_temp[i]);
  3c0:	1dfb      	adds	r3, r7, #7
  3c2:	781a      	ldrb	r2, [r3, #0]
@@ -540,23 +540,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:96
  3d4:	f001 f902 	bl	15dc <spi_data_exchange>
  3d8:	0003      	movs	r3, r0
  3da:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:96 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:96 (discriminator 1)
  3dc:	f240 0304 	movw	r3, #4
  3e0:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  3e4:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:95 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:95 (discriminator 3)
     for(i=0 ; i<4 ; i++){
  3e6:	1dfb      	adds	r3, r7, #7
  3e8:	781a      	ldrb	r2, [r3, #0]
  3ea:	1dfb      	adds	r3, r7, #7
  3ec:	3201      	adds	r2, #1
  3ee:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:95 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:95 (discriminator 1)
  3f0:	1dfb      	adds	r3, r7, #7
  3f2:	781b      	ldrb	r3, [r3, #0]
  3f4:	2b03      	cmp	r3, #3
  3f6:	d9e3      	bls.n	3c0 <read_wClick_temp+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:98
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:98
     }
 }
  3f8:	46c0      	nop			@ (mov r8, r8)
@@ -567,20 +567,20 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:98
 
 00000402 <read_wClick_press>:
 read_wClick_press():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:100
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:100
 
 void read_wClick_press(void){
  402:	b590      	push	{r4, r7, lr}
  404:	b083      	sub	sp, #12
  406:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:102
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:102
     uint8_t i;
     for(i=0 ; i<4 ; i++){
  408:	1dfb      	adds	r3, r7, #7
  40a:	2200      	movs	r2, #0
  40c:	701a      	strb	r2, [r3, #0]
  40e:	e017      	b.n	440 <read_wClick_press+0x3e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:103
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:103
         press[i] = spi_data_exchange(cmd_press[i]);
  410:	1dfb      	adds	r3, r7, #7
  412:	781a      	ldrb	r2, [r3, #0]
@@ -593,23 +593,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:103
  424:	f001 f8da 	bl	15dc <spi_data_exchange>
  428:	0003      	movs	r3, r0
  42a:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:103 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:103 (discriminator 1)
  42c:	f240 0308 	movw	r3, #8
  430:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  434:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:102 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:102 (discriminator 3)
     for(i=0 ; i<4 ; i++){
  436:	1dfb      	adds	r3, r7, #7
  438:	781a      	ldrb	r2, [r3, #0]
  43a:	1dfb      	adds	r3, r7, #7
  43c:	3201      	adds	r2, #1
  43e:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:102 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:102 (discriminator 1)
  440:	1dfb      	adds	r3, r7, #7
  442:	781b      	ldrb	r3, [r3, #0]
  444:	2b03      	cmp	r3, #3
  446:	d9e3      	bls.n	410 <read_wClick_press+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:105
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:105
     }
 }
  448:	46c0      	nop			@ (mov r8, r8)
@@ -620,20 +620,20 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:105
 
 00000452 <read_wClick_hum>:
 read_wClick_hum():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:107
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:107
 
 void read_wClick_hum(void){
  452:	b590      	push	{r4, r7, lr}
  454:	b083      	sub	sp, #12
  456:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:109
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:109
     uint8_t i;
     for(i=0 ; i<3 ; i++){
  458:	1dfb      	adds	r3, r7, #7
  45a:	2200      	movs	r2, #0
  45c:	701a      	strb	r2, [r3, #0]
  45e:	e017      	b.n	490 <read_wClick_hum+0x3e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:110
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:110
         hum[i] = spi_data_exchange(cmd_hum[i]);
  460:	1dfb      	adds	r3, r7, #7
  462:	781a      	ldrb	r2, [r3, #0]
@@ -646,23 +646,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:110
  474:	f001 f8b2 	bl	15dc <spi_data_exchange>
  478:	0003      	movs	r3, r0
  47a:	001a      	movs	r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:110 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:110 (discriminator 1)
  47c:	f240 030c 	movw	r3, #12
  480:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  484:	551a      	strb	r2, [r3, r4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:109 (discriminator 3)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:109 (discriminator 3)
     for(i=0 ; i<3 ; i++){
  486:	1dfb      	adds	r3, r7, #7
  488:	781a      	ldrb	r2, [r3, #0]
  48a:	1dfb      	adds	r3, r7, #7
  48c:	3201      	adds	r2, #1
  48e:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:109 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:109 (discriminator 1)
  490:	1dfb      	adds	r3, r7, #7
  492:	781b      	ldrb	r3, [r3, #0]
  494:	2b02      	cmp	r3, #2
  496:	d9e3      	bls.n	460 <read_wClick_hum+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:112
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:112
     }
 }
  498:	46c0      	nop			@ (mov r8, r8)
@@ -673,89 +673,89 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:112
 
 000004a2 <print_wClick_results>:
 print_wClick_results():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:114
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:114
 
 void print_wClick_results(void){
  4a2:	b580      	push	{r7, lr}
  4a4:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:116
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:116
     //Print the device ID to the terminal
     USART_sendString("\r\nBME280 Device ID: 0x");
  4a6:	f641 13c0 	movw	r3, #6592	@ 0x19c0
  4aa:	f2c0 0300 	movt	r3, #0
  4ae:	0018      	movs	r0, r3
  4b0:	f000 ff47 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:117
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:117
     USART_sendChar(deviceID[1]);
  4b4:	f240 0300 	movw	r3, #0
  4b8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  4bc:	785b      	ldrb	r3, [r3, #1]
  4be:	0018      	movs	r0, r3
  4c0:	f000 ff22 	bl	1308 <USART_sendChar>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:118
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:118
     USART_sendString("\r\n");
  4c4:	f641 13d8 	movw	r3, #6616	@ 0x19d8
  4c8:	f2c0 0300 	movt	r3, #0
  4cc:	0018      	movs	r0, r3
  4ce:	f000 ff38 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:120
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:120
     //Print the Temperature to the terminal
     USART_sendString("Temperature: ");
  4d2:	f641 13dc 	movw	r3, #6620	@ 0x19dc
  4d6:	f2c0 0300 	movt	r3, #0
  4da:	0018      	movs	r0, r3
  4dc:	f000 ff31 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:121
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:121
     USART_sendString("25");            //Placeholder for calculated temperature
  4e0:	f641 13ec 	movw	r3, #6636	@ 0x19ec
  4e4:	f2c0 0300 	movt	r3, #0
  4e8:	0018      	movs	r0, r3
  4ea:	f000 ff2a 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:122
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:122
     USART_sendString("degC\r\n");
  4ee:	f641 13f0 	movw	r3, #6640	@ 0x19f0
  4f2:	f2c0 0300 	movt	r3, #0
  4f6:	0018      	movs	r0, r3
  4f8:	f000 ff23 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:124
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:124
     //Print the Pressure to the terminal
     USART_sendString("Pressure: ");
  4fc:	f641 13f8 	movw	r3, #6648	@ 0x19f8
  500:	f2c0 0300 	movt	r3, #0
  504:	0018      	movs	r0, r3
  506:	f000 ff1c 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:125
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:125
     USART_sendString("100000");            //Placeholder for calculated pressure
  50a:	f641 2304 	movw	r3, #6660	@ 0x1a04
  50e:	f2c0 0300 	movt	r3, #0
  512:	0018      	movs	r0, r3
  514:	f000 ff15 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:126
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:126
     USART_sendString("Pa\r\n");
  518:	f641 230c 	movw	r3, #6668	@ 0x1a0c
  51c:	f2c0 0300 	movt	r3, #0
  520:	0018      	movs	r0, r3
  522:	f000 ff0e 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:128
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:128
     //Print the Humidity to the terminal
     USART_sendString("Humidity: ");
  526:	f641 2314 	movw	r3, #6676	@ 0x1a14
  52a:	f2c0 0300 	movt	r3, #0
  52e:	0018      	movs	r0, r3
  530:	f000 ff07 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:129
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:129
     USART_sendString("25");            //Placeholder for calculated humidity
  534:	f641 13ec 	movw	r3, #6636	@ 0x19ec
  538:	f2c0 0300 	movt	r3, #0
  53c:	0018      	movs	r0, r3
  53e:	f000 ff00 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:130
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:130
     USART_sendString("%%\r\n");
  542:	f641 2320 	movw	r3, #6688	@ 0x1a20
  546:	f2c0 0300 	movt	r3, #0
  54a:	0018      	movs	r0, r3
  54c:	f000 fef9 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:131
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:131
 }
  550:	46c0      	nop			@ (mov r8, r8)
  552:	46bd      	mov	sp, r7
@@ -763,13 +763,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:131
 
 00000556 <calc_wClick_temp>:
 calc_wClick_temp():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:133
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:133
 
 void calc_wClick_temp(void){
  556:	b5f0      	push	{r4, r5, r6, r7, lr}
  558:	b089      	sub	sp, #36	@ 0x24
  55a:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:135
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:135
     double var1, var2;
     temp_raw.byte2 = temp[1];
  55c:	f240 0304 	movw	r3, #4
@@ -779,7 +779,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:135
  568:	f240 035c 	movw	r3, #92	@ 0x5c
  56c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  570:	709a      	strb	r2, [r3, #2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:136
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:136
     temp_raw.byte1 = temp[2];
  572:	f240 0304 	movw	r3, #4
  576:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -788,7 +788,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:136
  57e:	f240 035c 	movw	r3, #92	@ 0x5c
  582:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  586:	705a      	strb	r2, [r3, #1]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:137
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:137
     temp_raw.byte0 = temp[3];
  588:	f240 0304 	movw	r3, #4
  58c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -797,7 +797,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:137
  594:	f240 035c 	movw	r3, #92	@ 0x5c
  598:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  59c:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:138
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:138
     temp_raw.raw = temp_raw.raw >> 4;
  59e:	f240 035c 	movw	r3, #92	@ 0x5c
  5a2:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -806,7 +806,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:138
  5aa:	f240 035c 	movw	r3, #92	@ 0x5c
  5ae:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  5b2:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:139
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:139
     uint16_t digT1 = (uDigT[2] << 8) + (uDigT[1]);
  5b4:	f240 0310 	movw	r3, #16
  5b8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -823,7 +823,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:139
  5d4:	19db      	adds	r3, r3, r7
  5d6:	1852      	adds	r2, r2, r1
  5d8:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:140
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:140
     int16_t digT2 = (sDigT[2] << 8) + (sDigT[1]);
  5da:	f240 0314 	movw	r3, #20
  5de:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -839,7 +839,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:140
  5f8:	181b      	adds	r3, r3, r0
  5fa:	19db      	adds	r3, r3, r7
  5fc:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:141
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:141
     int16_t digT3 = (sDigT[4] << 8) + (sDigT[3]);
  5fe:	f240 0314 	movw	r3, #20
  602:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -855,7 +855,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:141
  61c:	1809      	adds	r1, r1, r0
  61e:	19cb      	adds	r3, r1, r7
  620:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:142
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:142
     var1 = (((double)temp_raw.raw) / 16384.0 - ((double)digT1) / 1024.0) *
  622:	f240 035c 	movw	r3, #92	@ 0x5c
  626:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -889,7 +889,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:142
  66e:	000b      	movs	r3, r1
  670:	0014      	movs	r4, r2
  672:	001d      	movs	r5, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:143
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:143
         ((double)digT2);
  674:	2314      	movs	r3, #20
  676:	2008      	movs	r0, #8
@@ -901,7 +901,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:143
  682:	f001 fae8 	bl	1c56 <__aeabi_i2d>
  686:	0002      	movs	r2, r0
  688:	000b      	movs	r3, r1
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:142
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:142
     var1 = (((double)temp_raw.raw) / 16384.0 - ((double)digT1) / 1024.0) *
  68a:	0020      	movs	r0, r4
  68c:	0029      	movs	r1, r5
@@ -910,7 +910,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:142
  694:	000b      	movs	r3, r1
  696:	613a      	str	r2, [r7, #16]
  698:	617b      	str	r3, [r7, #20]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:144
     var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
  69a:	f240 035c 	movw	r3, #92	@ 0x5c
  69e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -944,7 +944,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
  6e4:	000b      	movs	r3, r1
  6e6:	0014      	movs	r4, r2
  6e8:	001d      	movs	r5, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:145
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:145
         (((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0)) *
  6ea:	f240 035c 	movw	r3, #92	@ 0x5c
  6ee:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -976,7 +976,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:145
  72e:	f001 fac1 	bl	1cb4 <__aeabi_dsub>
  732:	0002      	movs	r2, r0
  734:	000b      	movs	r3, r1
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:144
     var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
  736:	0020      	movs	r0, r4
  738:	0029      	movs	r1, r5
@@ -985,7 +985,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
  740:	000b      	movs	r3, r1
  742:	0014      	movs	r4, r2
  744:	001d      	movs	r5, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:146
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:146
         ((double)digT3);
  746:	2112      	movs	r1, #18
  748:	2308      	movs	r3, #8
@@ -997,7 +997,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:146
  754:	f001 fa7f 	bl	1c56 <__aeabi_i2d>
  758:	0002      	movs	r2, r0
  75a:	000b      	movs	r3, r1
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:144
     var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
  75c:	0020      	movs	r0, r4
  75e:	0029      	movs	r1, r5
@@ -1006,7 +1006,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:144
  766:	000b      	movs	r3, r1
  768:	60ba      	str	r2, [r7, #8]
  76a:	60fb      	str	r3, [r7, #12]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:147
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:147
     t_fine = (int32_t)(var1 + var2);
  76c:	68ba      	ldr	r2, [r7, #8]
  76e:	68fb      	ldr	r3, [r7, #12]
@@ -1022,7 +1022,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:147
  786:	f240 0340 	movw	r3, #64	@ 0x40
  78a:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  78e:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:148
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:148
     T = (var1 + var2) / 5120.0;
  790:	68ba      	ldr	r2, [r7, #8]
  792:	68fb      	ldr	r3, [r7, #12]
@@ -1045,7 +1045,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:148
  7bc:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  7c0:	6018      	str	r0, [r3, #0]
  7c2:	6059      	str	r1, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:149
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:149
 }
  7c4:	46c0      	nop			@ (mov r8, r8)
  7c6:	46bd      	mov	sp, r7
@@ -1054,13 +1054,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:149
 
 000007cc <calc_wClick_press>:
 calc_wClick_press():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:151
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:151
 
 void calc_wClick_press(void){
  7cc:	b5f0      	push	{r4, r5, r6, r7, lr}
  7ce:	b08b      	sub	sp, #44	@ 0x2c
  7d0:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:153
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:153
     double var1, var2;
     press_raw.byte2 = press[1];
  7d2:	f240 0308 	movw	r3, #8
@@ -1070,7 +1070,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:153
  7de:	f240 0360 	movw	r3, #96	@ 0x60
  7e2:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  7e6:	709a      	strb	r2, [r3, #2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:154
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:154
     press_raw.byte1 = press[2];
  7e8:	f240 0308 	movw	r3, #8
  7ec:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1079,7 +1079,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:154
  7f4:	f240 0360 	movw	r3, #96	@ 0x60
  7f8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  7fc:	705a      	strb	r2, [r3, #1]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:155
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:155
     press_raw.byte0 = press[3];
  7fe:	f240 0308 	movw	r3, #8
  802:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1088,7 +1088,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:155
  80a:	f240 0360 	movw	r3, #96	@ 0x60
  80e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  812:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:156
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:156
     press_raw.raw = press_raw.raw >> 4;
  814:	f240 0360 	movw	r3, #96	@ 0x60
  818:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1097,7 +1097,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:156
  820:	f240 0360 	movw	r3, #96	@ 0x60
  824:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  828:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:157
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:157
     uint16_t digP1 = (uDigP[2] << 8) + (uDigP[1]);
  82a:	f240 031c 	movw	r3, #28
  82e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1112,7 +1112,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:157
  846:	19bb      	adds	r3, r7, r6
  848:	1852      	adds	r2, r2, r1
  84a:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:158
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:158
     int16_t digP2 = (sDigP[2] << 8) + (sDigP[1]);
  84c:	f240 0320 	movw	r3, #32
  850:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1127,7 +1127,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:158
  868:	2324      	movs	r3, #36	@ 0x24
  86a:	18fb      	adds	r3, r7, r3
  86c:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:159
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:159
     int16_t digP3 = (sDigP[4] << 8) + (sDigP[3]);
  86e:	f240 0320 	movw	r3, #32
  872:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1142,7 +1142,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:159
  88a:	2122      	movs	r1, #34	@ 0x22
  88c:	187b      	adds	r3, r7, r1
  88e:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:160
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:160
     int16_t digP4 = (sDigP[6] << 8) + (sDigP[5]);
  890:	f240 0320 	movw	r3, #32
  894:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1157,7 +1157,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:160
  8ac:	2020      	movs	r0, #32
  8ae:	183b      	adds	r3, r7, r0
  8b0:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:161
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:161
     int16_t digP5 = (sDigP[8] << 8) + (sDigP[7]);
  8b2:	f240 0320 	movw	r3, #32
  8b6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1172,7 +1172,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:161
  8ce:	241e      	movs	r4, #30
  8d0:	193b      	adds	r3, r7, r4
  8d2:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:162
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:162
     int16_t digP6 = (sDigP[10] << 8) + (sDigP[9]);
  8d4:	f240 0320 	movw	r3, #32
  8d8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1187,7 +1187,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:162
  8f0:	251c      	movs	r5, #28
  8f2:	197b      	adds	r3, r7, r5
  8f4:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:163
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:163
     int16_t digP7 = (sDigP[12] << 8) + (sDigP[11]);
  8f6:	f240 0320 	movw	r3, #32
  8fa:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1202,7 +1202,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:163
  912:	251a      	movs	r5, #26
  914:	197b      	adds	r3, r7, r5
  916:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:164
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:164
     int16_t digP8 = (sDigP[14] << 8) + (sDigP[13]);
  918:	f240 0320 	movw	r3, #32
  91c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1217,7 +1217,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:164
  934:	2518      	movs	r5, #24
  936:	197b      	adds	r3, r7, r5
  938:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:165
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:165
     int16_t digP9 = (sDigP[16] << 8) + (sDigP[15]);
  93a:	f240 0320 	movw	r3, #32
  93e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1232,7 +1232,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:165
  956:	2516      	movs	r5, #22
  958:	197b      	adds	r3, r7, r5
  95a:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:166
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:166
     var1 = ((double)t_fine / 2.0) -64000.0;
  95c:	f240 0340 	movw	r3, #64	@ 0x40
  960:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1255,7 +1255,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:166
  98e:	000b      	movs	r3, r1
  990:	60ba      	str	r2, [r7, #8]
  992:	60fb      	str	r3, [r7, #12]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:167
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:167
     var2 = var1 * var1 * ((double)digP6) /32768.0;
  994:	68ba      	ldr	r2, [r7, #8]
  996:	68fb      	ldr	r3, [r7, #12]
@@ -1289,7 +1289,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:167
  9d8:	000b      	movs	r3, r1
  9da:	603a      	str	r2, [r7, #0]
  9dc:	607b      	str	r3, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:168
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:168
     var2 = var2 + var1 * ((double)digP5) *2.0;
  9de:	241e      	movs	r4, #30
  9e0:	193b      	adds	r3, r7, r4
@@ -1316,7 +1316,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:168
  a12:	000b      	movs	r3, r1
  a14:	603a      	str	r2, [r7, #0]
  a16:	607b      	str	r3, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:169
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:169
     var2 = (var2 / 4.0) + (((double)digP4) *65536.0);
  a18:	2200      	movs	r2, #0
  a1a:	2300      	movs	r3, #0
@@ -1347,7 +1347,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:169
  a58:	000b      	movs	r3, r1
  a5a:	603a      	str	r2, [r7, #0]
  a5c:	607b      	str	r3, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:170
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:170
     var1 = (((double)digP3) * var1 * var1 / 524288.0 + ((double)digP2) *
  a5e:	2122      	movs	r1, #34	@ 0x22
  a60:	187b      	adds	r3, r7, r1
@@ -1403,7 +1403,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:170
  ad8:	000b      	movs	r3, r1
  ada:	60ba      	str	r2, [r7, #8]
  adc:	60fb      	str	r3, [r7, #12]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:172
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:172
     var1) / 524288.0;
     var1 = (1.0 + var1 / 32768.0) * ((double)digP1);
  ade:	2200      	movs	r2, #0
@@ -1437,7 +1437,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:172
  b22:	000b      	movs	r3, r1
  b24:	60ba      	str	r2, [r7, #8]
  b26:	60fb      	str	r3, [r7, #12]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:173
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:173
     if (var1 == 0.0)
  b28:	2200      	movs	r2, #0
  b2a:	2300      	movs	r3, #0
@@ -1446,7 +1446,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:173
  b30:	f001 f830 	bl	1b94 <__aeabi_dcmpeq>
  b34:	0003      	movs	r3, r0
  b36:	b13b      	cbz	r3, b48 <calc_wClick_press+0x37c>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:175
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:175
     {
     P = 0;
  b38:	f240 0350 	movw	r3, #80	@ 0x50
@@ -1455,7 +1455,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:175
  b42:	2100      	movs	r1, #0
  b44:	6018      	str	r0, [r3, #0]
  b46:	6059      	str	r1, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:177
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:177
     }
     P = 1048576.0 - (double)press_raw.raw;
  b48:	f240 0360 	movw	r3, #96	@ 0x60
@@ -1477,7 +1477,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:177
  b74:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  b78:	6018      	str	r0, [r3, #0]
  b7a:	6059      	str	r1, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:178
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:178
     P = (P - (var2 / 4096.0)) * 6250.0 / var1;
  b7c:	f240 0350 	movw	r3, #80	@ 0x50
  b80:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1517,7 +1517,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:178
  bd6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  bda:	6018      	str	r0, [r3, #0]
  bdc:	6059      	str	r1, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:179
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:179
     var1 = ((double)digP9) * P * P/ 2147483648.0;
  bde:	2316      	movs	r3, #22
  be0:	18fb      	adds	r3, r7, r3
@@ -1551,7 +1551,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:179
  c2a:	000b      	movs	r3, r1
  c2c:	60ba      	str	r2, [r7, #8]
  c2e:	60fb      	str	r3, [r7, #12]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:180
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:180
     var2 = P * ((double)digP8) /32768.0;
  c30:	2318      	movs	r3, #24
  c32:	18fb      	adds	r3, r7, r3
@@ -1576,7 +1576,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:180
  c64:	000b      	movs	r3, r1
  c66:	603a      	str	r2, [r7, #0]
  c68:	607b      	str	r3, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:181
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:181
     P = P + (var1 + var2 +((double)digP7)) / 16.0;
  c6a:	683a      	ldr	r2, [r7, #0]
  c6c:	687b      	ldr	r3, [r7, #4]
@@ -1623,7 +1623,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:181
  cd0:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  cd4:	6018      	str	r0, [r3, #0]
  cd6:	6059      	str	r1, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:182
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:182
 }
  cd8:	46c0      	nop			@ (mov r8, r8)
  cda:	46bd      	mov	sp, r7
@@ -1632,13 +1632,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:182
 
 00000ce0 <calc_wClick_hum>:
 calc_wClick_hum():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:184
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:184
 
 void calc_wClick_hum(void){
  ce0:	b5f0      	push	{r4, r5, r6, r7, lr}
  ce2:	b085      	sub	sp, #20
  ce4:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:186
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:186
     int32_t var1;
     hum_raw.byte1 = hum[1];
  ce6:	f240 030c 	movw	r3, #12
@@ -1648,7 +1648,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:186
  cf2:	f240 0364 	movw	r3, #100	@ 0x64
  cf6:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  cfa:	705a      	strb	r2, [r3, #1]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:187
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:187
     hum_raw.byte0 = hum[2];
  cfc:	f240 030c 	movw	r3, #12
  d00:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1657,7 +1657,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:187
  d08:	f240 0364 	movw	r3, #100	@ 0x64
  d0c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  d10:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:188
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:188
     uint8_t digH1 = uDigH[1];
  d12:	240f      	movs	r4, #15
  d14:	193a      	adds	r2, r7, r4
@@ -1665,7 +1665,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:188
  d1a:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  d1e:	785b      	ldrb	r3, [r3, #1]
  d20:	7013      	strb	r3, [r2, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:189
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:189
     int16_t digH2 = (sDigH[2] << 8) + (sDigH[1]);
  d22:	f240 0338 	movw	r3, #56	@ 0x38
  d26:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1680,7 +1680,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:189
  d3e:	250c      	movs	r5, #12
  d40:	197b      	adds	r3, r7, r5
  d42:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:190
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:190
     uint8_t digH3 = uDigH[2];
  d44:	200b      	movs	r0, #11
  d46:	183a      	adds	r2, r7, r0
@@ -1688,7 +1688,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:190
  d4c:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  d50:	789b      	ldrb	r3, [r3, #2]
  d52:	7013      	strb	r3, [r2, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:191
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:191
     int16_t digH4 = (sDigH[3] << 4) + (sDigH[4] & 0x0F);
  d54:	f240 0338 	movw	r3, #56	@ 0x38
  d58:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1707,7 +1707,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:191
  d78:	2608      	movs	r6, #8
  d7a:	19bb      	adds	r3, r7, r6
  d7c:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:192
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:192
     int16_t digH5 = (sDigH[5] << 4) + ((sDigH[4] >> 4) & 0x0F);
  d7e:	f240 0338 	movw	r3, #56	@ 0x38
  d82:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1727,14 +1727,14 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:192
  da4:	b29a      	uxth	r2, r3
  da6:	1dbb      	adds	r3, r7, #6
  da8:	801a      	strh	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:193
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:193
     int8_t digH6 = sDigH[6];
  daa:	f240 0338 	movw	r3, #56	@ 0x38
  dae:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  db2:	799a      	ldrb	r2, [r3, #6]
  db4:	1d7b      	adds	r3, r7, #5
  db6:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:194
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:194
     var1 = (t_fine - ((int32_t) 76000));
  db8:	f240 0340 	movw	r3, #64	@ 0x40
  dbc:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1743,7 +1743,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:194
  dc6:	f6cf 7cfe 	movt	ip, #65534	@ 0xfffe
  dca:	4463      	add	r3, ip
  dcc:	603b      	str	r3, [r7, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:195
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:195
     var1 = (((((temp_raw.raw << 14) - (((int32_t) digH4) << 20) -
  dce:	f240 035c 	movw	r3, #92	@ 0x5c
  dd2:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1754,22 +1754,22 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:195
  dde:	5e5b      	ldrsh	r3, [r3, r1]
  de0:	051b      	lsls	r3, r3, #20
  de2:	1ad2      	subs	r2, r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:196
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:196
     (((int32_t) digH5) * var1)) + ((int32_t) 16384)) >> 15) *
  de4:	1dbb      	adds	r3, r7, #6
  de6:	2100      	movs	r1, #0
  de8:	5e5b      	ldrsh	r3, [r3, r1]
  dea:	6839      	ldr	r1, [r7, #0]
  dec:	434b      	muls	r3, r1
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:195
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:195
     var1 = (((((temp_raw.raw << 14) - (((int32_t) digH4) << 20) -
  dee:	1ad3      	subs	r3, r2, r3
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:196
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:196
     (((int32_t) digH5) * var1)) + ((int32_t) 16384)) >> 15) *
  df0:	f244 0c00 	movw	ip, #16384	@ 0x4000
  df4:	4463      	add	r3, ip
  df6:	13db      	asrs	r3, r3, #15
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:197
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:197
     (((((((var1 * ((int32_t) digH6)) >> 10) *
  df8:	1d7a      	adds	r2, r7, #5
  dfa:	7812      	ldrb	r2, [r2, #0]
@@ -1777,7 +1777,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:197
  dfe:	6839      	ldr	r1, [r7, #0]
  e00:	434a      	muls	r2, r1
  e02:	1292      	asrs	r2, r2, #10
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:198
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:198
     (((var1 * ((int32_t) digH3)) >> 11) + ((int32_t)32768))) >> 10) +
  e04:	1839      	adds	r1, r7, r0
  e06:	7809      	ldrb	r1, [r1, #0]
@@ -1786,17 +1786,17 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:198
  e0c:	12c9      	asrs	r1, r1, #11
  e0e:	f248 0c00 	movw	ip, #32768	@ 0x8000
  e12:	4461      	add	r1, ip
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:197
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:197
     (((((((var1 * ((int32_t) digH6)) >> 10) *
  e14:	434a      	muls	r2, r1
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:198
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:198
     (((var1 * ((int32_t) digH3)) >> 11) + ((int32_t)32768))) >> 10) +
  e16:	1292      	asrs	r2, r2, #10
  e18:	2180      	movs	r1, #128	@ 0x80
  e1a:	0389      	lsls	r1, r1, #14
  e1c:	468c      	mov	ip, r1
  e1e:	4462      	add	r2, ip
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:199
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:199
     ((int32_t) 2097152)) * ((int32_t)digH2) + 8192) >> 14));
  e20:	1979      	adds	r1, r7, r5
  e22:	2000      	movs	r0, #0
@@ -1805,11 +1805,11 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:199
  e28:	f242 0c00 	movw	ip, #8192	@ 0x2000
  e2c:	4462      	add	r2, ip
  e2e:	1392      	asrs	r2, r2, #14
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:195
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:195
     var1 = (((((temp_raw.raw << 14) - (((int32_t) digH4) << 20) -
  e30:	4353      	muls	r3, r2
  e32:	603b      	str	r3, [r7, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:200
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:200
     var1 = (var1 - (((((var1 >> 15) * (var1 >> 15)) >> 7) *
  e34:	683b      	ldr	r3, [r7, #0]
  e36:	13db      	asrs	r3, r3, #15
@@ -1817,29 +1817,29 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:200
  e3a:	13d2      	asrs	r2, r2, #15
  e3c:	4353      	muls	r3, r2
  e3e:	11db      	asrs	r3, r3, #7
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:201
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:201
     ((int32_t) digH1))>> 4));
  e40:	193a      	adds	r2, r7, r4
  e42:	7812      	ldrb	r2, [r2, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:200
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:200
     var1 = (var1 - (((((var1 >> 15) * (var1 >> 15)) >> 7) *
  e44:	4353      	muls	r3, r2
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:201
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:201
     ((int32_t) digH1))>> 4));
  e46:	111b      	asrs	r3, r3, #4
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:200
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:200
     var1 = (var1 - (((((var1 >> 15) * (var1 >> 15)) >> 7) *
  e48:	683a      	ldr	r2, [r7, #0]
  e4a:	1ad3      	subs	r3, r2, r3
  e4c:	603b      	str	r3, [r7, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:202
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:202
     var1 = (var1 < 0 ? 0 :var1);
  e4e:	683b      	ldr	r3, [r7, #0]
  e50:	2b00      	cmp	r3, #0
  e52:	da00      	bge.n	e56 <calc_wClick_hum+0x176>
  e54:	2300      	movs	r3, #0
  e56:	603b      	str	r3, [r7, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:203
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:203
     var1 = (var1 > 419430400 ? 419430400 : var1);
  e58:	683a      	ldr	r2, [r7, #0]
  e5a:	2301      	movs	r3, #1
@@ -1849,7 +1849,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:203
  e64:	23c8      	movs	r3, #200	@ 0xc8
  e66:	055a      	lsls	r2, r3, #21
  e68:	603a      	str	r2, [r7, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:204
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:204
     H = (uint32_t) (var1 >> 12);
  e6a:	683b      	ldr	r3, [r7, #0]
  e6c:	131b      	asrs	r3, r3, #12
@@ -1857,7 +1857,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:204
  e70:	f240 0358 	movw	r3, #88	@ 0x58
  e74:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  e78:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:205
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:205
     H = H / 1024.0;
  e7a:	f240 0358 	movw	r3, #88	@ 0x58
  e7e:	f2c2 0300 	movt	r3, #8192	@ 0x2000
@@ -1877,7 +1877,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:205
  ea4:	f240 0358 	movw	r3, #88	@ 0x58
  ea8:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  eac:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:206
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/weatherClick.c:206
  eae:	46c0      	nop			@ (mov r8, r8)
  eb0:	46bd      	mov	sp, r7
  eb2:	b005      	add	sp, #20
@@ -2122,7 +2122,7 @@ Disassembly of section .text%54:
 
 0000107e <init_system>:
 init_system():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:226
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:226
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
@@ -2131,24 +2131,24 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:226
 void init_system(void){
     107e:	b580      	push	{r7, lr}
     1080:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:228
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:228
     
     NVMCTRL_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(3U);
     1082:	f244 0300 	movw	r3, #16384	@ 0x4000
     1086:	f2c4 1300 	movt	r3, #16640	@ 0x4100
     108a:	2206      	movs	r2, #6
     108c:	605a      	str	r2, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:230
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:230
 
     init_OSCCTRL();
     108e:	f000 f807 	bl	10a0 <init_OSCCTRL>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:231
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:231
     init_GCLK();
     1092:	f000 f81b 	bl	10cc <init_GCLK>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:232
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:232
     init_ports();
     1096:	f000 f856 	bl	1146 <init_ports>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:233
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:233
 }
     109a:	46c0      	nop			@ (mov r8, r8)
     109c:	46bd      	mov	sp, r7
@@ -2156,12 +2156,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:233
 
 000010a0 <init_OSCCTRL>:
 init_OSCCTRL():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:235
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:235
 
 void init_OSCCTRL(){
     10a0:	b580      	push	{r7, lr}
     10a2:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:238
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:238
     //Configure Oscillator controller to run at 16MHz using OSC16M
 
     OSCCTRL_REGS->OSCCTRL_OSC16MCTRL = OSCCTRL_OSC16MCTRL_RUNSTDBY_Msk | OSCCTRL_OSC16MCTRL_FSEL_16MHZ | OSCCTRL_OSC16MCTRL_ENABLE_Msk;
@@ -2169,12 +2169,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:238
     10a8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     10ac:	224e      	movs	r2, #78	@ 0x4e
     10ae:	761a      	strb	r2, [r3, #24]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:241
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:241
 
     //Wait for OSC16M ready state
     while((OSCCTRL_REGS->OSCCTRL_STATUS & OSCCTRL_STATUS_OSC16MRDY_Msk) != OSCCTRL_STATUS_OSC16MRDY_Msk);
     10b0:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:241 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:241 (discriminator 1)
     10b2:	f241 0300 	movw	r3, #4096	@ 0x1000
     10b6:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     10ba:	691b      	ldr	r3, [r3, #16]
@@ -2182,7 +2182,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:241 (discrimina
     10be:	4013      	ands	r3, r2
     10c0:	2b10      	cmp	r3, #16
     10c2:	d1f6      	bne.n	10b2 <init_OSCCTRL+0x12>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:242
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:242
 }
     10c4:	46c0      	nop			@ (mov r8, r8)
     10c6:	46c0      	nop			@ (mov r8, r8)
@@ -2191,12 +2191,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:242
 
 000010cc <init_GCLK>:
 init_GCLK():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:244
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:244
 
 void init_GCLK(){
     10cc:	b580      	push	{r7, lr}
     10ce:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:246
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:246
     //Configure GCLK0 to run at 48MHz using the OSC16M for the main clock
     GCLK_REGS->GCLK_GENCTRL[0] = GCLK_GENCTRL_DIV(1UL) | GCLK_GENCTRL_SRC(5UL) | GCLK_GENCTRL_GENEN_Msk;
     10d0:	f641 4300 	movw	r3, #7168	@ 0x1c00
@@ -2204,12 +2204,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:246
     10d8:	f240 1205 	movw	r2, #261	@ 0x105
     10dc:	f2c0 0201 	movt	r2, #1
     10e0:	621a      	str	r2, [r3, #32]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:249
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:249
     
     //Wait for synchronization to complete
     while((GCLK_REGS->GCLK_SYNCBUSY & GCLK_SYNCBUSY_GENCTRL0_Msk) == GCLK_SYNCBUSY_GENCTRL0_Msk);
     10e2:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:249 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:249 (discriminator 1)
     10e4:	f641 4300 	movw	r3, #7168	@ 0x1c00
     10e8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     10ec:	685b      	ldr	r3, [r3, #4]
@@ -2217,7 +2217,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:249 (discrimina
     10f0:	4013      	ands	r3, r2
     10f2:	2b04      	cmp	r3, #4
     10f4:	d0f6      	beq.n	10e4 <init_GCLK+0x18>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:252
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:252
 
     //Enable peripheral channel for SERCOM1 on GCLK0
     GCLK_REGS->GCLK_PCHCTRL[18] = GCLK_PCHCTRL_WRTLOCK(0x0U) | GCLK_PCHCTRL_CHEN(0x0U) | GCLK_PCHCTRL_CHEN_Msk;
@@ -2226,12 +2226,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:252
     10fe:	22c8      	movs	r2, #200	@ 0xc8
     1100:	2140      	movs	r1, #64	@ 0x40
     1102:	5099      	str	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:255
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:255
 
     //wait for synchronization
     while((GCLK_REGS->GCLK_PCHCTRL[18] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk);
     1104:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:255 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:255 (discriminator 1)
     1106:	f641 4300 	movw	r3, #7168	@ 0x1c00
     110a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     110e:	22c8      	movs	r2, #200	@ 0xc8
@@ -2240,7 +2240,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:255 (discrimina
     1114:	4013      	ands	r3, r2
     1116:	2b40      	cmp	r3, #64	@ 0x40
     1118:	d1f5      	bne.n	1106 <init_GCLK+0x3a>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:258
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:258
 
     //Enable peripheral channel for SERCOM3 on GCLK0
     GCLK_REGS->GCLK_PCHCTRL[20] = GCLK_PCHCTRL_WRTLOCK(0x0U) | GCLK_PCHCTRL_CHEN(0x0U) | GCLK_PCHCTRL_CHEN_Msk;
@@ -2249,12 +2249,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:258
     1122:	22d0      	movs	r2, #208	@ 0xd0
     1124:	2140      	movs	r1, #64	@ 0x40
     1126:	5099      	str	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:261
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:261
 
     //wait for synchronization
     while((GCLK_REGS->GCLK_PCHCTRL[20] & GCLK_PCHCTRL_CHEN_Msk) != GCLK_PCHCTRL_CHEN_Msk);
     1128:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:261 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:261 (discriminator 1)
     112a:	f641 4300 	movw	r3, #7168	@ 0x1c00
     112e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     1132:	22d0      	movs	r2, #208	@ 0xd0
@@ -2263,7 +2263,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:261 (discrimina
     1138:	4013      	ands	r3, r2
     113a:	2b40      	cmp	r3, #64	@ 0x40
     113c:	d1f5      	bne.n	112a <init_GCLK+0x5e>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:263
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:263
 
 }
     113e:	46c0      	nop			@ (mov r8, r8)
@@ -2273,26 +2273,26 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:263
 
 00001146 <init_ports>:
 init_ports():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:265
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:265
 
 void init_ports(){
     1146:	b580      	push	{r7, lr}
     1148:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:267
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:267
     //Configure Ports (BaseAddress: 0x41000000)
     PORT_REGS->GROUP[0].PORT_DIR = (LED_PIN | SPI_SCK | SPI_SDO | SPI_SS );     // Set LED, USART TX, SPI SCK, SPI SDO, and SPI SS pins as outputs
     114a:	f243 0300 	movw	r3, #12288	@ 0x3000
     114e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     1152:	f248 7200 	movw	r2, #34560	@ 0x8700
     1156:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:268
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:268
     PORT_REGS->GROUP[1].PORT_DIR = (USART_TX_PIN);     // Set LED, USART TX, SPI SCK, SPI SDO, and SPI SS pins as outputs
     1158:	f243 0300 	movw	r3, #12288	@ 0x3000
     115c:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     1160:	2280      	movs	r2, #128	@ 0x80
     1162:	f240 1100 	movw	r1, #256	@ 0x100
     1166:	5099      	str	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:271
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:271
     //PORT_REGS->GROUP[0].PORT_DIR = (uint32_t)USART_TX_PIN;     // Set LED pin as an output
     //PORT_REGS->GROUP[0].PORT_OUT = SW_PIN; // Set switch pin high (pull-up)
     PORT_REGS->GROUP[1].PORT_PINCFG[8] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PB8 [USART_TX_PIN]
@@ -2301,56 +2301,56 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:271
     1170:	22c8      	movs	r2, #200	@ 0xc8
     1172:	2101      	movs	r1, #1
     1174:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:272
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:272
     PORT_REGS->GROUP[1].PORT_PINCFG[9] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PB9 [USART_RX_PIN]
     1176:	f243 0300 	movw	r3, #12288	@ 0x3000
     117a:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     117e:	22c9      	movs	r2, #201	@ 0xc9
     1180:	2101      	movs	r1, #1
     1182:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:273
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:273
     PORT_REGS->GROUP[0].PORT_PINCFG[11] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA11 [SPI_SDI]
     1184:	f243 0300 	movw	r3, #12288	@ 0x3000
     1188:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     118c:	224b      	movs	r2, #75	@ 0x4b
     118e:	2101      	movs	r1, #1
     1190:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:274
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:274
     PORT_REGS->GROUP[0].PORT_PINCFG[8] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA08 [SPI_SDO]
     1192:	f243 0300 	movw	r3, #12288	@ 0x3000
     1196:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     119a:	2248      	movs	r2, #72	@ 0x48
     119c:	2101      	movs	r1, #1
     119e:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:275
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:275
     PORT_REGS->GROUP[0].PORT_PINCFG[9] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA09 [SPI_SCK]
     11a0:	f243 0300 	movw	r3, #12288	@ 0x3000
     11a4:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     11a8:	2249      	movs	r2, #73	@ 0x49
     11aa:	2101      	movs	r1, #1
     11ac:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:276
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:276
     PORT_REGS->GROUP[0].PORT_PINCFG[10] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA10 [SPI_SS]
     11ae:	f243 0300 	movw	r3, #12288	@ 0x3000
     11b2:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     11b6:	224a      	movs	r2, #74	@ 0x4a
     11b8:	2101      	movs	r1, #1
     11ba:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:277
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:277
     PORT_REGS->GROUP[0].PORT_PINCFG[23] = (uint8_t)0x6UL; // Configure port control for switch, enable internal pullup, enable input buffer 
     11bc:	f243 0300 	movw	r3, #12288	@ 0x3000
     11c0:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     11c4:	2257      	movs	r2, #87	@ 0x57
     11c6:	2106      	movs	r1, #6
     11c8:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:278
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:278
     PORT_REGS->GROUP[0].PORT_PINCFG[15] = (uint8_t)0x0UL; // Configure port control for LED, no pullup, enable output buffer
     11ca:	f243 0300 	movw	r3, #12288	@ 0x3000
     11ce:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     11d2:	224f      	movs	r2, #79	@ 0x4f
     11d4:	2100      	movs	r1, #0
     11d6:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:280
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:280
     //Figure out how to configure the ports for peripheral operation
     PORT_REGS->GROUP[1].PORT_PMUX[4] = (uint8_t)0x33UL; //Configure PB8 and PB9 for peripheral function D (SERCOM_ALT)
     11d8:	f243 0300 	movw	r3, #12288	@ 0x3000
@@ -2358,21 +2358,21 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:280
     11e0:	22b4      	movs	r2, #180	@ 0xb4
     11e2:	2133      	movs	r1, #51	@ 0x33
     11e4:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:281
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:281
     PORT_REGS->GROUP[0].PORT_PMUX[4] = (uint8_t)0x22;   //Configure PA8 and PA9 for peripheral function C (SERCOM)
     11e6:	f243 0300 	movw	r3, #12288	@ 0x3000
     11ea:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     11ee:	2234      	movs	r2, #52	@ 0x34
     11f0:	2122      	movs	r1, #34	@ 0x22
     11f2:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:282
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:282
     PORT_REGS->GROUP[0].PORT_PMUX[5] = (uint8_t)0x22;   //Configure PA10 and PA11 for peripheral function C (SERCOM)
     11f4:	f243 0300 	movw	r3, #12288	@ 0x3000
     11f8:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     11fc:	2235      	movs	r2, #53	@ 0x35
     11fe:	2122      	movs	r1, #34	@ 0x22
     1200:	5499      	strb	r1, [r3, r2]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:284
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:284
     //PORT_REGS->GROUP[0].PORT_WRCONFIG =  PORT_WRCONFIG_HWSEL(0x0UL) | PORT_WRCONFIG_WRPINCFG(0x1UL) | PORT_WRCONFIG_WRPMUX(0x2UL) | PORT_WRCONFIG_PMUXEN(0x1UL) | PORT_WRCONFIG_PINMASK(0x8UL); 
     PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN; // Turn off LED (active low)
     1202:	f243 0300 	movw	r3, #12288	@ 0x3000
@@ -2383,7 +2383,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:284
     1214:	f248 0100 	movw	r1, #32768	@ 0x8000
     1218:	430a      	orrs	r2, r1
     121a:	619a      	str	r2, [r3, #24]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:285
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/configuration.c:285
 }
     121c:	46c0      	nop			@ (mov r8, r8)
     121e:	46bd      	mov	sp, r7
@@ -2444,7 +2444,7 @@ C:/Users/gregw/.mchp_packs/ARM/CMSIS/6.3.0/CMSIS/Core/Include/core_cm23.h:1488
 
 00001266 <init_USART>:
 init_USART():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:42
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:42
 #include "usart.h"
 #include <component/sercom.h>
 #include <xc.h>
@@ -2453,7 +2453,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:42
 void init_USART(){
     1266:	b580      	push	{r7, lr}
     1268:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:45
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:45
 
     //Connect sercom 1 to APBC (for the USART)
     MCLK_REGS -> MCLK_APBCMASK |= MCLK_APBCMASK_SERCOM3_Msk;
@@ -2465,7 +2465,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:45
     127c:	2110      	movs	r1, #16
     127e:	430a      	orrs	r2, r1
     1280:	61da      	str	r2, [r3, #28]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:48
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:48
 
     //Configure CTRLA: internal clk, Generic clk disabled when transfer is finished, 16x sampling, TXP set to SERCOM_PAD[0], RXP set to SERCOM_PAD[1], Sample Adjustment set to 7-8-9, USART Frame, Async Mode, Rising XCK (TX), MSB first
     SERCOM3_REGS -> USART_INT.SERCOM_CTRLA = SERCOM_USART_INT_CTRLA_DORD_LSB | SERCOM_USART_INT_CTRLA_CPOL_IDLE_HIGH | SERCOM_USART_INT_CTRLA_CMODE_ASYNC |
@@ -2474,7 +2474,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:48
     128a:	2284      	movs	r2, #132	@ 0x84
     128c:	f2c6 0210 	movt	r2, #24592	@ 0x6010
     1290:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:53
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:53
     SERCOM_USART_INT_CTRLA_FORM_USART_FRAME_NO_PARITY | SERCOM_USART_INT_CTRLA_SAMPA_ADJ0 | SERCOM_USART_INT_CTRLA_RXPO_PAD1 |
     SERCOM_USART_INT_CTRLA_TXPO_PAD0 | SERCOM_USART_INT_CTRLA_SAMPR_16X_ARITHMETIC | SERCOM_USART_INT_CTRLA_RUNSTDBY_Msk | SERCOM_USART_INT_CTRLA_MODE_USART_INT_CLK;
 
@@ -2484,7 +2484,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:53
     1296:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     129a:	4a1a      	ldr	r2, [pc, #104]	@ (1304 <init_USART+0x9e>)
     129c:	819a      	strh	r2, [r3, #12]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:56
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:56
 
     //Configure CTRLB: 8 Bit char size, 1 stop bit, no collision detection, ST of Frame detection disabled, Data is not Encoded, Even Parity, TX enabled, RX disabled (for now), Normal UART tx
     SERCOM3_REGS -> USART_INT.SERCOM_CTRLB = SERCOM_USART_INT_CTRLB_RXEN_Msk | SERCOM_USART_INT_CTRLB_TXEN_Msk | SERCOM_USART_INT_CTRLB_PMODE_EVEN |
@@ -2493,13 +2493,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:56
     12a6:	22c0      	movs	r2, #192	@ 0xc0
     12a8:	0292      	lsls	r2, r2, #10
     12aa:	605a      	str	r2, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:60
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:60
     SERCOM_USART_INT_CTRLB_ENC_DISABLE | SERCOM_USART_INT_CTRLB_SFDE(0x0UL) | SERCOM_USART_INT_CTRLB_COLDEN(0x0UL) | SERCOM_USART_INT_CTRLB_SBMODE_1_BIT | SERCOM_USART_INT_CTRLB_CHSIZE_8_BIT;
 
     //Synchronize the CTRLB register (LINCMD, RXEN, and TXEN have been updated)
     while((SERCOM3_REGS -> USART_INT.SERCOM_SYNCBUSY & SERCOM_USART_INT_SYNCBUSY_CTRLB_Msk) == SERCOM_USART_INT_SYNCBUSY_CTRLB_Msk);
     12ac:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:60 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:60 (discriminator 1)
     12ae:	f241 0300 	movw	r3, #4096	@ 0x1000
     12b2:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     12b6:	69db      	ldr	r3, [r3, #28]
@@ -2507,7 +2507,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:60 (discriminator 1)
     12ba:	4013      	ands	r3, r2
     12bc:	2b04      	cmp	r3, #4
     12be:	d0f6      	beq.n	12ae <init_USART+0x48>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:63
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:63
 
     //Enable the USART
     SERCOM3_REGS -> USART_INT.SERCOM_CTRLA |= SERCOM_USART_INT_CTRLA_ENABLE_Msk;
@@ -2519,12 +2519,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:63
     12d2:	2102      	movs	r1, #2
     12d4:	430a      	orrs	r2, r1
     12d6:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:66
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:66
 
     //Synchronize the USART
     while((SERCOM3_REGS -> USART_INT.SERCOM_SYNCBUSY & SERCOM_USART_INT_SYNCBUSY_ENABLE_Msk) == SERCOM_USART_INT_SYNCBUSY_ENABLE_Msk);
     12d8:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:66 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:66 (discriminator 1)
     12da:	f241 0300 	movw	r3, #4096	@ 0x1000
     12de:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     12e2:	69db      	ldr	r3, [r3, #28]
@@ -2532,7 +2532,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:66 (discriminator 1)
     12e6:	4013      	ands	r3, r2
     12e8:	2b02      	cmp	r3, #2
     12ea:	d0f6      	beq.n	12da <init_USART+0x74>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:69
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:69
 
     //Enable the RX interrupt
     SERCOM3_REGS -> USART_INT.SERCOM_INTENSET = SERCOM_USART_INT_INTENSET_RXC_Msk;
@@ -2540,13 +2540,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:69
     12f0:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     12f4:	2204      	movs	r2, #4
     12f6:	759a      	strb	r2, [r3, #22]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:72
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:72
 
     //Enable NVIC interrupt for SERCOM3
     NVIC_EnableIRQ(SERCOM3_2_IRQn);
     12f8:	202d      	movs	r0, #45	@ 0x2d
     12fa:	f7ff ff93 	bl	1224 <__NVIC_EnableIRQ>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:73
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:73
 }
     12fe:	46c0      	nop			@ (mov r8, r8)
     1300:	46bd      	mov	sp, r7
@@ -2555,7 +2555,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:73
 
 00001308 <USART_sendChar>:
 USART_sendChar():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:75
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:75
 
 void USART_sendChar(char charToSend){
     1308:	b580      	push	{r7, lr}
@@ -2564,10 +2564,10 @@ void USART_sendChar(char charToSend){
     130e:	0002      	movs	r2, r0
     1310:	1dfb      	adds	r3, r7, #7
     1312:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:76
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:76
     while((SERCOM3_REGS -> USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_DRE_Msk) != SERCOM_USART_INT_INTFLAG_DRE_Msk){}
     1314:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:76 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:76 (discriminator 1)
     1316:	f241 0300 	movw	r3, #4096	@ 0x1000
     131a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     131e:	7e1b      	ldrb	r3, [r3, #24]
@@ -2577,14 +2577,14 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:76 (discriminator 1)
     1326:	4013      	ands	r3, r2
     1328:	2b01      	cmp	r3, #1
     132a:	d1f4      	bne.n	1316 <USART_sendChar+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:77
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:77
     SERCOM3_REGS -> USART_INT.SERCOM_DATA = charToSend;
     132c:	f241 0300 	movw	r3, #4096	@ 0x1000
     1330:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     1334:	1dfa      	adds	r2, r7, #7
     1336:	7812      	ldrb	r2, [r2, #0]
     1338:	629a      	str	r2, [r3, #40]	@ 0x28
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:78
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:78
 }
     133a:	46c0      	nop			@ (mov r8, r8)
     133c:	46bd      	mov	sp, r7
@@ -2593,20 +2593,20 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:78
 
 00001342 <USART_sendString>:
 USART_sendString():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:80
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:80
 
 void USART_sendString(char *stringToSend){
     1342:	b580      	push	{r7, lr}
     1344:	b082      	sub	sp, #8
     1346:	af00      	add	r7, sp, #0
     1348:	6078      	str	r0, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:81
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:81
     while(*stringToSend){
     134a:	e014      	b.n	1376 <USART_sendString+0x34>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:82
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:82
         while((SERCOM3_REGS -> USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_DRE_Msk) != SERCOM_USART_INT_INTFLAG_DRE_Msk){}
     134c:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:82 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:82 (discriminator 1)
     134e:	f241 0300 	movw	r3, #4096	@ 0x1000
     1352:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     1356:	7e1b      	ldrb	r3, [r3, #24]
@@ -2616,7 +2616,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:82 (discriminator 1)
     135e:	4013      	ands	r3, r2
     1360:	2b01      	cmp	r3, #1
     1362:	d1f4      	bne.n	134e <USART_sendString+0xc>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:83
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:83
         SERCOM3_REGS -> USART_INT.SERCOM_DATA = *stringToSend++;
     1364:	687b      	ldr	r3, [r7, #4]
     1366:	1c5a      	adds	r2, r3, #1
@@ -2625,13 +2625,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:83
     136c:	f241 0300 	movw	r3, #4096	@ 0x1000
     1370:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     1374:	629a      	str	r2, [r3, #40]	@ 0x28
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:81
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:81
     while(*stringToSend){
     1376:	687b      	ldr	r3, [r7, #4]
     1378:	781b      	ldrb	r3, [r3, #0]
     137a:	2b00      	cmp	r3, #0
     137c:	d1e6      	bne.n	134c <USART_sendString+0xa>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:85
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:85
     }
 }
     137e:	46c0      	nop			@ (mov r8, r8)
@@ -2642,13 +2642,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:85
 
 00001388 <SERCOM3_Handler>:
 SERCOM3_Handler():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:87
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:87
 
 void SERCOM3_Handler(void){
     1388:	b580      	push	{r7, lr}
     138a:	b082      	sub	sp, #8
     138c:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:88
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:88
     if((SERCOM3_REGS -> USART_INT.SERCOM_INTFLAG & SERCOM_USART_INT_INTFLAG_RXC_Msk) == SERCOM_USART_INT_INTFLAG_RXC_Msk){
     138e:	f241 0300 	movw	r3, #4096	@ 0x1000
     1392:	f2c4 2300 	movt	r3, #16896	@ 0x4200
@@ -2659,20 +2659,20 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:88
     139e:	4013      	ands	r3, r2
     13a0:	2b04      	cmp	r3, #4
     13a2:	d10b      	bne.n	13bc <SERCOM3_Handler+0x34>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:89
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:89
         char data = SERCOM3_REGS->USART_INT.SERCOM_DATA;
     13a4:	f241 0300 	movw	r3, #4096	@ 0x1000
     13a8:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     13ac:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
     13ae:	1dfb      	adds	r3, r7, #7
     13b0:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:90
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:90
         USART_sendChar(data);
     13b2:	1dfb      	adds	r3, r7, #7
     13b4:	781b      	ldrb	r3, [r3, #0]
     13b6:	0018      	movs	r0, r3
     13b8:	f7ff ffa6 	bl	1308 <USART_sendChar>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/usart.c:92
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/usart.c:92
     }
     13bc:	46c0      	nop			@ (mov r8, r8)
     13be:	46bd      	mov	sp, r7
@@ -2885,14 +2885,14 @@ Disassembly of section .text%57:
 
 0000154a <init_SPI>:
 init_SPI():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:4
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:4
 #include "definitions.h"
 #include <component/sercom.h>
 
 void init_SPI(){
     154a:	b580      	push	{r7, lr}
     154c:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:6
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:6
     //Connect APBC to SERCOM1
     MCLK_REGS -> MCLK_APBCMASK |= MCLK_APBCMASK_SERCOM1_Msk;
     154e:	f640 0300 	movw	r3, #2048	@ 0x800
@@ -2903,7 +2903,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:6
     1560:	2104      	movs	r1, #4
     1562:	430a      	orrs	r2, r1
     1564:	61da      	str	r2, [r3, #28]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:36
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:36
       * IBON: Immediate buffer overflow notification [0x0], enable-protected, not synchronized
       * RUNSTDBY: Generic clock is enabled in all sleep modes [0x1]. enable-protected, not synchronized
       * MODE: Operating mode - SPI host operation [0x3], enable-protected, not synchronized
@@ -2915,7 +2915,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:36
     156e:	228c      	movs	r2, #140	@ 0x8c
     1570:	f2c2 0201 	movt	r2, #8193	@ 0x2001
     1574:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:40
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:40
      SERCOM_SPIM_CTRLA_DIPO_PAD0 | SERCOM_SPIS_CTRLA_DOPO(0x1) | SERCOM_SPIM_CTRLA_RUNSTDBY_Msk | SERCOM_SPIM_CTRLA_MODE_SPI_MASTER;
 
      // Configure BAUD rate for 9600 baud
@@ -2924,7 +2924,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:40
     157a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     157e:	228b      	movs	r2, #139	@ 0x8b
     1580:	731a      	strb	r2, [r3, #12]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:49
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:49
      *  AMODE: Address mode (not applicable in this case) [0x0], enable-protected, not synchronized
      *  MSSEN: Enable Host SPI Select [0x1]. enable-protected, not synchronized
      *  SSDE: enable SS low detector [0x1]. enable-protected, not synchronized
@@ -2936,13 +2936,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:49
     158a:	f242 2200 	movw	r2, #8704	@ 0x2200
     158e:	f2c0 0202 	movt	r2, #2
     1592:	605a      	str	r2, [r3, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:53
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:53
      SERCOM_SPIM_CTRLB_SSDE_ENABLE | SERCOM_SPIM_CTRLB_CHSIZE_8_BIT;
 
      //Synchronize the CTRLB register
      while((SERCOM1_REGS -> SPIM.SERCOM_SYNCBUSY & SERCOM_SPIM_SYNCBUSY_CTRLB_Msk) == SERCOM_SPIM_SYNCBUSY_CTRLB_Msk){}
     1594:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:53 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:53 (discriminator 1)
     1596:	f640 0300 	movw	r3, #2048	@ 0x800
     159a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     159e:	69db      	ldr	r3, [r3, #28]
@@ -2950,7 +2950,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:53 (discriminator 1)
     15a2:	4013      	ands	r3, r2
     15a4:	2b04      	cmp	r3, #4
     15a6:	d0f6      	beq.n	1596 <init_SPI+0x4c>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:56
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:56
 
      //Enable the SPI
      SERCOM1_REGS -> SPIM.SERCOM_CTRLA |= SERCOM_SPIM_CTRLA_ENABLE_Msk;
@@ -2962,12 +2962,12 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:56
     15ba:	2102      	movs	r1, #2
     15bc:	430a      	orrs	r2, r1
     15be:	601a      	str	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:59
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:59
 
      //Synchronize the SPI
      while((SERCOM1_REGS -> SPIM.SERCOM_SYNCBUSY & SERCOM_SPIM_SYNCBUSY_ENABLE_Msk) == SERCOM_SPIM_SYNCBUSY_ENABLE_Msk){}
     15c0:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:59 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:59 (discriminator 1)
     15c2:	f640 0300 	movw	r3, #2048	@ 0x800
     15c6:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     15ca:	69db      	ldr	r3, [r3, #28]
@@ -2975,7 +2975,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:59 (discriminator 1)
     15ce:	4013      	ands	r3, r2
     15d0:	2b02      	cmp	r3, #2
     15d2:	d0f6      	beq.n	15c2 <init_SPI+0x78>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:66
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:66
      // Enable the RX interrupt
      //SERCOM1_REGS -> SPIM.SERCOM_INTENSET = SERCOM_SPIM_INTENSET_RXC_Msk;
 
@@ -2989,7 +2989,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:66
 
 000015dc <spi_data_exchange>:
 spi_data_exchange():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:68
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:68
 
 char spi_data_exchange(uint8_t cmd){
     15dc:	b590      	push	{r4, r7, lr}
@@ -2998,11 +2998,11 @@ char spi_data_exchange(uint8_t cmd){
     15e2:	0002      	movs	r2, r0
     15e4:	1dfb      	adds	r3, r7, #7
     15e6:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:70
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:70
     char rx_data;
     while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_DRE_Msk) != SERCOM_SPIM_INTFLAG_DRE_Msk){}
     15e8:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:70 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:70 (discriminator 1)
     15ea:	f640 0300 	movw	r3, #2048	@ 0x800
     15ee:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     15f2:	7e1b      	ldrb	r3, [r3, #24]
@@ -3012,17 +3012,17 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:70 (discriminator 1)
     15fa:	4013      	ands	r3, r2
     15fc:	2b01      	cmp	r3, #1
     15fe:	d1f4      	bne.n	15ea <spi_data_exchange+0xe>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:71
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:71
     SERCOM1_REGS->SPIM.SERCOM_DATA = cmd;
     1600:	f640 0300 	movw	r3, #2048	@ 0x800
     1604:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     1608:	1dfa      	adds	r2, r7, #7
     160a:	7812      	ldrb	r2, [r2, #0]
     160c:	629a      	str	r2, [r3, #40]	@ 0x28
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:72
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:72
     while((SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_RXC_Msk) != SERCOM_SPIM_INTFLAG_RXC_Msk){}
     160e:	46c0      	nop			@ (mov r8, r8)
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:72 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:72 (discriminator 1)
     1610:	f640 0300 	movw	r3, #2048	@ 0x800
     1614:	f2c4 2300 	movt	r3, #16896	@ 0x4200
     1618:	7e1b      	ldrb	r3, [r3, #24]
@@ -3032,7 +3032,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:72 (discriminator 1)
     1620:	4013      	ands	r3, r2
     1622:	2b04      	cmp	r3, #4
     1624:	d1f4      	bne.n	1610 <spi_data_exchange+0x34>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:73
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:73
     rx_data = SERCOM1_REGS->SPIM.SERCOM_DATA;
     1626:	f640 0300 	movw	r3, #2048	@ 0x800
     162a:	f2c4 2300 	movt	r3, #16896	@ 0x4200
@@ -3040,27 +3040,27 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:73
     1630:	240f      	movs	r4, #15
     1632:	193b      	adds	r3, r7, r4
     1634:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:74
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:74
     USART_sendString("SPI Char received: ");
     1636:	f641 438c 	movw	r3, #7308	@ 0x1c8c
     163a:	f2c0 0300 	movt	r3, #0
     163e:	0018      	movs	r0, r3
     1640:	f7ff fe7f 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:75
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:75
     USART_sendChar(rx_data);
     1644:	193b      	adds	r3, r7, r4
     1646:	781b      	ldrb	r3, [r3, #0]
     1648:	0018      	movs	r0, r3
     164a:	f7ff fe5d 	bl	1308 <USART_sendChar>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:76
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:76
     USART_sendChar('\n');
     164e:	200a      	movs	r0, #10
     1650:	f7ff fe5a 	bl	1308 <USART_sendChar>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:77
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:77
     return rx_data;
     1654:	193b      	adds	r3, r7, r4
     1656:	781b      	ldrb	r3, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:78
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:78
 }
     1658:	0018      	movs	r0, r3
     165a:	46bd      	mov	sp, r7
@@ -3069,13 +3069,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:78
 
 00001660 <SERCOM1_Handler>:
 SERCOM1_Handler():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:80
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:80
 
 void SERCOM1_Handler(void){
     1660:	b580      	push	{r7, lr}
     1662:	b082      	sub	sp, #8
     1664:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:82
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:82
     //Check if RX complete interrupt flag is set
     if(SERCOM1_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_RXC_Msk){
     1666:	f640 0300 	movw	r3, #2048	@ 0x800
@@ -3086,7 +3086,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:82
     1674:	2304      	movs	r3, #4
     1676:	4013      	ands	r3, r2
     1678:	b1ab      	cbz	r3, 16a6 <SERCOM1_Handler+0x46>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:84
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:84
         //Read received character
         char received_char = SERCOM1_REGS->SPIM.SERCOM_DATA;
     167a:	f640 0300 	movw	r3, #2048	@ 0x800
@@ -3094,23 +3094,23 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:84
     1682:	6a9a      	ldr	r2, [r3, #40]	@ 0x28
     1684:	1dfb      	adds	r3, r7, #7
     1686:	701a      	strb	r2, [r3, #0]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:85
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:85
         USART_sendString("SPI Char received: ");
     1688:	f641 438c 	movw	r3, #7308	@ 0x1c8c
     168c:	f2c0 0300 	movt	r3, #0
     1690:	0018      	movs	r0, r3
     1692:	f7ff fe56 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:86
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:86
         USART_sendChar(received_char);
     1696:	1dfb      	adds	r3, r7, #7
     1698:	781b      	ldrb	r3, [r3, #0]
     169a:	0018      	movs	r0, r3
     169c:	f7ff fe34 	bl	1308 <USART_sendChar>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:87
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:87
         USART_sendChar('\n');
     16a0:	200a      	movs	r0, #10
     16a2:	f7ff fe31 	bl	1308 <USART_sendChar>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:91
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/SPI.c:91
         
         //add your code here to process/store received_char
     }
@@ -3224,7 +3224,7 @@ Disassembly of section .text%60:
 
 00001830 <main>:
 main():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:12
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:12
 
 #include "definitions.h"
 #include <pic32cm5164LS00048.h>
@@ -3233,91 +3233,91 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:12
 int main(){
     1830:	b580      	push	{r7, lr}
     1832:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:14
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:14
 
     init_system();
     1834:	f7ff fc23 	bl	107e <init_system>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:15
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:15
     init_USART();
     1838:	f7ff fd15 	bl	1266 <init_USART>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:16
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:16
     init_SPI();
     183c:	f7ff fe85 	bl	154a <init_SPI>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:18
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:18
 
      USART_sendString("SPI Weather Click Example\n");                       //Program appears to be tripping an interrupt at this point, from here it jumps to the dummy_handler function in the startup_pic32cm5164ls00048.c file
     1840:	f641 133c 	movw	r3, #6460	@ 0x193c
     1844:	f2c0 0300 	movt	r3, #0
     1848:	0018      	movs	r0, r3
     184a:	f7ff fd7a 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:19
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:19
      USART_sendString("Initializing Weather Click\n");
     184e:	f641 1358 	movw	r3, #6488	@ 0x1958
     1852:	f2c0 0300 	movt	r3, #0
     1856:	0018      	movs	r0, r3
     1858:	f7ff fd73 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:21
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:21
      //Begin by reading the WeatherClick's Compensation Parameters
      read_wClick_T_Params();
     185c:	f7fe fcd1 	bl	202 <read_wClick_T_Params>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:22
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:22
      read_wClick_P_Params();
     1860:	f7fe fd17 	bl	292 <read_wClick_P_Params>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:23
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:23
      read_wClick_H_Params();
     1864:	f7fe fd5d 	bl	322 <read_wClick_H_Params>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:24
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:24
      USART_sendString("\r\n\r\nPIC32_LS00 Weather Station\r\n");
     1868:	f641 1374 	movw	r3, #6516	@ 0x1974
     186c:	f2c0 0300 	movt	r3, #0
     1870:	0018      	movs	r0, r3
     1872:	f7ff fd66 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:25
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:25
      USART_sendString("BME280 Environmental Sensor Demo");
     1876:	f641 1398 	movw	r3, #6552	@ 0x1998
     187a:	f2c0 0300 	movt	r3, #0
     187e:	0018      	movs	r0, r3
     1880:	f7ff fd5f 	bl	1342 <USART_sendString>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:26
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:26
      read_wClick_ID();
     1884:	f7fe fc95 	bl	1b2 <read_wClick_ID>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:30
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:30
 
     while(1){
 
         toggle_LED();
     1888:	f000 f8f5 	bl	1a76 <toggle_LED>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:31
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:31
         init_wClick();
     188c:	f7fe fc76 	bl	17c <init_wClick>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:32
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:32
         read_wClick_temp();
     1890:	f7fe fd8f 	bl	3b2 <read_wClick_temp>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:33
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:33
         read_wClick_press();
     1894:	f7fe fdb5 	bl	402 <read_wClick_press>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:34
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:34
         read_wClick_hum();
     1898:	f7fe fddb 	bl	452 <read_wClick_hum>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:35
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:35
         calc_wClick_temp();
     189c:	f7fe fe5b 	bl	556 <calc_wClick_temp>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:36
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:36
         calc_wClick_press();
     18a0:	f7fe ff94 	bl	7cc <calc_wClick_press>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:37
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:37
         calc_wClick_hum();
     18a4:	f7ff fa1c 	bl	ce0 <calc_wClick_hum>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:38
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:38
         print_wClick_results();
     18a8:	f7fe fdfb 	bl	4a2 <print_wClick_results>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:39 (discriminator 1)
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:39 (discriminator 1)
         simple_delay(1200000);
     18ac:	f644 7380 	movw	r3, #20352	@ 0x4f80
     18b0:	f2c0 0312 	movt	r3, #18
     18b4:	0018      	movs	r0, r3
     18b6:	f000 f8b6 	bl	1a26 <simple_delay>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/main.c:30
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/main.c:30
         toggle_LED();
     18ba:	e7e5      	b.n	1888 <main+0x58>
 
@@ -3426,7 +3426,7 @@ Disassembly of section .text%64:
 
 00001a26 <simple_delay>:
 simple_delay():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:6
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:6
 #include "utilities.h"
 #include "configuration.h"
 #include "definitions.h"
@@ -3437,20 +3437,20 @@ void simple_delay(uint32_t delay){
     1a28:	b082      	sub	sp, #8
     1a2a:	af00      	add	r7, sp, #0
     1a2c:	6078      	str	r0, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:7
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:7
     while(delay > 0){
     1a2e:	e002      	b.n	1a36 <simple_delay+0x10>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:8
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:8
         delay--;
     1a30:	687b      	ldr	r3, [r7, #4]
     1a32:	3b01      	subs	r3, #1
     1a34:	607b      	str	r3, [r7, #4]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:7
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:7
     while(delay > 0){
     1a36:	687b      	ldr	r3, [r7, #4]
     1a38:	2b00      	cmp	r3, #0
     1a3a:	d1f9      	bne.n	1a30 <simple_delay+0xa>
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:10
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:10
     }
 }
     1a3c:	46c0      	nop			@ (mov r8, r8)
@@ -3461,18 +3461,18 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:10
 
 00001a46 <LED_on>:
 LED_on():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:12
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:12
 
 void LED_on(){
     1a46:	b580      	push	{r7, lr}
     1a48:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:13
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:13
     PORT_REGS->GROUP[0].PORT_OUTCLR = LED_PIN; // Turn on LED (active low)
     1a4a:	f243 0300 	movw	r3, #12288	@ 0x3000
     1a4e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     1a52:	f248 0200 	movw	r2, #32768	@ 0x8000
     1a56:	615a      	str	r2, [r3, #20]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:14
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:14
 }
     1a58:	46c0      	nop			@ (mov r8, r8)
     1a5a:	46bd      	mov	sp, r7
@@ -3480,18 +3480,18 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:14
 
 00001a5e <LED_off>:
 LED_off():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:16
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:16
 
 void LED_off(){
     1a5e:	b580      	push	{r7, lr}
     1a60:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:17
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:17
     PORT_REGS->GROUP[0].PORT_OUTSET = LED_PIN; // Turn off LED (active low)
     1a62:	f243 0300 	movw	r3, #12288	@ 0x3000
     1a66:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     1a6a:	f248 0200 	movw	r2, #32768	@ 0x8000
     1a6e:	619a      	str	r2, [r3, #24]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:18
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:18
 }
     1a70:	46c0      	nop			@ (mov r8, r8)
     1a72:	46bd      	mov	sp, r7
@@ -3499,18 +3499,18 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:18
 
 00001a76 <toggle_LED>:
 toggle_LED():
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:20
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:20
 
 void toggle_LED(){
     1a76:	b580      	push	{r7, lr}
     1a78:	af00      	add	r7, sp, #0
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:21
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:21
     PORT_REGS->GROUP[0].PORT_OUTTGL = LED_PIN; // Toggle LED (active low)
     1a7a:	f243 0300 	movw	r3, #12288	@ 0x3000
     1a7e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     1a82:	f248 0200 	movw	r2, #32768	@ 0x8000
     1a86:	61da      	str	r2, [r3, #28]
-C:/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c:22
+C:/Users/gregw/Documents/Projects/GardenBot_LS00/utilities.c:22
     1a88:	46c0      	nop			@ (mov r8, r8)
     1a8a:	46bd      	mov	sp, r7
     1a8c:	bd80      	pop	{r7, pc}

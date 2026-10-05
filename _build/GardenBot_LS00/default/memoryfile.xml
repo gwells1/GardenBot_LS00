@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="C:\Users\gregw\Documents\projects\GardenBot_LS00\out\GardenBot_LS00\default.elf">
+  <executable name="C:\Users\gregw\Documents\Projects\GardenBot_LS00\out\GardenBot_LS00\default.elf">
     <memory name="program">
       <units>bytes</units>
       <length>262144</length>
