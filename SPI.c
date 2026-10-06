@@ -46,7 +46,7 @@ void init_SPI(){
      *  SSDE: enable SS low detector [0x1]. enable-protected, not synchronized
      *  CHSIZE: 8-bit character size [0x0]. enable-protected, not synchronized
      */
-     SERCOM1_REGS -> SPIM.SERCOM_CTRLB = SERCOM_SPIM_CTRLB_RXEN_Msk | SERCOM_SPIM_CTRLB_MSSEN_ENABLE |
+     SERCOM1_REGS -> SPIM.SERCOM_CTRLB = SERCOM_SPIM_CTRLB_RXEN_Msk | SERCOM_SPIM_CTRLB_MSSEN_DISABLE |
      SERCOM_SPIM_CTRLB_SSDE_ENABLE | SERCOM_SPIM_CTRLB_CHSIZE_8_BIT;
 
      //Synchronize the CTRLB register
@@ -63,6 +63,14 @@ void init_SPI(){
 
      //Enable NVIC interrupt for SERCOM1
      //NVIC_EnableIRQ(SERCOM1_IRQn);
+}
+
+void en_wClick_SS(){
+    PORT_REGS->GROUP[0].PORT_OUTCLR = SPI_SS;
+}
+
+void dis_wClick_SS(){
+    PORT_REGS->GROUP[0].PORT_OUTSET = SPI_SS;
 }
 
 char spi_data_exchange(uint8_t cmd){

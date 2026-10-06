@@ -68,3 +68,16 @@
 24	73	8129409927299082	CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
 24	73	8129409927299082	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.hex	cf7760c4307faa67
 24	73	8129409927299082	C:/Users/gregw/Documents/projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
+33	3048	8129467093991138	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c.o	91e96a39bc9b0785
+53	3051	8129467094185048	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/main.c.o	7787f8c3c2bd65a
+73	3051	8129467094390524	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/utilities.c.o	206eec59909d27a7
+45	3053	8129467094104677	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c.o	3a8d4dded8d377cb
+61	3061	8129467094275318	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/usart.c.o	f5a1d8e44d1f8e2b
+84	3063	8129467094495034	CMakeFiles/GardenBot_LS00_default_default_XC32_compile.dir/C_/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c.o	a48804f93c6ca69e
+3063	5030	8129467124286174	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.elf	17d022b5d289f274
+5030	5362	8129467143954696	CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
+5030	5362	8129467143954696	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.hex	cf7760c4307faa67
+5030	5362	8129467143954696	C:/Users/gregw/Documents/projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
+104	318	8129467838345205	CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
+104	318	8129467838345205	C:/Users/gregw/Documents/projects/GardenBot_LS00/out/GardenBot_LS00/default.hex	cf7760c4307faa67
+104	318	8129467838345205	C:/Users/gregw/Documents/projects/GardenBot_LS00/_build/GardenBot_LS00/default/CMakeFiles/GardenBot_LS00_default_Bin2Hex	cf7760c4307faa67
