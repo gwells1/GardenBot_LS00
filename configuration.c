@@ -281,5 +281,5 @@ void init_ports(){
     PORT_REGS->GROUP[0].PORT_PMUX[4] = (uint8_t)0x22;   //Configure PA8 and PA9 for peripheral function C (SERCOM)
     PORT_REGS->GROUP[0].PORT_PMUX[5] = (uint8_t)0x22;   //Configure PA10 and PA11 for peripheral function C (SERCOM)
     //PORT_REGS->GROUP[0].PORT_WRCONFIG =  PORT_WRCONFIG_HWSEL(0x0UL) | PORT_WRCONFIG_WRPINCFG(0x1UL) | PORT_WRCONFIG_WRPMUX(0x2UL) | PORT_WRCONFIG_PMUXEN(0x1UL) | PORT_WRCONFIG_PINMASK(0x8UL); 
-    PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN; // Turn off LED (active low)
+    PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN | SPI_SS; // Turn off LED (active low), disable SS (Active Low)
 }

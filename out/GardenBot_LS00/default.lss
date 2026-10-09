@@ -305,10 +305,10 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:69
  25c:	701a      	strb	r2, [r3, #0]
  25e:	e017      	b.n	290 <read_wClick_T_Params+0x82>
 C:/Users/gregw/Documents/projects/GardenBot_LS00/weatherClick.c:70
-        sDigT[j] = spi_data_exchange(cmd_uDigT[j]);
+        sDigT[j] = spi_data_exchange(cmd_sDigT[j]);
  260:	1dbb      	adds	r3, r7, #6
  262:	781a      	ldrb	r2, [r3, #0]
- 264:	f240 03f4 	movw	r3, #244	@ 0xf4
+ 264:	f240 03f8 	movw	r3, #248	@ 0xf8
  268:	f2c2 0300 	movt	r3, #8192	@ 0x2000
  26c:	5c9a      	ldrb	r2, [r3, r2]
  26e:	1dbb      	adds	r3, r7, #6
@@ -2322,7 +2322,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:267
     PORT_REGS->GROUP[0].PORT_DIR = (LED_PIN | SPI_SCK | SPI_SDO | SPI_SS );     // Set LED, USART TX, SPI SCK, SPI SDO, and SPI SS pins as outputs
     117a:	f243 0300 	movw	r3, #12288	@ 0x3000
     117e:	f2c4 0300 	movt	r3, #16384	@ 0x4000
-    1182:	f248 7200 	movw	r2, #34560	@ 0x8700
+    1182:	f648 6200 	movw	r2, #36352	@ 0x8e00
     1186:	601a      	str	r2, [r3, #0]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:268
     PORT_REGS->GROUP[1].PORT_DIR = (USART_TX_PIN);     // Set LED, USART TX, SPI SCK, SPI SDO, and SPI SS pins as outputs
@@ -2413,13 +2413,13 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:282
     1230:	5499      	strb	r1, [r3, r2]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:284
     //PORT_REGS->GROUP[0].PORT_WRCONFIG =  PORT_WRCONFIG_HWSEL(0x0UL) | PORT_WRCONFIG_WRPINCFG(0x1UL) | PORT_WRCONFIG_WRPMUX(0x2UL) | PORT_WRCONFIG_PMUXEN(0x1UL) | PORT_WRCONFIG_PINMASK(0x8UL); 
-    PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN; // Turn off LED (active low)
+    PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN | SPI_SS; // Turn off LED (active low), disable SS (Active Low)
     1232:	f243 0300 	movw	r3, #12288	@ 0x3000
     1236:	f2c4 0300 	movt	r3, #16384	@ 0x4000
     123a:	699a      	ldr	r2, [r3, #24]
     123c:	f243 0300 	movw	r3, #12288	@ 0x3000
     1240:	f2c4 0300 	movt	r3, #16384	@ 0x4000
-    1244:	f248 0100 	movw	r1, #32768	@ 0x8000
+    1244:	f248 2100 	movw	r1, #33280	@ 0x8200
     1248:	430a      	orrs	r2, r1
     124a:	619a      	str	r2, [r3, #24]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/configuration.c:285
@@ -3037,7 +3037,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:69
     PORT_REGS->GROUP[0].PORT_OUTCLR = SPI_SS;
     1610:	f243 0300 	movw	r3, #12288	@ 0x3000
     1614:	f2c4 0300 	movt	r3, #16384	@ 0x4000
-    1618:	f240 4200 	movw	r2, #1024	@ 0x400
+    1618:	f240 2200 	movw	r2, #512	@ 0x200
     161c:	615a      	str	r2, [r3, #20]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:70
 }
@@ -3056,7 +3056,7 @@ C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:73
     PORT_REGS->GROUP[0].PORT_OUTSET = SPI_SS;
     1628:	f243 0300 	movw	r3, #12288	@ 0x3000
     162c:	f2c4 0300 	movt	r3, #16384	@ 0x4000
-    1630:	f240 4200 	movw	r2, #1024	@ 0x400
+    1630:	f240 2200 	movw	r2, #512	@ 0x200
     1634:	619a      	str	r2, [r3, #24]
 C:/Users/gregw/Documents/projects/GardenBot_LS00/SPI.c:74
 }
