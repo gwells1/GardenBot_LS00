@@ -36,7 +36,7 @@
 #pragma config NONSECA_PM = CLEAR
 #pragma config NONSECA_MCLK = SET
 #pragma config NONSECA_RSTC = CLEAR
-#pragma config NONSECA_OSCCTRL = CLEAR
+#pragma config NONSECA_OSCCTRL = SET
 #pragma config NONSECA_OSC32KCTRL = CLEAR
 #pragma config NONSECA_SUPC = CLEAR
 #pragma config NONSECA_GCLK = SET
