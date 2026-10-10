@@ -42,62 +42,62 @@ raw_data_t          temp_raw, press_raw, hum_raw;
 //ToDo: Identify how to read and store measured values
 //ToDo: Read Section 4.2.3 regarding "Compensation"
 void init_wClick(){
-    en_wClick_SS();
+    //en_wClick_SS();
     for(int i=0; i<7; i++){
         spi_data_exchange(cmd_initialize[i]);
     }
-    dis_wClick_SS();
+    //dis_wClick_SS();
 }
 
 void read_wClick_ID(void){
     uint8_t i;
-    en_wClick_SS();
+    //en_wClick_SS();
     for(i=0 ; i<2 ; i++){
         deviceID[i] = spi_data_exchange(cmd_deviceID[i]);
     }
-    dis_wClick_SS();
+    //dis_wClick_SS();
 }
 
 void read_wClick_T_Params(void){
     //Quiery the device for the first temperature compensation parameter
     uint8_t i;
     uint8_t j;
-    en_wClick_SS();
+    //en_wClick_SS();
     for(i=0; i<3 ; i++){
         uDigT[i] = spi_data_exchange(cmd_uDigT[i]);
     }
     for(j=0; j<5 ; j++){
         sDigT[j] = spi_data_exchange(cmd_sDigT[j]);
     }
-    dis_wClick_SS();
+    //dis_wClick_SS();
 }
 
 void read_wClick_P_Params(void){
     //Quiery the device for the first pressure compensation parameter
     uint8_t i;
     uint8_t j;
-    en_wClick_SS();
+    //en_wClick_SS();
     for(i=0; i<3 ; i++){
         uDigP[i] = spi_data_exchange(cmd_uDigP[i]);
     }
     for(j=0; j<17; j++){
         sDigP[j] = spi_data_exchange(cmd_sDigP[j]);
     }
-    dis_wClick_SS();
+    //dis_wClick_SS();
 }
 
 void read_wClick_H_Params(void){
     //Quiery the device for the first pressure compensation parameter
     uint8_t i;
     uint8_t j;
-    en_wClick_SS();
+    //en_wClick_SS();
     for(i=0; i<3 ; i++){
         uDigH[i] = spi_data_exchange(cmd_uDigH[i]);
     }
     for(j=0; j<7; j++){
         sDigH[j] = spi_data_exchange(cmd_sDigH[j]);
     }
-    dis_wClick_SS();
+    //dis_wClick_SS();
 }
 
 void read_wClick_temp(void){

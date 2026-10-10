@@ -25,16 +25,16 @@ void init_SPI(){
       * FORM: SPI_FRAME [0x00]. enable-protected, not synchronized
       * DIPO: Data In Pinout = PAD[0] (PA08). [0x0] enable-protected, not synchronized
       * DOPO: Data Out Pinout [0x1]. enable protected, not synchronized
-      *     DO          =   PAD[2] (PA10)
-      *     SCK         =   PAD[3] (PA11)
-      *     client !SS  =   PAD[1] (PA9)
+      *     DO          =   PAD[3] (PA11) PAD[2] (PA10)
+      *     SCK         =   PAD[1] (PA9)  PAD[3] (PA11)
+      *     client !SS  =   PAD[2] (PA10)  PAD[1] (PA9)
       * IBON: Immediate buffer overflow notification [0x0], enable-protected, not synchronized
       * RUNSTDBY: Generic clock is enabled in all sleep modes [0x1]. enable-protected, not synchronized
       * MODE: Operating mode - SPI host operation [0x3], enable-protected, not synchronized
      */
 
-     SERCOM1_REGS -> SPIM.SERCOM_CTRLA = SERCOM_SPIM_CTRLA_DORD_MSB | SERCOM_SPIM_CTRLA_CPOL_IDLE_LOW | SERCOM_SPIM_CTRLA_CPHA_LEADING_EDGE |
-     SERCOM_SPIM_CTRLA_DIPO_PAD0 | SERCOM_SPIS_CTRLA_DOPO(0x1) | SERCOM_SPIM_CTRLA_RUNSTDBY_Msk | SERCOM_SPIM_CTRLA_MODE_SPI_MASTER;
+     SERCOM1_REGS -> SPIM.SERCOM_CTRLA = SERCOM_SPIM_CTRLA_DORD_MSB | SERCOM_SPIM_CTRLA_CPOL_IDLE_HIGH | SERCOM_SPIM_CTRLA_CPHA_TRAILING_EDGE |
+     SERCOM_SPIM_CTRLA_DIPO_PAD0 | SERCOM_SPIS_CTRLA_DOPO_PAD3 | SERCOM_SPIM_CTRLA_RUNSTDBY_Msk | SERCOM_SPIM_CTRLA_MODE_SPI_MASTER;
 
      // Configure BAUD rate for 9600 baud
      SERCOM1_REGS -> SPIM.SERCOM_BAUD = (uint16_t)SERCOM_SPIM_BAUD_BAUD(64907UL);
@@ -46,7 +46,7 @@ void init_SPI(){
      *  SSDE: enable SS low detector [0x1]. enable-protected, not synchronized
      *  CHSIZE: 8-bit character size [0x0]. enable-protected, not synchronized
      */
-     SERCOM1_REGS -> SPIM.SERCOM_CTRLB = SERCOM_SPIM_CTRLB_RXEN_Msk | SERCOM_SPIM_CTRLB_MSSEN_DISABLE |
+     SERCOM1_REGS -> SPIM.SERCOM_CTRLB = SERCOM_SPIM_CTRLB_RXEN_Msk | SERCOM_SPIM_CTRLB_MSSEN_ENABLE |
      SERCOM_SPIM_CTRLB_SSDE_ENABLE | SERCOM_SPIM_CTRLB_CHSIZE_8_BIT;
 
      //Synchronize the CTRLB register

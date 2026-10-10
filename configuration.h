@@ -14,9 +14,9 @@
 
 //SPI Pin Definitions
 #define SPI_SDI         (uint32_t)1U << 8U             //PIN PA08
-#define SPI_SDO         (uint32_t)1U << 10U            //PIN PA10
-#define SPI_SCK         (uint32_t)1U << 11U            //PIN PA11
-#define SPI_SS          (uint32_t)1U << 9U             //PIN PA09
+#define SPI_SDO         (uint32_t)1U << 11U            //PIN PA11
+#define SPI_SCK         (uint32_t)1U << 9U             //PIN PA09
+#define SPI_SS          (uint32_t)1U << 10U            //PIN PA10
 
 void init_system(void);
 void init_ports(void);
