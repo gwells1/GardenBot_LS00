@@ -37,7 +37,7 @@ void init_SPI(){
      SERCOM_SPIM_CTRLA_DIPO_PAD0 | SERCOM_SPIS_CTRLA_DOPO_PAD3 | SERCOM_SPIM_CTRLA_RUNSTDBY_Msk | SERCOM_SPIM_CTRLA_MODE_SPI_MASTER;
 
      // Configure BAUD rate for 9600 baud
-     SERCOM1_REGS -> SPIM.SERCOM_BAUD = (uint16_t)SERCOM_SPIM_BAUD_BAUD(64907UL);
+     SERCOM1_REGS -> SPIM.SERCOM_BAUD = (uint16_t)SERCOM_SPIM_BAUD_BAUD(832UL);
 
      /* Configure CTRLB
      *  RXEN: enable receiver [0x1]. enable-protected, not synchronized

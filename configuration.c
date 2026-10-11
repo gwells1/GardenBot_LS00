@@ -242,7 +242,7 @@ void init_OSCCTRL(){
 }
 
 void init_GCLK(){
-    //Configure GCLK0 to run at 48MHz using the OSC16M for the main clock
+    //Configure GCLK0 to run at 16MHz using the OSC16M for the main clock
     GCLK_REGS->GCLK_GENCTRL[0] = GCLK_GENCTRL_DIV(1UL) | GCLK_GENCTRL_SRC(5UL) | GCLK_GENCTRL_GENEN_Msk;
     
     //Wait for synchronization to complete
@@ -273,13 +273,14 @@ void init_ports(){
     PORT_REGS->GROUP[0].PORT_PINCFG[11] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA11 [SPI_SDI]
     PORT_REGS->GROUP[0].PORT_PINCFG[8] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA08 [SPI_SDO]
     PORT_REGS->GROUP[0].PORT_PINCFG[9] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA09 [SPI_SCK]
-    PORT_REGS->GROUP[0].PORT_PINCFG[10] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA10 [SPI_SS]
+    //PORT_REGS->GROUP[0].PORT_PINCFG[10] = (uint8_t)0x1UL; //Configure port control to enable the peripheral multiplexer on PA10 [SPI_SS]
+    PORT_REGS->GROUP[0].PORT_PINCFG[10] = (uint8_t)0x0UL; // Configure port control SPI Chip Select on, no pullup, enableoutput buffer: PA10 [SPI_SS]
     PORT_REGS->GROUP[0].PORT_PINCFG[23] = (uint8_t)0x6UL; // Configure port control for switch, enable internal pullup, enable input buffer 
     PORT_REGS->GROUP[0].PORT_PINCFG[15] = (uint8_t)0x0UL; // Configure port control for LED, no pullup, enable output buffer
     //Figure out how to configure the ports for peripheral operation
     PORT_REGS->GROUP[1].PORT_PMUX[4] = (uint8_t)0x33UL; //Configure PB8 and PB9 for peripheral function D (SERCOM_ALT)
     PORT_REGS->GROUP[0].PORT_PMUX[4] = (uint8_t)0x22UL;   //Configure PA8 and PA9 for peripheral function C (SERCOM)
-    PORT_REGS->GROUP[0].PORT_PMUX[5] = (uint8_t)0x22UL;   //Configure PA10 and PA11 for peripheral function C (SERCOM)
+    PORT_REGS->GROUP[0].PORT_PMUX[5] = (uint8_t)0x20UL;   //Configure PA11 for peripheral function C (SERCOM)
     //PORT_REGS->GROUP[0].PORT_WRCONFIG =  PORT_WRCONFIG_HWSEL(0x0UL) | PORT_WRCONFIG_WRPINCFG(0x1UL) | PORT_WRCONFIG_WRPMUX(0x2UL) | PORT_WRCONFIG_PMUXEN(0x1UL) | PORT_WRCONFIG_PINMASK(0x8UL); 
-    PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN | SPI_SS; // Turn off LED (active low), disable SS (Active Low)
+    PORT_REGS->GROUP[0].PORT_OUTSET |= LED_PIN | SPI_SS; // Turn off LED (active low)
 }

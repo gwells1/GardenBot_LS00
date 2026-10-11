@@ -155,13 +155,16 @@ void calc_wClick_temp(void){
     uint16_t digT1 = (uDigT[2] << 8) + (uDigT[1]);
     int16_t digT2 = (sDigT[2] << 8) + (sDigT[1]);
     int16_t digT3 = (sDigT[4] << 8) + (sDigT[3]);
-    var1 = (((double)temp_raw.raw) / 16384.0 - ((double)digT1) / 1024.0) *
-        ((double)digT2);
+    var1 = (((double)temp_raw.raw) / 16384.0 - ((double)digT1) / 1024.0) * ((double)digT2);
     var2 = ((((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0) *
-        (((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0)) *
-        ((double)digT3);
+            (((double)temp_raw.raw) / 131072.0 - ((double)digT1) / 8192.0)) *
+           ((double)digT3);
+    //var1 = ((((temp_raw.raw >> 3) - ((uint32_t)digT1<<1))) * ((uint32_t)digT2)) >> 11;
+    //var2 = (((((temp_raw.raw >> 4) - ((uint32_t)digT1)) * ((temp_raw.raw>>4) - (uint32_t)digT1))));
     t_fine = (int32_t)(var1 + var2);
-    T = (var1 + var2) / 5120.0;
+    //T = (var1 + var2) / 5120.0;
+    T = t_fine / 5120.0;
+    //T = (t_fine * 5 + 128) >> 8;
 }
 
 void calc_wClick_press(void){
